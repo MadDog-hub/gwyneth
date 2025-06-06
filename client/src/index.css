@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500;600&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --background: 0 0% 100%; /* #FFFFFF */
+  --foreground: 222 84% 5%; /* #020617 */
+  --muted: 210 40% 98%; /* #F8FAFC */
+  --muted-foreground: 215 16% 47%; /* #64748B */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 222 84% 5%; /* #020617 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 222 84% 5%; /* #020617 */
+  --border: 214 32% 91%; /* #E2E8F0 */
+  --input: 214 32% 91%; /* #E2E8F0 */
+  --primary: 217 91% 60%; /* #3B82F6 */
+  --primary-foreground: 222 84% 5%; /* #020617 */
+  --secondary: 210 40% 96%; /* #F1F5F9 */
+  --secondary-foreground: 222 13% 11%; /* #1E293B */
+  --accent: 210 40% 96%; /* #F1F5F9 */
+  --accent-foreground: 222 13% 11%; /* #1E293B */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 210 40% 98%; /* #F8FAFC */
+  --ring: 217 91% 60%; /* #3B82F6 */
+  --radius: 0.5rem;
+  
+  /* Custom colors for royal theme */
+  --royal-blue: 217 91% 32%; /* #1E3A8A */
+  --sky-blue: 214 95% 79%; /* #93C5FD */
+  --slate-gray: 220 14% 46%; /* #6B7280 */
+  --soft-lilac: 327 73% 81%; /* #F9A8D4 */
+  --gold: 51 100% 50%; /* #FFD700 */
+}
+
+.dark {
+  --background: 222 84% 5%; /* #020617 */
+  --foreground: 210 40% 98%; /* #F8FAFC */
+  --muted: 222 13% 11%; /* #1E293B */
+  --muted-foreground: 215 20% 65%; /* #94A3B8 */
+  --popover: 222 84% 5%; /* #020617 */
+  --popover-foreground: 210 40% 98%; /* #F8FAFC */
+  --card: 222 84% 5%; /* #020617 */
+  --card-foreground: 210 40% 98%; /* #F8FAFC */
+  --border: 222 13% 11%; /* #1E293B */
+  --input: 222 13% 11%; /* #1E293B */
+  --primary: 217 91% 60%; /* #3B82F6 */
+  --primary-foreground: 222 84% 5%; /* #020617 */
+  --secondary: 222 13% 11%; /* #1E293B */
+  --secondary-foreground: 210 40% 98%; /* #F8FAFC */
+  --accent: 222 13% 11%; /* #1E293B */
+  --accent-foreground: 210 40% 98%; /* #F8FAFC */
+  --destructive: 0 63% 31%; /* #B91C1C */
+  --destructive-foreground: 210 40% 98%; /* #F8FAFC */
+  --ring: 217 91% 60%; /* #3B82F6 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-lora {
+    font-family: 'Lora', serif;
+  }
+
+  .font-opensans {
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-royal-blue {
+    color: hsl(var(--royal-blue));
+  }
+
+  .text-sky-blue {
+    color: hsl(var(--sky-blue));
+  }
+
+  .text-slate-gray {
+    color: hsl(var(--slate-gray));
+  }
+
+  .text-soft-lilac {
+    color: hsl(var(--soft-lilac));
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .bg-royal-blue {
+    background-color: hsl(var(--royal-blue));
+  }
+
+  .bg-sky-blue {
+    background-color: hsl(var(--sky-blue));
+  }
+
+  .bg-slate-gray {
+    background-color: hsl(var(--slate-gray));
+  }
+
+  .bg-soft-lilac {
+    background-color: hsl(var(--soft-lilac));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .border-royal-blue {
+    border-color: hsl(var(--royal-blue));
+  }
+
+  .border-sky-blue {
+    border-color: hsl(var(--sky-blue));
+  }
+
+  .border-soft-lilac {
+    border-color: hsl(var(--soft-lilac));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .gradient-royal {
+    background: linear-gradient(135deg, hsl(var(--royal-blue)) 0%, hsl(var(--sky-blue)) 100%);
+  }
+
+  .gradient-lilac {
+    background: linear-gradient(135deg, hsl(var(--soft-lilac)) 0%, hsl(var(--gold)) 100%);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .rotating {
+    animation: rotate 20s linear infinite;
+  }
+
+  .pulse-gold {
+    animation: pulse-gold 4s ease-in-out infinite;
+  }
+
+  .btn-3d {
+    transform: perspective(500px) rotateX(0deg);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-3d:hover {
+    transform: perspective(500px) rotateX(-5deg) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 20px hsl(var(--gold));
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 40px hsl(var(--gold)), 0 0 60px hsl(var(--gold));
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, hsl(var(--royal-blue)), hsl(var(--sky-blue)));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--gold));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--soft-lilac));
+}
+
+/* Three.js canvas positioning */
+.three-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Music player */
+.music-player {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .card-3d {
+    transform: none;
+  }
+  
+  .card-3d:hover {
+    transform: none;
+  }
+  
+  .btn-3d {
+    transform: none;
+  }
+  
+  .btn-3d:hover {
+    transform: none;
+  }
+}
+
+/* Animation delays for staggered effects */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-1000 { animation-delay: 1s; }
