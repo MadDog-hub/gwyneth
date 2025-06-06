@@ -266,7 +266,7 @@ export default function Home() {
       </section>
 
       {/* About Erica Section */}
-      <section id="about" className="py-20 relative">
+      <section id="about" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
@@ -291,7 +291,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <p className="font-opensans text-lg text-slate-gray leading-relaxed">
+              <p className="font-opensans text-lg text-white leading-relaxed">
                 Erica Santos, a 25-year-old artist from Manila, loves painting nature and dreams of a garden-themed celebration. Her artistic vision and love for natural beauty have inspired this magnificent royal garden celebration, where art meets elegance in perfect harmony.
               </p>
             </motion.div>

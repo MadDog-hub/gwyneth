@@ -32,6 +32,9 @@
   --slate-gray: 220 14% 46%; /* #6B7280 */
   --soft-lilac: 327 73% 81%; /* #F9A8D4 */
   --gold: 51 100% 50%; /* #FFD700 */
+  --forest-green: 122 39% 49%; /* #22C55E */
+  --emerald-green: 142 71% 45%; /* #10B981 */
+  --sage-green: 84 27% 65%; /* #A3A363 */
 }
 
 .dark {
@@ -124,6 +127,30 @@
     background-color: hsl(var(--gold));
   }
 
+  .bg-forest-green {
+    background-color: hsl(var(--forest-green));
+  }
+
+  .bg-emerald-green {
+    background-color: hsl(var(--emerald-green));
+  }
+
+  .bg-sage-green {
+    background-color: hsl(var(--sage-green));
+  }
+
+  .text-forest-green {
+    color: hsl(var(--forest-green));
+  }
+
+  .text-emerald-green {
+    color: hsl(var(--emerald-green));
+  }
+
+  .text-sage-green {
+    color: hsl(var(--sage-green));
+  }
+
   .border-royal-blue {
     border-color: hsl(var(--royal-blue));
   }
@@ -140,12 +167,24 @@
     border-color: hsl(var(--gold));
   }
 
+  .border-forest-green {
+    border-color: hsl(var(--forest-green));
+  }
+
   .gradient-royal {
     background: linear-gradient(135deg, hsl(var(--royal-blue)) 0%, hsl(var(--sky-blue)) 100%);
   }
 
   .gradient-lilac {
     background: linear-gradient(135deg, hsl(var(--soft-lilac)) 0%, hsl(var(--gold)) 100%);
+  }
+
+  .gradient-garden {
+    background: linear-gradient(135deg, hsl(var(--forest-green)) 0%, hsl(var(--emerald-green)) 50%, hsl(var(--sage-green)) 100%);
+  }
+
+  .gradient-green-blue {
+    background: linear-gradient(135deg, hsl(var(--emerald-green)) 0%, hsl(var(--royal-blue)) 100%);
   }
 
   .text-shadow {

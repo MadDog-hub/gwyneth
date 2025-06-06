@@ -10,6 +10,7 @@ export default function ThreeBackground({ scene }: ThreeBackgroundProps) {
   const sceneRef = useRef<THREE.Scene>();
   const rendererRef = useRef<THREE.WebGLRenderer>();
   const animationRef = useRef<number>();
+  const plantsRef = useRef<THREE.Group[]>([]);
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -70,28 +71,93 @@ export default function ThreeBackground({ scene }: ThreeBackgroundProps) {
     const particleSystem = new THREE.Points(particles, particleMaterial);
     threeScene.add(particleSystem);
 
-    // Create floating crowns/flowers
-    const crownGeometry = new THREE.SphereGeometry(0.1, 8, 8);
-    const crownCount = scene === "invitation" ? 3 : 6;
-    const crowns: THREE.Mesh[] = [];
+    // Create large 3D plants and flowers
+    const plantCount = scene === "invitation" ? 5 : 12;
+    const plants: THREE.Group[] = [];
 
-    for (let i = 0; i < crownCount; i++) {
-      const crownMaterial = new THREE.MeshBasicMaterial({
-        color: i % 2 === 0 ? 0xFFD700 : 0xF9A8D4,
+    for (let i = 0; i < plantCount; i++) {
+      const plantGroup = new THREE.Group();
+      
+      // Create flower petals (using multiple spheres)
+      const petalGeometry = new THREE.SphereGeometry(0.3, 8, 8);
+      const petalColors = [0x22C55E, 0x10B981, 0xF9A8D4, 0xFFD700];
+      const petalColor = petalColors[Math.floor(Math.random() * petalColors.length)];
+      
+      const petalMaterial = new THREE.MeshBasicMaterial({
+        color: petalColor,
         transparent: true,
-        opacity: 0.4,
+        opacity: 0.7,
+      });
+
+      // Create flower petals in a circle
+      for (let j = 0; j < 6; j++) {
+        const petal = new THREE.Mesh(petalGeometry, petalMaterial);
+        const angle = (j / 6) * Math.PI * 2;
+        petal.position.set(
+          Math.cos(angle) * 0.5,
+          Math.sin(angle) * 0.5,
+          0
+        );
+        petal.scale.set(0.6, 1.2, 0.3);
+        plantGroup.add(petal);
+      }
+
+      // Create flower center
+      const centerGeometry = new THREE.SphereGeometry(0.2, 8, 8);
+      const centerMaterial = new THREE.MeshBasicMaterial({
+        color: 0xFFD700,
+        transparent: true,
+        opacity: 0.8,
+      });
+      const center = new THREE.Mesh(centerGeometry, centerMaterial);
+      plantGroup.add(center);
+
+      // Create stem
+      const stemGeometry = new THREE.CylinderGeometry(0.05, 0.08, 2, 8);
+      const stemMaterial = new THREE.MeshBasicMaterial({
+        color: 0x22C55E,
+        transparent: true,
+        opacity: 0.6,
+      });
+      const stem = new THREE.Mesh(stemGeometry, stemMaterial);
+      stem.position.y = -1;
+      plantGroup.add(stem);
+
+      // Create leaves
+      const leafGeometry = new THREE.SphereGeometry(0.4, 8, 8);
+      const leafMaterial = new THREE.MeshBasicMaterial({
+        color: 0x10B981,
+        transparent: true,
+        opacity: 0.7,
       });
       
-      const crown = new THREE.Mesh(crownGeometry, crownMaterial);
-      crown.position.set(
+      for (let k = 0; k < 3; k++) {
+        const leaf = new THREE.Mesh(leafGeometry, leafMaterial);
+        leaf.position.set(
+          (Math.random() - 0.5) * 0.8,
+          -0.5 - Math.random() * 0.5,
+          (Math.random() - 0.5) * 0.8
+        );
+        leaf.scale.set(0.8, 0.3, 1.5);
+        leaf.rotation.z = Math.random() * Math.PI * 2;
+        plantGroup.add(leaf);
+      }
+
+      // Position the entire plant
+      plantGroup.position.set(
+        (Math.random() - 0.5) * 20,
         (Math.random() - 0.5) * 15,
-        (Math.random() - 0.5) * 15,
-        (Math.random() - 0.5) * 10
+        (Math.random() - 0.5) * 12
       );
       
-      crowns.push(crown);
-      threeScene.add(crown);
+      plantGroup.scale.setScalar(scene === "invitation" ? 0.8 : 1.2);
+      
+      plants.push(plantGroup);
+      threeScene.add(plantGroup);
     }
+
+    // Store plants reference for animation
+    plantsRef.current = plants;
 
     camera.position.z = 5;
 
@@ -104,11 +170,19 @@ export default function ThreeBackground({ scene }: ThreeBackgroundProps) {
       particleSystem.rotation.y = time * 0.1;
       particleSystem.rotation.x = time * 0.05;
 
-      // Animate floating crowns
-      crowns.forEach((crown, index) => {
-        crown.rotation.y = time + index * 0.5;
-        crown.position.y += Math.sin(time * 2 + index) * 0.002;
-        crown.position.x += Math.cos(time * 1.5 + index) * 0.001;
+      // Animate floating plants and flowers
+      plantsRef.current.forEach((plant, index) => {
+        plant.rotation.y = time * 0.3 + index * 0.2;
+        plant.position.y += Math.sin(time * 1.5 + index) * 0.003;
+        plant.position.x += Math.cos(time * 1.2 + index) * 0.002;
+        
+        // Animate individual components
+        plant.children.forEach((child, childIndex) => {
+          if (childIndex < 6) { // Petals
+            child.rotation.z = time * 0.5 + childIndex * 0.3;
+            child.scale.setScalar(0.8 + Math.sin(time * 2 + childIndex) * 0.1);
+          }
+        });
       });
 
       // Gentle particle movement
