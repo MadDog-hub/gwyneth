@@ -334,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* Dress Code Section */}
-      <section id="dresscode" className="py-20 relative">
+      <section id="dresscode" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
@@ -353,7 +353,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="glass-effect rounded-3xl p-8 md:p-12"
             >
-              <p className="font-opensans text-lg text-slate-gray mb-8">
+              <p className="font-opensans text-lg text-white mb-8">
                 Formal garden attire in our celebration colors. Women: elegant dresses, Men: suits with ties
               </p>
               
@@ -423,14 +423,14 @@ export default function Home() {
       <Gallery />
 
       {/* Event Video Section */}
-      <section id="video" className="py-20 relative">
+      <section id="video" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-8"
             >
               Event Video
             </motion.h2>
@@ -457,7 +457,7 @@ export default function Home() {
       </section>
 
       {/* Gift Registry Section */}
-      <section id="gifts" className="py-20 relative">
+      <section id="gifts" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
