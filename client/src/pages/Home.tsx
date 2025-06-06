@@ -623,21 +623,21 @@ export default function Home() {
       <GuestbookForm />
 
       {/* Footer */}
-      <footer className="py-12 relative">
+      <footer className="py-12 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="mb-8">
               <Crown className="w-12 h-12 text-gold mx-auto" />
             </div>
             
-            <h3 className="font-cinzel text-2xl text-royal-blue mb-4">Erica Santos' Grand Celebration</h3>
+            <h3 className="font-cinzel text-2xl text-white mb-4">Erica Santos' Grand Celebration</h3>
             
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
               <div className="flex items-center">
-                <span className="font-opensans text-slate-gray">ericasantos@gmail.com</span>
+                <span className="font-opensans text-white">ericasantos@gmail.com</span>
               </div>
               <div className="flex items-center">
-                <span className="font-opensans text-slate-gray">0918-654-3210</span>
+                <span className="font-opensans text-white">0918-654-3210</span>
               </div>
             </div>
             
@@ -652,14 +652,14 @@ export default function Home() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-slate-gray hover:text-gold transition-colors font-opensans"
+                  className="text-white hover:text-gold transition-colors font-opensans"
                 >
                   {item.label}
                 </button>
               ))}
             </div>
             
-            <p className="font-opensans text-sm text-slate-gray mb-4">
+            <p className="font-opensans text-sm text-white mb-4">
               Domain: ericasantoscelebration.com
             </p>
             
