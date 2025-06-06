@@ -464,7 +464,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-8"
             >
               Gift Registry
             </motion.h2>
@@ -480,7 +480,7 @@ export default function Home() {
                 <Crown className="w-16 h-16 text-gold mx-auto" />
               </div>
               
-              <p className="font-opensans text-lg text-slate-gray mb-8">
+              <p className="font-opensans text-lg text-white mb-8">
                 Your presence is the greatest gift, but if you'd like to contribute, we'd appreciate art supplies or cash gifts.
               </p>
               
@@ -499,7 +499,7 @@ export default function Home() {
       </section>
 
       {/* Maps Section */}
-      <section id="maps" className="py-20 relative">
+      <section id="maps" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
@@ -509,7 +509,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-royal-blue mb-8">Ceremony Location</h2>
+                <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-white mb-8">Ceremony Location</h2>
                 <div className="glass-effect rounded-3xl p-6">
                   <div className="aspect-video rounded-2xl overflow-hidden bg-slate-200 flex items-center justify-center">
                     <div className="text-center">
@@ -534,7 +534,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-royal-blue mb-8">Reception Location</h2>
+                <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-white mb-8">Reception Location</h2>
                 <div className="glass-effect rounded-3xl p-6">
                   <div className="aspect-video rounded-2xl overflow-hidden bg-slate-200 flex items-center justify-center">
                     <div className="text-center">
@@ -558,14 +558,14 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 relative">
+      <section id="faq" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-12 text-center"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12 text-center"
             >
               Frequently Asked Questions
             </motion.h2>
