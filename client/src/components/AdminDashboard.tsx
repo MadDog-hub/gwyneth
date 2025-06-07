@@ -145,7 +145,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
 
   const handleAddGuest = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!newGuest.firstName || !newGuest.lastName || !newGuest.role) {
       toast({
         title: "Missing Information",
@@ -214,7 +214,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                 </p>
               </div>
             </div>
-            
+
             <Button
               onClick={onLogout}
               variant="outline"
@@ -580,7 +580,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="role" className="font-opensans text-slate-gray">
@@ -598,6 +598,15 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                           <SelectItem value="Family">Family</SelectItem>
                           <SelectItem value="Friend">Friend</SelectItem>
                           <SelectItem value="Colleague">Colleague</SelectItem>
+                          <SelectItem value="Neighbor">Neighbor</SelectItem>
+                          <SelectItem value="Classmate">Classmate</SelectItem>
+                          <SelectItem value="Relative">Relative</SelectItem>
+                          <SelectItem value="18 Roses">18 Roses</SelectItem>
+                          <SelectItem value="18 Candles">18 Candles</SelectItem>
+                          <SelectItem value="18 Male Guests/Friends">18 Male Guests/Friends</SelectItem>
+                          <SelectItem value="18 Treasures">18 Treasures</SelectItem>
+                          <SelectItem value="18 Shots/Toasts">18 Shots/Toasts</SelectItem>
+                          <SelectItem value="Cake Ceremony">Cake Ceremony</SelectItem>
                           <SelectItem value="Other">Other</SelectItem>
                         </SelectContent>
                       </Select>
@@ -625,7 +634,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                       </Select>
                     </div>
                   </div>
-                  
+
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-royal-blue to-soft-lilac text-white font-opensans font-semibold py-4 btn-3d"
