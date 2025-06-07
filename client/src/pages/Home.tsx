@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Crown, MapPin, Calendar, Music, Play, Pause } from "lucide-react";
+import { Crown, MapPin, Calendar, Music, Play, Pause, Mail, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ThreeBackground from "@/components/ThreeBackground";
@@ -8,15 +8,14 @@ import CountdownTimer from "@/components/CountdownTimer";
 import Gallery from "@/components/Gallery";
 import RSVPForm from "@/components/RSVPForm";
 import GuestbookForm from "@/components/GuestbookForm";
+import Navigation from "@/components/Navigation";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
   const [musicPlaying, setMusicPlaying] = useState(false);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const transitionToMainPage = () => {
     setCurrentPage("main");
-    // Auto-start music after transition
     setTimeout(() => setMusicPlaying(true), 1000);
   };
 
@@ -25,70 +24,92 @@ export default function Home() {
   };
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-    setShowMobileMenu(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   if (currentPage === "invitation") {
     return (
-      <div className="min-h-screen gradient-royal flex items-center justify-center relative overflow-hidden">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-amber-50 via-amber-100 to-amber-200 flex items-center justify-center">
         <ThreeBackground scene="invitation" />
         
-        {/* Floating decorative elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="rotating absolute top-10 left-10 text-6xl text-soft-lilac/30">
-            <Crown />
+        <div className="relative w-full max-w-4xl aspect-[4/3]">
+          <div className="absolute inset-0 bg-gradient-to-b from-amber-200 to-amber-300 rounded-lg shadow-2xl border-2 border-amber-400">
+            <div className="absolute inset-2 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg"></div>
           </div>
-          <div className="floating delay-300 absolute top-20 right-20 text-4xl text-gold/40">
-            <Crown />
-          </div>
-          <div className="rotating delay-700 absolute bottom-40 left-1/4 text-5xl text-soft-lilac/25">
-            <Crown />
-          </div>
-        </div>
-
-        {/* Invitation Card */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotateY: -30 }}
-          animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="card-3d floating z-10"
-        >
-          <Card className="max-w-md mx-4 border-4 border-gold bg-white/95 backdrop-blur-sm shadow-2xl">
-            <CardContent className="p-12 text-center">
-              <div className="mb-8">
-                <div className="w-24 h-24 mx-auto bg-gradient-to-br from-gold to-soft-lilac rounded-full flex items-center justify-center mb-6">
-                  <Crown className="w-12 h-12 text-white" />
-                </div>
-              </div>
-              
-              <h1 className="font-cinzel text-4xl font-bold text-royal-blue mb-6 text-shadow">
-                You Are Invited!
-              </h1>
-              
-              <h2 className="font-lora text-2xl text-soft-lilac mb-8">
-                Erica Santos' Grand Celebration
-              </h2>
-              
-              <Button
-                onClick={transitionToMainPage}
-                className="btn-3d bg-gradient-to-r from-royal-blue to-soft-lilac text-white px-8 py-4 rounded-full font-lora text-lg"
+          
+          <motion.div
+            initial={{ rotateX: 0 }}
+            animate={{ rotateX: -45 }}
+            transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
+            className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-amber-300 to-amber-400 origin-bottom border-2 border-amber-400 rounded-t-lg"
+            style={{ transformStyle: "preserve-3d" }}
+          >
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-red-600 rounded-full border-4 border-red-700 flex items-center justify-center">
+              <Crown className="w-8 h-8 text-gold" />
+            </div>
+          </motion.div>
+          
+          <motion.div
+            initial={{ y: 50, opacity: 0, scale: 0.8 }}
+            animate={{ y: -20, opacity: 1, scale: 1 }}
+            transition={{ delay: 2.5, duration: 1.2, ease: "easeOut" }}
+            className="absolute inset-4 bg-white/95 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-xl border border-gold/30"
+          >
+            <div className="text-center h-full flex flex-col justify-center">
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 3, duration: 0.8 }}
               >
-                <Crown className="w-5 h-5 mr-2" />
-                Click to Enter
-              </Button>
-              
-              <div className="mt-8 flex justify-center space-x-4">
-                <Crown className="w-6 h-6 text-soft-lilac rotating" />
-                <Crown className="w-5 h-5 text-gold" />
-                <Crown className="w-6 h-6 text-soft-lilac rotating delay-300" />
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+                <div className="flex items-center justify-center mb-6">
+                  <Heart className="w-8 h-8 text-red-500 mr-2" />
+                  <Mail className="w-12 h-12 text-gold" />
+                  <Heart className="w-8 h-8 text-red-500 ml-2" />
+                </div>
+                
+                <h1 className="font-cinzel text-2xl md:text-4xl font-bold text-royal-blue mb-4">
+                  You're Invited
+                </h1>
+                
+                <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                
+                <h2 className="font-cinzel text-xl md:text-2xl font-semibold text-royal-blue mb-6">
+                  Erica Santos' Grand Celebration
+                </h2>
+                
+                <div className="space-y-3 mb-8 text-slate-gray">
+                  <p className="font-opensans">
+                    <Calendar className="inline w-4 h-4 mr-2" />
+                    July 20, 2025 • 6:00 PM
+                  </p>
+                  <p className="font-opensans">
+                    <MapPin className="inline w-4 h-4 mr-2" />
+                    Royal Gardens Estate
+                  </p>
+                </div>
+                
+                <p className="font-lora text-sm text-slate-gray mb-8 italic">
+                  "Where art meets elegance in perfect harmony"
+                </p>
+                
+                <Button
+                  onClick={transitionToMainPage}
+                  className="bg-royal-blue text-white font-opensans font-semibold px-6 py-3 btn-3d hover:scale-105 transition-all duration-300"
+                >
+                  Open Invitation
+                </Button>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     );
   }
@@ -97,7 +118,6 @@ export default function Home() {
     <div className="min-h-screen">
       <ThreeBackground scene="main" />
       
-      {/* Music Player */}
       <div className="music-player glass-effect rounded-full p-3">
         <Button
           variant="ghost"
@@ -109,7 +129,6 @@ export default function Home() {
         </Button>
       </div>
 
-      {/* Hidden YouTube iframe for music */}
       {musicPlaying && (
         <iframe
           src="https://www.youtube.com/embed/woLcQL-RaRU?autoplay=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
@@ -118,80 +137,8 @@ export default function Home() {
         />
       )}
       
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 py-4 glass-effect border-b border-gold/30">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <div className="font-cinzel text-xl font-bold text-white">
-              <Crown className="inline w-6 h-6 mr-2 text-gold" />
-              Erica's Celebration
-            </div>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex space-x-6">
-              {[
-                { label: "Home", id: "hero" },
-                { label: "About", id: "about" },
-                { label: "Timeline", id: "timeline" },
-                { label: "Gallery", id: "gallery" },
-                { label: "RSVP", id: "rsvp" },
-                { label: "Guestbook", id: "guestbook" },
-              ].map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-gold transition-colors font-opensans"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-            
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="lg:hidden text-white"
-              onClick={() => setShowMobileMenu(!showMobileMenu)}
-            >
-              <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-                <div className="w-full h-0.5 bg-current" />
-                <div className="w-full h-0.5 bg-current" />
-                <div className="w-full h-0.5 bg-current" />
-              </div>
-            </Button>
-          </div>
-          
-          {/* Mobile Navigation */}
-          {showMobileMenu && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-4 pb-4 space-y-2"
-            >
-              {[
-                { label: "Home", id: "hero" },
-                { label: "About", id: "about" },
-                { label: "Timeline", id: "timeline" },
-                { label: "Gallery", id: "gallery" },
-                { label: "RSVP", id: "rsvp" },
-                { label: "Guestbook", id: "guestbook" },
-              ].map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-white hover:text-gold transition-colors font-opensans py-2"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </motion.div>
-          )}
-        </div>
-      </nav>
+      <Navigation scrollToSection={scrollToSection} />
 
-      {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
         <div className="text-center z-10 relative max-w-4xl mx-auto px-4">
           <motion.div
@@ -214,58 +161,41 @@ export default function Home() {
             Erica Santos' Grand Celebration
           </motion.h1>
           
-          <motion.h2
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-lora text-2xl md:text-3xl text-soft-lilac mb-8"
+            className="font-lora text-xl md:text-2xl text-soft-lilac mb-8"
           >
-            July 20, 2025
-          </motion.h2>
+            A Royal Garden Celebration
+          </motion.p>
           
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="mb-8"
+            className="space-y-4 mb-12"
+          >
+            <p className="font-opensans text-lg text-slate-gray">
+              <Calendar className="inline w-6 h-6 mr-2 text-gold" />
+              July 20, 2025 at 6:00 PM
+            </p>
+            <p className="font-opensans text-lg text-slate-gray">
+              <MapPin className="inline w-6 h-6 mr-2 text-gold" />
+              Royal Gardens Estate
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
           >
             <CountdownTimer targetDate="2025-07-20T18:00:00" />
           </motion.div>
-          
-          <motion.blockquote
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="font-lora text-lg md:text-xl text-slate-gray mb-6 italic max-w-2xl mx-auto border-l-4 border-gold pl-6"
-          >
-            "The Lord is my shepherd; I shall not want." - Psalm 23:1
-          </motion.blockquote>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="font-opensans text-lg text-slate-gray max-w-xl mx-auto"
-          >
-            Step into a royal garden of joy and love
-          </motion.p>
-        </div>
-        
-        {/* Floating decorative elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="rotating absolute top-20 left-10 text-6xl text-soft-lilac/30">
-            <Crown />
-          </div>
-          <div className="floating delay-500 absolute top-40 right-20 text-4xl text-gold/40">
-            <Crown />
-          </div>
-          <div className="rotating delay-1000 absolute bottom-40 left-1/4 text-5xl text-soft-lilac/25">
-            <Crown />
-          </div>
         </div>
       </section>
 
-      {/* About Erica Section */}
       <section id="about" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -273,7 +203,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12"
             >
               About Erica
             </motion.h2>
@@ -286,7 +216,7 @@ export default function Home() {
               className="glass-effect rounded-3xl p-8 md:p-12"
             >
               <div className="mb-8">
-                <div className="w-32 h-32 mx-auto bg-gradient-to-br from-soft-lilac to-gold rounded-full flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
                   <Crown className="w-16 h-16 text-white" />
                 </div>
               </div>
@@ -316,7 +246,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Message from Parents Section */}
       <section id="message" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -324,7 +253,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-12"
             >
               Message from Parents
             </motion.h2>
@@ -336,21 +265,20 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="glass-effect rounded-3xl p-8 md:p-12"
             >
-              <div className="mb-8">
-                <Crown className="w-16 h-16 text-soft-lilac mx-auto" />
+              <p className="font-opensans text-lg text-slate-gray leading-relaxed italic">
+                "We are incredibly proud of our daughter Erica and her artistic achievements. This celebration marks not just another year of her life, but the blossoming of her talents and dreams. We invite you to join us in celebrating the beautiful person she has become and the bright future that lies ahead."
+              </p>
+              
+              <div className="mt-8">
+                <p className="font-lora text-xl text-soft-lilac">
+                  — Mr. & Mrs. Santos
+                </p>
               </div>
-              
-              <blockquote className="font-lora text-xl text-slate-gray italic leading-relaxed mb-4">
-                "Our dearest Erica, your journey has filled us with pride. Celebrate this day with the love you've always shared."
-              </blockquote>
-              
-              <p className="font-opensans text-lg text-slate-gray">- Mom & Dad</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Dress Code Section */}
       <section id="dresscode" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -358,7 +286,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12"
             >
               Dress Code
             </motion.h2>
@@ -374,7 +302,6 @@ export default function Home() {
                 Formal garden attire in our celebration colors. Women: elegant dresses, Men: suits with ties
               </p>
               
-              {/* Color Palette Display */}
               <div className="flex justify-center space-x-4 mb-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-royal-blue rounded-full border-4 border-white shadow-lg mx-auto"></div>
@@ -394,7 +321,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Event Timeline Section */}
       <section id="timeline" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -436,10 +362,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
       <Gallery />
 
-      {/* Event Video Section */}
       <section id="video" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -449,7 +373,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-8"
             >
-              Event Video
+              Debut Prenup Video
             </motion.h2>
             
             <motion.div
@@ -473,7 +397,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gift Registry Section */}
       <section id="gifts" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -516,7 +439,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Maps Section */}
       <section id="maps" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -575,7 +497,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section id="faq" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -617,14 +538,15 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass-effect rounded-2xl overflow-hidden"
+                  className="glass-effect rounded-2xl p-6"
                 >
                   <details className="group">
-                    <summary className="cursor-pointer p-6 font-lora text-xl text-royal-blue hover:bg-white/5 transition-colors">
+                    <summary className="font-lora text-lg text-white cursor-pointer list-none flex justify-between items-center">
                       <span>{faq.question}</span>
+                      <span className="text-gold group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <div className="p-6 pt-0 font-opensans text-slate-gray">
-                      {faq.answer}
+                    <div className="mt-4 pt-4 border-t border-white/20">
+                      <p className="font-opensans text-white/90">{faq.answer}</p>
                     </div>
                   </details>
                 </motion.div>
@@ -634,13 +556,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RSVP Section */}
       <RSVPForm />
 
-      {/* Digital Guestbook Section */}
       <GuestbookForm />
 
-      {/* Footer */}
       <footer className="py-12 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="text-center">
