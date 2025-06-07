@@ -13,6 +13,7 @@ import Navigation from "@/components/Navigation";
 import gcash from "@assets/gcash.jpg";
 
 import aboutme from "@assets/aboutme.jpg";
+import dresscode from "@assets/dresscode.jpg";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
@@ -277,8 +278,12 @@ export default function Home() {
               className="glass-effect rounded-3xl p-8 md:p-12"
             >
               <div className="mb-8">
-                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
-                  <Crown className="w-12 h-12 text-royal-blue" />
+                <div className="w-64 h-auto mx-auto mb-6">
+                  <img 
+                    src={dresscode} 
+                    alt="Dress Code Illustration"
+                    className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-gold"
+                  />
                 </div>
               </div>
               
