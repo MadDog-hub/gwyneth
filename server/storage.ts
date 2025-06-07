@@ -14,7 +14,7 @@ import {
   type GuestWithPlusGuests,
 } from "@shared/schema";
 import { db } from "./db";
-import { eq, and, desc } from "drizzle-orm";
+import { eq, and, desc, sql } from "drizzle-orm";
 
 export interface IStorage {
   // Guest operations
@@ -57,13 +57,16 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getGuestByName(firstName: string, lastName: string): Promise<GuestWithPlusGuests | undefined> {
-    const [guest] = await db
-      .select()
-      .from(guests)
-      .where(and(
-        eq(guests.firstName, firstName),
-        eq(guests.lastName, lastName)
-      ));
+    // Normalize input: trim whitespace and convert to lowercase for case-insensitive search
+    const normalizedFirstName = firstName.trim().toLowerCase();
+    const normalizedLastName = lastName.trim().toLowerCase();
+    
+    // Get all guests and perform case-insensitive comparison
+    const allGuests = await db.select().from(guests);
+    const guest = allGuests.find(g => 
+      g.firstName.trim().toLowerCase() === normalizedFirstName && 
+      g.lastName.trim().toLowerCase() === normalizedLastName
+    );
 
     if (!guest) return undefined;
 
