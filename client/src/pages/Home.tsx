@@ -10,6 +10,8 @@ import RSVPForm from "@/components/RSVPForm";
 import GuestbookForm from "@/components/GuestbookForm";
 import Navigation from "@/components/Navigation";
 
+import gcash from "@assets/gcash.jpg";
+
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
   const [musicPlaying, setMusicPlaying] = useState(false);
@@ -117,7 +119,6 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <ThreeBackground scene="main" />
-
       <div className="music-player glass-effect rounded-full p-3">
         <Button
           variant="ghost"
@@ -128,7 +129,6 @@ export default function Home() {
           {musicPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
         </Button>
       </div>
-
       {musicPlaying && (
         <iframe
           src="https://www.youtube.com/embed/woLcQL-RaRU?autoplay=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
@@ -136,9 +136,7 @@ export default function Home() {
           allow="autoplay"
         />
       )}
-
       <Navigation scrollToSection={scrollToSection} />
-
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
         <div className="text-center z-10 relative max-w-4xl mx-auto px-4">
           <motion.div
@@ -195,7 +193,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       <section id="about" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -245,7 +242,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="message" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -278,7 +274,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="dresscode" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -320,7 +315,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="timeline" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -361,9 +355,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <Gallery />
-
       <section id="video" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -397,7 +389,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="gifts" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -429,7 +420,7 @@ export default function Home() {
                 <h3 className="font-lora text-xl text-soft-lilac mb-4">GCash Payment</h3>
                 <div className="w-64 h-auto mx-auto">
                   <img 
-                    src="/attached_assets/gcash_1749268566635.jpg" 
+                    src={gcash} 
                     alt="GCash QR Code"
                     className="w-full h-auto object-contain rounded-xl"
                   />
@@ -439,7 +430,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="maps" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -497,7 +487,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="faq" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -556,11 +545,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <RSVPForm />
-
       <GuestbookForm />
-
       <footer className="py-12 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="text-center">
