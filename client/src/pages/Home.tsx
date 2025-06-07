@@ -149,15 +149,27 @@ export default function Home() {
       </div>
       {musicPlaying && (
         <audio
-          autoPlay
+          ref={(audio) => {
+            if (audio) {
+              audio.volume = 0.3;
+              audio.play().catch(() => {
+                console.log("Auto-play blocked, user interaction required");
+                setMusicPlaying(false);
+              });
+            }
+          }}
           loop
           className="hidden"
+          preload="auto"
           onError={() => {
             console.log("Audio failed to load");
             setMusicPlaying(false);
           }}
+          onLoadStart={() => console.log("Audio loading started")}
+          onCanPlay={() => console.log("Audio can start playing")}
         >
-          <source src="/src/assets/background-music.mp3" type="audio/mpeg" />
+          <source src="/attached_assets/background-music_1749277320612.mp3" type="audio/mpeg" />
+          <source src="/attached_assets/background-music_1749277320612.mp3" type="audio/mp3" />
           Your browser does not support the audio element.
         </audio>
       )}
