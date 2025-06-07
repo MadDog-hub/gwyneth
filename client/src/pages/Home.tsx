@@ -158,11 +158,18 @@ export default function Home() {
         </Button>
       </div>
       {musicPlaying && (
-        <iframe
-          src="https://www.youtube.com/embed/woLcQL-RaRU?autoplay=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+        <audio
+          autoPlay
+          loop
           className="hidden"
-          allow="autoplay"
-        />
+          onError={() => {
+            console.log("Audio failed to load");
+            setMusicPlaying(false);
+          }}
+        >
+          <source src="/src/assets/background-music.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
       )}
       <Navigation scrollToSection={scrollToSection} />
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
