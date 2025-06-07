@@ -21,10 +21,22 @@ export default function Home() {
   const [musicPlaying, setMusicPlaying] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const transitionToMainPage = () => {
     setCurrentPage("main");
-    setTimeout(() => setMusicPlaying(true), 1000);
+    // Start music after user interaction (clicking the button)
+    setTimeout(() => {
+      if (audioRef.current) {
+        audioRef.current.volume = 0.3;
+        audioRef.current.play().then(() => {
+          setMusicPlaying(true);
+          console.log("Music started successfully");
+        }).catch(error => {
+          console.log("Audio play failed:", error);
+        });
+      }
+    }, 1000);
   };
 
   const toggleMusic = () => {
@@ -138,10 +150,8 @@ export default function Home() {
     <div className="min-h-screen">
       <ThreeBackground scene="main" />
       <audio
-        autoPlay
+        ref={audioRef}
         loop
-        className="hidden"
-        volume={0.3}
         preload="auto"
         onError={() => console.log("Audio failed to load")}
         onLoadStart={() => console.log("Audio loading started")}
