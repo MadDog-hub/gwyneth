@@ -258,7 +258,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="location" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -340,7 +339,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="dresscode" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -452,7 +450,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="glass-effect rounded-3xl p-8 md:p-12"
             >
-              <p className="font-opensans text-lg text-slate-gray leading-relaxed italic">
+              <p className="font-opensans text-lg leading-relaxed italic text-[#ffffff]">
                 "We are incredibly proud of our daughter Erica and her artistic achievements. This celebration marks not just another year of her life, but the blossoming of her talents and dreams. We invite you to join us in celebrating the beautiful person she has become and the bright future that lies ahead."
               </p>
 
