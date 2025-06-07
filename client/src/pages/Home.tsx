@@ -58,19 +58,9 @@ export default function Home() {
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-amber-50 via-amber-100 to-amber-200 flex items-center justify-center">
         <ThreeBackground scene="invitation" />
 
-        {/* Browser Compatibility Notice */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-royal-blue text-white p-3 text-center">
-          <div className="max-w-4xl mx-auto">
-            <p className="font-opensans text-sm">
-              🎵 <strong>For the best experience with music and animations:</strong> Please open in Google Chrome, Firefox, or Edge browser. 
-              <span className="opacity-75 block mt-1">
-                Safari and in-app browsers (Messenger, Instagram, Facebook) may not support all features.
-              </span>
-            </p>
-          </div>
-        </div>
 
-        <div className="relative w-full max-w-4xl aspect-[4/3] mt-16">
+
+        <div className="relative w-full max-w-4xl aspect-[4/3]">
           <div className="absolute inset-0 bg-gradient-to-b from-amber-200 to-amber-300 rounded-lg shadow-2xl border-2 border-amber-400">
             <div className="absolute inset-2 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg"></div>
           </div>
