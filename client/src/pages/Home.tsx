@@ -528,8 +528,8 @@ export default function Home() {
       </section>
       <Gallery />
       <section id="video" className="py-20 relative gradient-green-blue">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <div className="w-full px-4">
+          <div className="w-full text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -544,13 +544,13 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8"
+              className="w-full"
             >
               {showVideo && (
-                <div className="flex justify-end mb-4">
+                <div className="flex justify-end mb-4 px-4">
                   <Button
                     onClick={handleStopVideo}
-                    className="bg-red-600 hover:bg-red-700 text-white"
+                    className="bg-red-600 hover:bg-red-700 text-white z-10"
                     size="sm"
                   >
                     Stop Video
@@ -558,7 +558,7 @@ export default function Home() {
                 </div>
               )}
 
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold">
+              <div className="w-full h-[70vh] md:h-[80vh] overflow-hidden shadow-lg border-4 border-gold rounded-2xl">
                 {!showVideo ? (
                   <div 
                     className="w-full h-full bg-gradient-to-br from-royal-blue/20 to-soft-lilac/20 flex items-center justify-center cursor-pointer group"
