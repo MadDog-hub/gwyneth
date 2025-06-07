@@ -12,6 +12,8 @@ import Navigation from "@/components/Navigation";
 
 import gcash from "@assets/gcash.jpg";
 
+import aboutme from "@assets/aboutme.jpg";
+
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
   const [musicPlaying, setMusicPlaying] = useState(false);
@@ -221,7 +223,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2">
                   <img 
-                    src="/attached_assets/aboutme_1749268570075.jpg" 
+                    src={aboutme} 
                     alt="Erica Santos"
                     className="w-full h-96 object-contain rounded-2xl shadow-lg border-4 border-gold"
                   />
