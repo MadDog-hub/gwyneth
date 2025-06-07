@@ -17,6 +17,8 @@ import aboutme from "@assets/aboutme.jpg";
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
   const [musicPlaying, setMusicPlaying] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   const transitionToMainPage = () => {
     setCurrentPage("main");
@@ -25,6 +27,16 @@ export default function Home() {
 
   const toggleMusic = () => {
     setMusicPlaying(!musicPlaying);
+  };
+
+  const handlePlayVideo = () => {
+    setShowVideo(true);
+    setVideoPlaying(true);
+  };
+
+  const handleStopVideo = () => {
+    setShowVideo(false);
+    setVideoPlaying(false);
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -131,7 +143,7 @@ export default function Home() {
           {musicPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
         </Button>
       </div>
-      {musicPlaying && (
+      {musicPlaying && !videoPlaying && (
         <iframe
           src="https://www.youtube.com/embed/woLcQL-RaRU?autoplay=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
           className="hidden"
@@ -377,15 +389,37 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="glass-effect rounded-3xl p-8"
             >
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold">
-                <iframe 
-                  src="https://www.youtube.com/embed/Us5WiFfhvIk?autoplay=1" 
-                  className="w-full h-full" 
-                  frameBorder="0" 
-                  allowFullScreen
-                  allow="autoplay"
-                  title="Debut Prenup Video"
-                />
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold relative">
+                {!showVideo ? (
+                  <div 
+                    className="w-full h-full bg-gradient-to-br from-royal-blue/20 to-soft-lilac/20 flex items-center justify-center cursor-pointer group"
+                    onClick={handlePlayVideo}
+                  >
+                    <div className="text-center">
+                      <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                        <Play className="w-8 h-8 text-royal-blue ml-1" />
+                      </div>
+                      <p className="font-lora text-white text-lg">Play Debut Prenup Video</p>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <iframe 
+                      src="https://www.youtube.com/embed/Us5WiFfhvIk?autoplay=1&controls=1"
+                      className="w-full h-full" 
+                      frameBorder="0" 
+                      allowFullScreen
+                      title="Debut Prenup Video"
+                    />
+                    <Button
+                      onClick={handleStopVideo}
+                      className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white"
+                      size="sm"
+                    >
+                      Stop Video
+                    </Button>
+                  </>
+                )}
               </div>
             </motion.div>
           </div>
