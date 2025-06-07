@@ -291,9 +291,26 @@ export default function Home() {
                 </div>
               </div>
               
-              <p className="font-opensans text-lg text-white leading-relaxed">
-                Erica Santos, a 25-year-old artist from Manila, loves painting nature and dreams of a garden-themed celebration. Her artistic vision and love for natural beauty have inspired this magnificent royal garden celebration, where art meets elegance in perfect harmony.
-              </p>
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="md:w-1/2">
+                  <img 
+                    src="/attached_assets/aboutme_1749267313288.jpg" 
+                    alt="Erica Santos"
+                    className="w-full h-96 object-contain rounded-2xl shadow-lg border-4 border-gold"
+                  />
+                </div>
+                <div className="md:w-1/2">
+                  <p className="font-opensans text-lg text-white leading-relaxed mb-6">
+                    Erica Santos, a passionate 25-year-old artist from Manila, has always found inspiration in the natural world around her. Her love for painting landscapes, flowers, and garden scenes reflects her deep connection with nature's beauty.
+                  </p>
+                  <p className="font-opensans text-lg text-white leading-relaxed mb-6">
+                    Born into a family that appreciates art and creativity, Erica developed her artistic talents from a young age. She specializes in watercolor paintings that capture the delicate essence of gardens, blooming flowers, and serene natural settings.
+                  </p>
+                  <p className="font-opensans text-lg text-white leading-relaxed">
+                    Her dream of a garden-themed celebration stems from her belief that life, like a garden, blooms most beautifully when nurtured with love, care, and the right conditions. This magnificent royal garden celebration represents the culmination of her artistic vision, where art meets elegance in perfect harmony.
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -403,7 +420,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass-effect rounded-2xl p-6 flex items-center justify-start space-x-4"
+                  className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 flex items-center justify-start space-x-4 shadow-lg border border-gold/20"
                 >
                   <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
                     <item.icon className="w-6 h-6 text-royal-blue" />
@@ -444,11 +461,11 @@ export default function Home() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold">
                 <iframe 
-                  src="https://www.youtube.com/embed/samplevideo" 
+                  src="https://www.youtube.com/embed/Us5WiFfhvIk" 
                   className="w-full h-full" 
                   frameBorder="0" 
                   allowFullScreen
-                  title="Event Video"
+                  title="Debut Prenup Video"
                 />
               </div>
             </motion.div>
@@ -486,11 +503,12 @@ export default function Home() {
               
               <div className="bg-white rounded-2xl p-6 max-w-md mx-auto border-2 border-soft-lilac">
                 <h3 className="font-lora text-xl text-soft-lilac mb-4">GCash Payment</h3>
-                <div className="w-48 h-48 mx-auto bg-slate-200 rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-slate-300 rounded-lg mx-auto mb-2"></div>
-                    <p className="font-opensans text-sm text-slate-gray">GCash QR Code</p>
-                  </div>
+                <div className="w-64 h-auto mx-auto">
+                  <img 
+                    src="/attached_assets/gcash_1749267450433.jpg" 
+                    alt="GCash QR Code"
+                    className="w-full h-auto object-contain rounded-xl"
+                  />
                 </div>
               </div>
             </motion.div>
