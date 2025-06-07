@@ -6,7 +6,6 @@ import gallery4 from "@assets/gallery4_1749267342786.jpg";
 import gallery5 from "@assets/gallery5_1749267342785.jpg";
 import gallery6 from "@assets/gallery6_1749267342785.jpg";
 import gallery7 from "@assets/gallery7_1749267342783.jpg";
-import gallery8 from "@assets/gallery8.jpg";
 
 const galleryImages = [
   { src: gallery1, alt: "Erica Santos - Portrait 1" },
@@ -16,7 +15,6 @@ const galleryImages = [
   { src: gallery5, alt: "Erica Santos - Portrait 5" },
   { src: gallery6, alt: "Erica Santos - Portrait 6" },
   { src: gallery7, alt: "Erica Santos - Portrait 7" },
-  { src: gallery8, alt: "Erica Santos - Portrait 8" },
 ];
 
 export default function Gallery() {
