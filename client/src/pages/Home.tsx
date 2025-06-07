@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Crown, MapPin, Calendar, Music, Play, Pause, Mail, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -137,42 +137,21 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <ThreeBackground scene="main" />
-      <div className="fixed bottom-8 right-8 z-50 glass-effect rounded-full p-3">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={toggleMusic}
-          className="text-gold hover:text-white transition-colors"
-        >
-          {musicPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-        </Button>
-      </div>
-      {musicPlaying && (
-        <audio
-          ref={(audio) => {
-            if (audio) {
-              audio.volume = 0.3;
-              audio.play().catch(() => {
-                console.log("Auto-play blocked, user interaction required");
-                setMusicPlaying(false);
-              });
-            }
-          }}
-          loop
-          className="hidden"
-          preload="auto"
-          onError={() => {
-            console.log("Audio failed to load");
-            setMusicPlaying(false);
-          }}
-          onLoadStart={() => console.log("Audio loading started")}
-          onCanPlay={() => console.log("Audio can start playing")}
-        >
-          <source src="/attached_assets/background-music_1749277320612.mp3" type="audio/mpeg" />
-          <source src="/attached_assets/background-music_1749277320612.mp3" type="audio/mp3" />
-          Your browser does not support the audio element.
-        </audio>
-      )}
+      <audio
+        autoPlay
+        loop
+        className="hidden"
+        volume={0.3}
+        preload="auto"
+        onError={() => console.log("Audio failed to load")}
+        onLoadStart={() => console.log("Audio loading started")}
+        onCanPlay={() => console.log("Audio ready to play")}
+        onPlay={() => console.log("Audio started playing")}
+        style={{ display: 'none' }}
+      >
+        <source src="/attached_assets/background-music_1749277320612.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
       <Navigation scrollToSection={scrollToSection} />
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
         <div className="text-center z-10 relative max-w-4xl mx-auto px-4">
