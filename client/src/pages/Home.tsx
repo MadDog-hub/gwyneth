@@ -586,9 +586,9 @@ export default function Home() {
                 Your presence is the greatest gift, but if you'd like to contribute, we'd appreciate art supplies or cash gifts.
               </p>
 
-              <div className="bg-white rounded-2xl p-6 max-w-md mx-auto border-2 border-soft-lilac">
-                <h3 className="font-lora text-xl text-soft-lilac mb-4">GCash Payment</h3>
-                <div className="w-64 h-auto mx-auto">
+              <div className="bg-white rounded-2xl p-4 md:p-6 w-full max-w-xs md:max-w-md mx-auto border-2 border-soft-lilac">
+                <h3 className="font-lora text-lg md:text-xl text-soft-lilac mb-4 text-center">GCash Payment</h3>
+                <div className="w-full max-w-[240px] md:max-w-[280px] mx-auto">
                   <img 
                     src={gcash} 
                     alt="GCash QR Code"
