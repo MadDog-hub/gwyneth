@@ -523,7 +523,19 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="glass-effect rounded-3xl p-8"
             >
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold relative">
+              {showVideo && (
+                <div className="flex justify-end mb-4">
+                  <Button
+                    onClick={handleStopVideo}
+                    className="bg-red-600 hover:bg-red-700 text-white"
+                    size="sm"
+                  >
+                    Stop Video
+                  </Button>
+                </div>
+              )}
+              
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold">
                 {!showVideo ? (
                   <div 
                     className="w-full h-full bg-gradient-to-br from-royal-blue/20 to-soft-lilac/20 flex items-center justify-center cursor-pointer group"
@@ -537,22 +549,13 @@ export default function Home() {
                     </div>
                   </div>
                 ) : (
-                  <>
-                    <iframe 
-                      src="https://www.youtube.com/embed/Us5WiFfhvIk?controls=1"
-                      className="w-full h-full" 
-                      frameBorder="0" 
-                      allowFullScreen
-                      title="Debut Prenup Video"
-                    />
-                    <Button
-                      onClick={handleStopVideo}
-                      className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white"
-                      size="sm"
-                    >
-                      Stop Video
-                    </Button>
-                  </>
+                  <iframe 
+                    src="https://www.youtube.com/embed/Us5WiFfhvIk?controls=1"
+                    className="w-full h-full" 
+                    frameBorder="0" 
+                    allowFullScreen
+                    title="Debut Prenup Video"
+                  />
                 )}
               </div>
             </motion.div>
