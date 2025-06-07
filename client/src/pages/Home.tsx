@@ -143,7 +143,7 @@ export default function Home() {
           {musicPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
         </Button>
       </div>
-      {musicPlaying && !videoPlaying && (
+      {musicPlaying && (
         <iframe
           src="https://www.youtube.com/embed/woLcQL-RaRU?autoplay=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
           className="hidden"
@@ -405,7 +405,7 @@ export default function Home() {
                 ) : (
                   <>
                     <iframe 
-                      src="https://www.youtube.com/embed/Us5WiFfhvIk?autoplay=1&controls=1"
+                      src="https://www.youtube.com/embed/Us5WiFfhvIk?controls=1"
                       className="w-full h-full" 
                       frameBorder="0" 
                       allowFullScreen
