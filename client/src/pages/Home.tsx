@@ -224,7 +224,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2">
                   <img 
-                    src="/attached_assets/aboutme_new.jpg" 
+                    src="/attached_assets/aboutme_1749268570075.jpg" 
                     alt="Erica Santos"
                     className="w-full h-96 object-contain rounded-2xl shadow-lg border-4 border-gold"
                   />
@@ -385,10 +385,11 @@ export default function Home() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold">
                 <iframe 
-                  src="https://www.youtube.com/embed/Us5WiFfhvIk" 
+                  src="https://www.youtube.com/embed/Us5WiFfhvIk?autoplay=1" 
                   className="w-full h-full" 
                   frameBorder="0" 
                   allowFullScreen
+                  allow="autoplay"
                   title="Debut Prenup Video"
                 />
               </div>
@@ -428,7 +429,7 @@ export default function Home() {
                 <h3 className="font-lora text-xl text-soft-lilac mb-4">GCash Payment</h3>
                 <div className="w-64 h-auto mx-auto">
                   <img 
-                    src="/attached_assets/gcash_new.jpg" 
+                    src="/attached_assets/gcash_1749268566635.jpg" 
                     alt="GCash QR Code"
                     className="w-full h-auto object-contain rounded-xl"
                   />
