@@ -258,6 +258,89 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section id="location" className="py-20 relative gradient-green-blue">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12"
+            >
+              Reception Location
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="glass-effect rounded-3xl p-8 md:p-12"
+            >
+              <div className="mb-8">
+                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                  <MapPin className="w-12 h-12 text-white" />
+                </div>
+              </div>
+              
+              <h3 className="font-lora text-2xl text-white mb-4">Royal Gardens Ballroom</h3>
+              <p className="font-opensans text-lg text-white mb-2">123 Garden Vista Boulevard</p>
+              <p className="font-opensans text-lg text-white mb-8">Makati City, Metro Manila 1200</p>
+              
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold mb-6">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5547!2d121.0244!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMzJzE3LjAiTiAxMjHCsDAxJzI4LjAiRQ!5e0!3m2!1sen!2sph!4v1234567890"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  aria-hidden="false"
+                  tabIndex={0}
+                  title="Royal Gardens Ballroom Location"
+                />
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6 text-left">
+                <div className="bg-white/10 rounded-2xl p-6">
+                  <h4 className="font-lora text-xl text-gold mb-3">Venue Details</h4>
+                  <ul className="font-opensans text-white space-y-2">
+                    <li>• Grand ballroom with garden views</li>
+                    <li>• Capacity: 200+ guests</li>
+                    <li>• Climate-controlled environment</li>
+                    <li>• Professional sound system</li>
+                  </ul>
+                </div>
+                <div className="bg-white/10 rounded-2xl p-6">
+                  <h4 className="font-lora text-xl text-gold mb-3">Amenities</h4>
+                  <ul className="font-opensans text-white space-y-2">
+                    <li>• Complimentary valet parking</li>
+                    <li>• Wheelchair accessible</li>
+                    <li>• Bridal suite available</li>
+                    <li>• Professional lighting</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-8">
+                <Button
+                  asChild
+                  className="bg-gold text-royal-blue font-semibold btn-3d hover:scale-105 transition-all duration-300"
+                >
+                  <a 
+                    href="https://www.google.com/maps/dir//Royal+Gardens+Ballroom,+123+Garden+Vista+Boulevard,+Makati+City,+Metro+Manila" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Get Directions
+                  </a>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <section id="dresscode" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -516,63 +599,6 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-      <section id="maps" className="py-20 relative gradient-green-blue">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-white mb-8">Ceremony Location</h2>
-                <div className="glass-effect rounded-3xl p-6">
-                  <div className="aspect-video rounded-2xl overflow-hidden bg-slate-200 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="w-16 h-16 text-slate-gray mx-auto mb-2" />
-                      <p className="font-opensans text-slate-gray mb-4">Royal Gardens Estate - Ceremony</p>
-                      <Button
-                        asChild
-                        className="bg-royal-blue text-white btn-3d"
-                      >
-                        <a href="https://maps.app.goo.gl/RoyalGardensCeremony" target="_blank" rel="noopener noreferrer">
-                          View on Maps
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-white mb-8">Reception Location</h2>
-                <div className="glass-effect rounded-3xl p-6">
-                  <div className="aspect-video rounded-2xl overflow-hidden bg-slate-200 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="w-16 h-16 text-slate-gray mx-auto mb-2" />
-                      <p className="font-opensans text-slate-gray mb-4">Royal Gardens Estate - Reception</p>
-                      <Button
-                        asChild
-                        className="bg-royal-blue text-white btn-3d"
-                      >
-                        <a href="https://maps.app.goo.gl/RoyalGardensReception" target="_blank" rel="noopener noreferrer">
-                          View on Maps
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
           </div>
         </div>
       </section>
