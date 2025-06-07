@@ -39,12 +39,12 @@ export default function Home() {
     return (
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-amber-50 via-amber-100 to-amber-200 flex items-center justify-center">
         <ThreeBackground scene="invitation" />
-        
+
         <div className="relative w-full max-w-4xl aspect-[4/3]">
           <div className="absolute inset-0 bg-gradient-to-b from-amber-200 to-amber-300 rounded-lg shadow-2xl border-2 border-amber-400">
             <div className="absolute inset-2 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg"></div>
           </div>
-          
+
           <motion.div
             initial={{ rotateX: 0 }}
             animate={{ rotateX: -45 }}
@@ -56,7 +56,7 @@ export default function Home() {
               <Crown className="w-8 h-8 text-gold" />
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ y: 50, opacity: 0, scale: 0.8 }}
             animate={{ y: -20, opacity: 1, scale: 1 }}
@@ -74,17 +74,17 @@ export default function Home() {
                   <Mail className="w-12 h-12 text-gold" />
                   <Heart className="w-8 h-8 text-red-500 ml-2" />
                 </div>
-                
+
                 <h1 className="font-cinzel text-2xl md:text-4xl font-bold text-royal-blue mb-4">
                   You're Invited
                 </h1>
-                
+
                 <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
-                
+
                 <h2 className="font-cinzel text-xl md:text-2xl font-semibold text-royal-blue mb-6">
                   Erica Santos' Grand Celebration
                 </h2>
-                
+
                 <div className="space-y-3 mb-8 text-slate-gray">
                   <p className="font-opensans">
                     <Calendar className="inline w-4 h-4 mr-2" />
@@ -95,11 +95,11 @@ export default function Home() {
                     Royal Gardens Estate
                   </p>
                 </div>
-                
+
                 <p className="font-lora text-sm text-slate-gray mb-8 italic">
                   "Where art meets elegance in perfect harmony"
                 </p>
-                
+
                 <Button
                   onClick={transitionToMainPage}
                   className="bg-royal-blue text-white font-opensans font-semibold px-6 py-3 btn-3d hover:scale-105 transition-all duration-300"
@@ -117,7 +117,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <ThreeBackground scene="main" />
-      
+
       <div className="music-player glass-effect rounded-full p-3">
         <Button
           variant="ghost"
@@ -136,7 +136,7 @@ export default function Home() {
           allow="autoplay"
         />
       )}
-      
+
       <Navigation scrollToSection={scrollToSection} />
 
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
@@ -151,7 +151,7 @@ export default function Home() {
               <Crown className="w-12 h-12 text-gold" />
             </div>
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ export default function Home() {
           >
             Erica Santos' Grand Celebration
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -169,7 +169,7 @@ export default function Home() {
           >
             A Royal Garden Celebration
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ export default function Home() {
               Royal Gardens Estate
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -207,7 +207,7 @@ export default function Home() {
             >
               About Erica
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -220,11 +220,11 @@ export default function Home() {
                   <Crown className="w-16 h-16 text-white" />
                 </div>
               </div>
-              
+
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2">
                   <img 
-                    src="/attached_assets/aboutme_1749267313288.jpg" 
+                    src="/attached_assets/aboutme_new.jpg" 
                     alt="Erica Santos"
                     className="w-full h-96 object-contain rounded-2xl shadow-lg border-4 border-gold"
                   />
@@ -257,7 +257,7 @@ export default function Home() {
             >
               Message from Parents
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -268,7 +268,7 @@ export default function Home() {
               <p className="font-opensans text-lg text-slate-gray leading-relaxed italic">
                 "We are incredibly proud of our daughter Erica and her artistic achievements. This celebration marks not just another year of her life, but the blossoming of her talents and dreams. We invite you to join us in celebrating the beautiful person she has become and the bright future that lies ahead."
               </p>
-              
+
               <div className="mt-8">
                 <p className="font-lora text-xl text-soft-lilac">
                   — Mr. & Mrs. Santos
@@ -290,7 +290,7 @@ export default function Home() {
             >
               Dress Code
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -301,7 +301,7 @@ export default function Home() {
               <p className="font-opensans text-lg text-white mb-8">
                 Formal garden attire in our celebration colors. Women: elegant dresses, Men: suits with ties
               </p>
-              
+
               <div className="flex justify-center space-x-4 mb-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-royal-blue rounded-full border-4 border-white shadow-lg mx-auto"></div>
@@ -332,7 +332,7 @@ export default function Home() {
             >
               Event Timeline
             </motion.h2>
-            
+
             <div className="space-y-6">
               {[
                 { time: "5:30 PM", event: "Guests Arrive", icon: Calendar },
@@ -375,7 +375,7 @@ export default function Home() {
             >
               Debut Prenup Video
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -408,7 +408,7 @@ export default function Home() {
             >
               Gift Registry
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -419,16 +419,16 @@ export default function Home() {
               <div className="mb-8">
                 <Crown className="w-16 h-16 text-gold mx-auto" />
               </div>
-              
+
               <p className="font-opensans text-lg text-white mb-8">
                 Your presence is the greatest gift, but if you'd like to contribute, we'd appreciate art supplies or cash gifts.
               </p>
-              
+
               <div className="bg-white rounded-2xl p-6 max-w-md mx-auto border-2 border-soft-lilac">
                 <h3 className="font-lora text-xl text-soft-lilac mb-4">GCash Payment</h3>
                 <div className="w-64 h-auto mx-auto">
                   <img 
-                    src="/attached_assets/gcash_1749267450433.jpg" 
+                    src="/attached_assets/gcash_new.jpg" 
                     alt="GCash QR Code"
                     className="w-full h-auto object-contain rounded-xl"
                   />
@@ -467,7 +467,7 @@ export default function Home() {
                   </div>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -508,7 +508,7 @@ export default function Home() {
             >
               Frequently Asked Questions
             </motion.h2>
-            
+
             <div className="space-y-4">
               {[
                 {
@@ -566,9 +566,9 @@ export default function Home() {
             <div className="mb-8">
               <Crown className="w-12 h-12 text-gold mx-auto" />
             </div>
-            
+
             <h3 className="font-cinzel text-2xl text-white mb-4">Erica Santos' Grand Celebration</h3>
-            
+
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
               <div className="flex items-center">
                 <span className="font-opensans text-white">ericasantos@gmail.com</span>
@@ -577,7 +577,7 @@ export default function Home() {
                 <span className="font-opensans text-white">0918-654-3210</span>
               </div>
             </div>
-            
+
             <div className="flex justify-center space-x-6 mb-8">
               {[
                 { label: "Home", id: "hero" },
@@ -595,11 +595,11 @@ export default function Home() {
                 </button>
               ))}
             </div>
-            
+
             <p className="font-opensans text-sm text-white mb-4">
               Domain: ericasantoscelebration.com
             </p>
-            
+
             <Button
               asChild
               variant="ghost"
