@@ -133,7 +133,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <ThreeBackground scene="main" />
-      <div className="music-player glass-effect rounded-full p-3">
+      <div className="fixed bottom-8 right-8 z-50 glass-effect rounded-full p-3">
         <Button
           variant="ghost"
           size="icon"
@@ -256,7 +256,97 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="message" className="py-20 relative">
+
+      <section id="dresscode" className="py-20 relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-12"
+            >
+              Dress Code
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="glass-effect rounded-3xl p-8 md:p-12"
+            >
+              <div className="mb-8">
+                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                  <Crown className="w-12 h-12 text-royal-blue" />
+                </div>
+              </div>
+              
+              <p className="font-opensans text-xl text-slate-gray mb-8 leading-relaxed">
+                <strong>Formal Garden Attire</strong><br />
+                We invite you to dress elegantly in celebration colors that complement our royal garden theme.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="text-center">
+                  <h3 className="font-lora text-2xl text-royal-blue mb-4">For Ladies</h3>
+                  <p className="font-opensans text-slate-gray">
+                    Elegant cocktail dresses, formal gowns, or sophisticated separates in celebration colors. 
+                    Floral patterns and garden-inspired accessories are welcome.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <h3 className="font-lora text-2xl text-royal-blue mb-4">For Gentlemen</h3>
+                  <p className="font-opensans text-slate-gray">
+                    Business formal or cocktail attire - suits with dress shirts and ties. 
+                    Pocket squares in celebration colors are encouraged.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="mb-8">
+                <h3 className="font-lora text-2xl text-royal-blue mb-6">Celebration Color Palette</h3>
+                <div className="flex justify-center flex-wrap gap-6">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-blue-800 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
+                    <p className="font-opensans text-sm font-semibold text-slate-gray">Royal Blue</p>
+                    <p className="font-opensans text-xs text-slate-gray">#1E3A8A</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-sky-300 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
+                    <p className="font-opensans text-sm font-semibold text-slate-gray">Sky Blue</p>
+                    <p className="font-opensans text-xs text-slate-gray">#93C5FD</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-pink-300 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
+                    <p className="font-opensans text-sm font-semibold text-slate-gray">Soft Lilac</p>
+                    <p className="font-opensans text-xs text-slate-gray">#F9A8D4</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-yellow-500 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
+                    <p className="font-opensans text-sm font-semibold text-slate-gray">Gold</p>
+                    <p className="font-opensans text-xs text-slate-gray">#FFD700</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-slate-600 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
+                    <p className="font-opensans text-sm font-semibold text-slate-gray">Slate Gray</p>
+                    <p className="font-opensans text-xs text-slate-gray">#6B7280</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-royal-blue/10 rounded-2xl p-6 border-l-4 border-royal-blue">
+                <p className="font-opensans text-slate-gray italic">
+                  <strong>Note:</strong> Please avoid wearing white, ivory, or cream as these colors are reserved for the celebrant. 
+                  We encourage garden-inspired accessories like floral jewelry or botanical prints.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section id="message" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
@@ -283,47 +373,6 @@ export default function Home() {
                 <p className="font-lora text-xl text-soft-lilac">
                   — Mr. & Mrs. Santos
                 </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      <section id="dresscode" className="py-20 relative gradient-green-blue">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12"
-            >
-              Dress Code
-            </motion.h2>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12"
-            >
-              <p className="font-opensans text-lg text-white mb-8">
-                Formal garden attire in our celebration colors. Women: elegant dresses, Men: suits with ties
-              </p>
-
-              <div className="flex justify-center space-x-4 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-royal-blue rounded-full border-4 border-white shadow-lg mx-auto"></div>
-                  <p className="font-opensans text-sm text-slate-gray mt-2">Royal Blue</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-soft-lilac rounded-full border-4 border-white shadow-lg mx-auto"></div>
-                  <p className="font-opensans text-sm text-slate-gray mt-2">Soft Lilac</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gold rounded-full border-4 border-white shadow-lg mx-auto"></div>
-                  <p className="font-opensans text-sm text-slate-gray mt-2">Gold</p>
-                </div>
               </div>
             </motion.div>
           </div>
