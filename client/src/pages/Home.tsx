@@ -14,6 +14,8 @@ import gcash from "@assets/gcash.jpg";
 
 import aboutme from "@assets/aboutme.jpg";
 
+import dresscode from "@assets/dresscode.jpg";
+
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
   const [musicPlaying, setMusicPlaying] = useState(false);
@@ -256,7 +258,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="dresscode" className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -279,7 +280,7 @@ export default function Home() {
               <div className="mb-8">
                 <div className="w-64 h-auto mx-auto mb-6">
                   <img 
-                    src="/attached_assets/dresscode_1749270075382.jpg" 
+                    src={dresscode} 
                     alt="Dress Code Illustration"
                     className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-gold"
                   />
@@ -349,7 +350,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section id="message" className="py-20 relative gradient-garden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
