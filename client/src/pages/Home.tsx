@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Crown, MapPin, Calendar, Music, Play, Pause, Mail, Heart, ExternalLink } from "lucide-react";
+import { Crown, MapPin, Calendar, Music, Play, Pause, Mail, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ThreeBackground from "@/components/ThreeBackground";
@@ -21,16 +21,6 @@ export default function Home() {
   const [musicPlaying, setMusicPlaying] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const [showBrowserPrompt, setShowBrowserPrompt] = useState(false);
-
-  // Detect if user is in an in-app browser
-  useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor;
-    const isInAppBrowser = /FBAN|FBAV|Instagram|Messenger|WhatsApp|Line|WeChat/i.test(userAgent);
-    if (isInAppBrowser) {
-      setShowBrowserPrompt(true);
-    }
-  }, []);
 
   const transitionToMainPage = () => {
     setCurrentPage("main");
@@ -144,58 +134,16 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {showBrowserPrompt && (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-royal-blue text-white p-4 text-center">
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <ExternalLink className="w-5 h-5" />
-            <span className="font-opensans text-sm">For the best experience, open this in your browser</span>
-          </div>
-          <div className="flex justify-center gap-4">
-            <button
-              onClick={() => setShowBrowserPrompt(false)}
-              className="text-xs underline opacity-75 hover:opacity-100"
-            >
-              Continue here
-            </button>
-            <button
-              onClick={() => {
-                // Copy current URL to clipboard
-                navigator.clipboard.writeText(window.location.href);
-                alert('Link copied! Paste it in your browser.');
-              }}
-              className="text-xs underline opacity-75 hover:opacity-100"
-            >
-              Copy link
-            </button>
-          </div>
-        </div>
-      )}
       <ThreeBackground scene="main" />
-      <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-2">
-        <div className="glass-effect rounded-full p-3">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => {
-              navigator.clipboard.writeText(window.location.href);
-              alert('Link copied to clipboard!');
-            }}
-            className="text-gold hover:text-white transition-colors"
-            title="Share this invitation"
-          >
-            <ExternalLink className="w-5 h-5" />
-          </Button>
-        </div>
-        <div className="glass-effect rounded-full p-3">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleMusic}
-            className="text-gold hover:text-white transition-colors"
-          >
-            {musicPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-          </Button>
-        </div>
+      <div className="fixed bottom-8 right-8 z-50 glass-effect rounded-full p-3">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggleMusic}
+          className="text-gold hover:text-white transition-colors"
+        >
+          {musicPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+        </Button>
       </div>
       {musicPlaying && (
         <iframe
