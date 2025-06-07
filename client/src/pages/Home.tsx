@@ -46,11 +46,24 @@ export default function Home() {
   const handlePlayVideo = () => {
     setShowVideo(true);
     setVideoPlaying(true);
+    // Pause music when video starts
+    if (audioRef.current && musicPlaying) {
+      audioRef.current.pause();
+      setMusicPlaying(false);
+    }
   };
 
   const handleStopVideo = () => {
     setShowVideo(false);
     setVideoPlaying(false);
+    // Resume music when video is stopped
+    if (audioRef.current && !musicPlaying) {
+      audioRef.current.play().then(() => {
+        setMusicPlaying(true);
+      }).catch(error => {
+        console.log("Audio play failed:", error);
+      });
+    }
   };
 
   const scrollToSection = (sectionId: string) => {
