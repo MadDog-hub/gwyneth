@@ -58,7 +58,19 @@ export default function Home() {
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-amber-50 via-amber-100 to-amber-200 flex items-center justify-center">
         <ThreeBackground scene="invitation" />
 
-        <div className="relative w-full max-w-4xl aspect-[4/3]">
+        {/* Browser Compatibility Notice */}
+        <div className="fixed top-0 left-0 right-0 z-50 bg-royal-blue text-white p-3 text-center">
+          <div className="max-w-4xl mx-auto">
+            <p className="font-opensans text-sm">
+              🎵 <strong>For the best experience with music and animations:</strong> Please open in Google Chrome, Firefox, or Edge browser. 
+              <span className="opacity-75 block mt-1">
+                Safari and in-app browsers (Messenger, Instagram, Facebook) may not support all features.
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <div className="relative w-full max-w-4xl aspect-[4/3] mt-16">
           <div className="absolute inset-0 bg-gradient-to-b from-amber-200 to-amber-300 rounded-lg shadow-2xl border-2 border-amber-400">
             <div className="absolute inset-2 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg"></div>
           </div>
@@ -269,7 +281,7 @@ export default function Home() {
             >
               Reception Location
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -282,11 +294,11 @@ export default function Home() {
                   <MapPin className="w-12 h-12 text-white" />
                 </div>
               </div>
-              
+
               <h3 className="font-lora text-2xl text-white mb-4">Royal Gardens Ballroom</h3>
               <p className="font-opensans text-lg text-white mb-2">123 Garden Vista Boulevard</p>
               <p className="font-opensans text-lg text-white mb-8">Makati City, Metro Manila 1200</p>
-              
+
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold mb-6">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5547!2d121.0244!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMzJzE3LjAiTiAxMjHCsDAxJzI4LjAiRQ!5e0!3m2!1sen!2sph!4v1234567890"
@@ -299,7 +311,7 @@ export default function Home() {
                   title="Royal Gardens Ballroom Location"
                 />
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div className="bg-white/10 rounded-2xl p-6">
                   <h4 className="font-lora text-xl text-gold mb-3">Venue Details</h4>
@@ -320,7 +332,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="mt-8">
                 <Button
                   asChild
@@ -350,7 +362,7 @@ export default function Home() {
             >
               Dress Code
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -367,12 +379,12 @@ export default function Home() {
                   />
                 </div>
               </div>
-              
+
               <p className="font-opensans text-xl text-slate-gray mb-8 leading-relaxed">
                 <strong>Formal Garden Attire</strong><br />
                 We invite you to dress elegantly in celebration colors that complement our royal garden theme.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="text-center">
                   <h3 className="font-lora text-2xl text-royal-blue mb-4">For Ladies</h3>
@@ -389,7 +401,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <h3 className="font-lora text-2xl text-royal-blue mb-6">Celebration Color Palette</h3>
                 <div className="flex justify-center flex-wrap gap-6">
@@ -420,7 +432,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-royal-blue/10 rounded-2xl p-6 border-l-4 border-royal-blue">
                 <p className="font-opensans text-slate-gray italic">
                   <strong>Note:</strong> Please avoid wearing white, ivory, or cream as these colors are reserved for the celebrant. 
@@ -534,7 +546,7 @@ export default function Home() {
                   </Button>
                 </div>
               )}
-              
+
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold">
                 {!showVideo ? (
                   <div 
