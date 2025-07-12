@@ -105,7 +105,7 @@ export default function Home() {
             initial={{ y: 50, opacity: 0, scale: 0.8 }}
             animate={{ y: -20, opacity: 1, scale: 1 }}
             transition={{ delay: 2.5, duration: 1.2, ease: "easeOut" }}
-            className="absolute inset-4 bg-[#F5F1E8]/95 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-xl border border-gold/30"
+            className="absolute inset-4 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-xl border border-gold/30 bg-[#fff8dd]"
           >
             <div className="text-center h-full flex flex-col justify-center">
               <motion.div
