@@ -248,11 +248,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-[#3c83f6e6]"
             >
-              About <img 
-                src="/attached_assets/Screenshot_2025-07-12_231826-removebg-preview_1752333538284.png" 
-                alt="Gwyneth"
-                className="h-12 md:h-16 inline-block"
-              />
+              About Gwyneth
             </motion.h2>
 
             <motion.div
