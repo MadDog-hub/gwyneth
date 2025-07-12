@@ -157,7 +157,7 @@ export default function RSVPForm() {
             <p className="font-lora text-2xl text-soft-lilac">
               Let Me Know You're Coming
             </p>
-            <div className="rounded-2xl p-4 border-l-4 border-blue-500 mt-6 bg-[#ece7df]">
+            <div className="rounded-2xl p-4 border-l-4 border-blue-500 mt-6 bg-[#fef2f2]">
               <p className="font-opensans text-blue-800 text-center">
                 <strong>Note:</strong> Whilst we love little ones, we kindly request a child-free ceremony.
               </p>
