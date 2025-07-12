@@ -80,7 +80,7 @@ export default function Gallery() {
             transition={{ delay: 0.6 }}
             className="font-lora text-lg mt-12 text-center text-[#E78BA5]"
           >
-            Gwyneth's journey to adulthood captured in beautiful moments
+            <span className="font-script">Gwyneth's</span> journey to adulthood captured in beautiful moments
           </motion.p>
         </div>
       </div>

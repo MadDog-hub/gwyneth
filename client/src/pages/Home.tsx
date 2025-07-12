@@ -128,8 +128,8 @@ export default function Home() {
 
                 <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
 
-                <h2 className="text-2xl md:text-4xl font-bold text-royal-blue mb-4" style={{ fontFamily: 'cursive' }}>
-                  GWYNETH
+                <h2 className="font-script text-3xl md:text-5xl font-bold text-royal-blue mb-4">
+                  Gwyneth
                 </h2>
 
                 <h3 className="font-cinzel text-xl md:text-2xl font-semibold text-royal-blue mb-6">
@@ -247,7 +247,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-[#3c83f6e6]"
             >
-              About Gwyneth
+              About <span className="font-script">Gwyneth</span>
             </motion.h2>
 
             <motion.div
@@ -273,7 +273,7 @@ export default function Home() {
                 </div>
                 <div className="md:w-1/2">
                   <p className="font-opensans text-lg leading-relaxed mb-6 text-[#E78BA5]">
-                    Lea Gwyneth, a thoughtful and passionate 18-year-old, has long held a deep appreciation for music and its ability to inspire, heal, and connect. Though not a musician herself, she finds meaning and emotion in melodies, lyrics, and rhythms that speak to the heart.
+                    Lea <span className="font-script text-xl">Gwyneth</span>, a thoughtful and passionate 18-year-old, has long held a deep appreciation for music and its ability to inspire, heal, and connect. Though not a musician herself, she finds meaning and emotion in melodies, lyrics, and rhythms that speak to the heart.
                   </p>
                   <p className="font-opensans text-lg leading-relaxed mb-6 text-[#E78BA5]">
                     Her love for music is reflected in the way she curates soundtracks to match moments in life, drawing strength, comfort, and joy from each note. To her, music is more than entertainment—it's a powerful expression of human experience, and a constant companion on her personal journey.
@@ -452,7 +452,7 @@ export default function Home() {
               className="glass-effect rounded-3xl p-8 md:p-12 bg-[#ffffff]"
             >
               <p className="font-opensans text-lg leading-relaxed italic text-[#E78BA5]">
-                "We are incredibly proud of our daughter Gwyneth and the beautiful young woman she has become. This debutante celebration marks a significant milestone in her life as she steps into adulthood with grace, passion, and dreams. Her love for music and the way it touches her heart reminds us daily of the wonderful person she is. We invite you to join us in celebrating this special moment as she begins this new chapter of her journey."
+                "We are incredibly proud of our daughter <span className="font-script text-xl">Gwyneth</span> and the beautiful young woman she has become. This debutante celebration marks a significant milestone in her life as she steps into adulthood with grace, passion, and dreams. Her love for music and the way it touches her heart reminds us daily of the wonderful person she is. We invite you to join us in celebrating this special moment as she begins this new chapter of her journey."
               </p>
 
               <div className="mt-8">
@@ -672,7 +672,7 @@ export default function Home() {
               <Crown className="w-12 h-12 text-gold mx-auto" />
             </div>
 
-            <h3 className="font-cinzel text-2xl text-[#3c83f6e6] mb-4">Gwyneth's Debutante Ball</h3>
+            <h3 className="font-cinzel text-2xl text-[#3c83f6e6] mb-4"><span className="font-script">Gwyneth's</span> Debutante Ball</h3>
 
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
               <div className="flex items-center">
