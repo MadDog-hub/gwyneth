@@ -78,7 +78,7 @@ export default function Gallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6 }}
-            className="font-lora text-soft-lilac text-lg mt-12 text-center"
+            className="font-lora text-lg mt-12 text-center text-[#E78BA5]"
           >
             Gwyneth's journey to adulthood captured in beautiful moments
           </motion.p>
