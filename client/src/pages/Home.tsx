@@ -195,7 +195,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-royal-blue mb-4 text-shadow"
+            className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-[#3c83f6e6]"
           >
             A Decade and Eight
           </motion.h1>
