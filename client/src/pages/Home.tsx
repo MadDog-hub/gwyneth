@@ -445,7 +445,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12"
+              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#ffffff]"
             >
               <p className="font-opensans text-lg leading-relaxed italic text-[#E78BA5]">
                 "We are incredibly proud of our daughter Gwyneth and the beautiful young woman she has become. This debutante celebration marks a significant milestone in her life as she steps into adulthood with grace, passion, and dreams. Her love for music and the way it touches her heart reminds us daily of the wonderful person she is. We invite you to join us in celebrating this special moment as she begins this new chapter of her journey."
