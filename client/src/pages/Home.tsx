@@ -191,8 +191,8 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="mb-8"
           >
-            <div className="w-24 h-24 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
-              <Crown className="w-12 h-12 text-gold" />
+            <div className="w-24 h-24 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6 border-2 border-[#fbda2d] rounded-lg">
+              <Crown className="w-12 h-12 text-[#fbda2d]" />
             </div>
           </motion.div>
 
@@ -221,11 +221,11 @@ export default function Home() {
             className="space-y-4 mb-12"
           >
             <p className="font-opensans text-lg text-slate-gray">
-              <Calendar className="inline w-6 h-6 mr-2 text-gold" />
+              <Calendar className="inline w-6 h-6 mr-2 text-[#fbda2d]" />
               August 30, 2025 at 6:00 PM
             </p>
             <p className="font-opensans text-lg text-slate-gray">
-              <MapPin className="inline w-6 h-6 mr-2 text-gold" />
+              <MapPin className="inline w-6 h-6 mr-2 text-[#fbda2d]" />
               THE BARN: Rustic Corner Bar & Grill
             </p>
           </motion.div>
