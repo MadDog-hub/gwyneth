@@ -135,19 +135,23 @@
 
   /* Legacy color support - mapping old colors to new ones */
   .text-royal-blue {
-    color: hsl(var(--dusty-blue));
+    color: #E78BA5;
   }
 
   .text-soft-lilac {
-    color: hsl(var(--blush-pink));
+    color: #E78BA5;
   }
 
   .text-gold {
-    color: hsl(var(--light-yellow));
+    color: #E78BA5;
   }
 
   .text-slate-gray {
-    color: #6B7280;
+    color: #E78BA5;
+  }
+
+  .text-white {
+    color: #E78BA5;
   }
 
   .bg-royal-blue {
