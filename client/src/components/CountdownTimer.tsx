@@ -18,7 +18,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
         </div>
       </div>
       <div className="text-center">
-        <div className="font-cinzel text-4xl md:text-6xl font-bold text-gold pulse-gold">
+        <div className="font-cinzel text-4xl md:text-6xl font-bold pulse-gold text-[#fbdc3a]">
           {hours.toString().padStart(2, '0')}
         </div>
         <div className="font-opensans text-slate-gray uppercase tracking-wider text-sm">
