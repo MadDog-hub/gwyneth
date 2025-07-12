@@ -611,7 +611,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-12 text-center"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-center text-[#E78BA5]"
             >
               Frequently Asked Questions
             </motion.h2>
