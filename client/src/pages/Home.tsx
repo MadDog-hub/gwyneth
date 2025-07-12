@@ -241,7 +241,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-12"
             >
               About Gwyneth
             </motion.h2>
@@ -255,7 +255,7 @@ export default function Home() {
             >
               <div className="mb-8">
                 <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
-                  <Music className="w-16 h-16 text-white" />
+                  <Music className="w-16 h-16 text-[#D9C2EB]" />
                 </div>
               </div>
 
@@ -268,13 +268,13 @@ export default function Home() {
                   />
                 </div>
                 <div className="md:w-1/2">
-                  <p className="font-opensans text-lg text-white leading-relaxed mb-6">
+                  <p className="font-opensans text-lg text-[#D9C2EB] leading-relaxed mb-6">
                     Lea Gwyneth, a thoughtful and passionate 18-year-old, has long held a deep appreciation for music and its ability to inspire, heal, and connect. Though not a musician herself, she finds meaning and emotion in melodies, lyrics, and rhythms that speak to the heart.
                   </p>
-                  <p className="font-opensans text-lg text-white leading-relaxed mb-6">
+                  <p className="font-opensans text-lg text-[#D9C2EB] leading-relaxed mb-6">
                     Her love for music is reflected in the way she curates soundtracks to match moments in life, drawing strength, comfort, and joy from each note. To her, music is more than entertainment—it's a powerful expression of human experience, and a constant companion on her personal journey.
                   </p>
-                  <p className="font-opensans text-lg text-white leading-relaxed">
+                  <p className="font-opensans text-lg text-[#D9C2EB] leading-relaxed">
                     At the heart of her story are her parents, whose unwavering support and love have shaped the person she is today. Their guidance, encouragement, and belief in her dreams have given her the confidence to grow, explore her passions, and face life with grace and purpose.
                   </p>
                 </div>
@@ -291,7 +291,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-12"
             >
               Celebration Venue
             </motion.h2>
@@ -305,12 +305,12 @@ export default function Home() {
             >
               <div className="mb-8">
                 <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
-                  <MapPin className="w-12 h-12 text-white" />
+                  <MapPin className="w-12 h-12 text-[#D9C2EB]" />
                 </div>
               </div>
 
-              <h3 className="font-lora text-2xl text-white mb-4">THE BARN: Rustic Corner Bar & Grill</h3>
-              <p className="font-opensans text-lg text-white mb-8">A charming rustic venue perfect for memorable celebrations</p>
+              <h3 className="font-lora text-2xl text-[#D9C2EB] mb-4">THE BARN: Rustic Corner Bar & Grill</h3>
+              <p className="font-opensans text-lg text-[#D9C2EB] mb-8">A charming rustic venue perfect for memorable celebrations</p>
 
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold mb-6">
                 <img 
@@ -509,7 +509,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-8"
             >
               Debut Prenup Video
             </motion.h2>
@@ -543,7 +543,7 @@ export default function Home() {
                       <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <Play className="w-8 h-8 text-royal-blue ml-1" />
                       </div>
-                      <p className="font-lora text-white text-lg">Play Debut Prenup Video</p>
+                      <p className="font-lora text-[#D9C2EB] text-lg">Play Debut Prenup Video</p>
                     </div>
                   </div>
                 ) : (
@@ -567,7 +567,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-8"
             >
               Gift Registry
             </motion.h2>
@@ -583,7 +583,7 @@ export default function Home() {
                 <Crown className="w-16 h-16 text-gold mx-auto" />
               </div>
 
-              <p className="font-opensans text-lg text-white mb-8">
+              <p className="font-opensans text-lg text-[#D9C2EB] mb-8">
                 With all that we have, we've been truly blessed.<br/>
                 Your presence and prayers are all that we request.<br/>
                 But if you desire to give nonetheless,<br/>
@@ -611,7 +611,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12 text-center"
+              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-12 text-center"
             >
               Frequently Asked Questions
             </motion.h2>
@@ -648,12 +648,12 @@ export default function Home() {
                   className="glass-effect rounded-2xl p-6"
                 >
                   <details className="group">
-                    <summary className="font-lora text-lg text-white cursor-pointer list-none flex justify-between items-center">
+                    <summary className="font-lora text-lg text-[#D9C2EB] cursor-pointer list-none flex justify-between items-center">
                       <span>{faq.question}</span>
                       <span className="text-gold group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <div className="mt-4 pt-4 border-t border-white/20">
-                      <p className="font-opensans text-white/90">{faq.answer}</p>
+                      <p className="font-opensans text-[#D9C2EB]">{faq.answer}</p>
                     </div>
                   </details>
                 </motion.div>
@@ -670,11 +670,11 @@ export default function Home() {
               <Crown className="w-12 h-12 text-gold mx-auto" />
             </div>
 
-            <h3 className="font-cinzel text-2xl text-white mb-4">Gwyneth's Debutante Ball</h3>
+            <h3 className="font-cinzel text-2xl text-[#D9C2EB] mb-4">Gwyneth's Debutante Ball</h3>
 
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
               <div className="flex items-center">
-                <span className="font-opensans text-white">For inquiries visit rsvpblisscreations.site</span>
+                <span className="font-opensans text-[#D9C2EB]">For inquiries visit rsvpblisscreations.site</span>
               </div>
             </div>
 
@@ -689,7 +689,7 @@ export default function Home() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-gold transition-colors font-opensans"
+                  className="text-[#D9C2EB] hover:text-gold transition-colors font-opensans"
                 >
                   {item.label}
                 </button>
