@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
-import gallery1 from "@assets/gallery1_1749267337389.jpg";
-import gallery2 from "@assets/gallery2_1749267337388.jpg";
-import gallery3 from "@assets/gallery3_1749267337387.jpg";
-import gallery4 from "@assets/gallery4_1749267342786.jpg";
-import gallery5 from "@assets/gallery5_1749267342785.jpg";
-import gallery6 from "@assets/gallery6_1749267342785.jpg";
-import gallery7 from "@assets/gallery7_1749267342783.jpg";
-import gallery8 from "@assets/gallery9_1749269284528.jpg";
+import gallery1 from "@assets/gallery1_1752306166982.jpg";
+import gallery2 from "@assets/DSC06930_1752306166981.jpg";
+import gallery3 from "@assets/about-debudant_1752306166981.jpg";
+import gallery4 from "@assets/DSC07066_1752306166982.jpg";
+import gallery5 from "@assets/gallery12_1752306166982.jpg";
+import gallery6 from "@assets/gallery10_1752306166983.jpg";
+import gallery7 from "@assets/gallery7_1752306166983.jpg";
+import gallery8 from "@assets/gallery11_1752306166983.jpg";
 
 const galleryImages = [
-  { src: gallery1, alt: "Erica Santos - Portrait 1" },
-  { src: gallery2, alt: "Erica Santos - Portrait 2" },
-  { src: gallery3, alt: "Erica Santos - Portrait 3" },
-  { src: gallery4, alt: "Erica Santos - Portrait 4" },
-  { src: gallery5, alt: "Erica Santos - Portrait 5" },
-  { src: gallery6, alt: "Erica Santos - Portrait 6" },
-  { src: gallery7, alt: "Erica Santos - Portrait 7" },
-  { src: gallery8, alt: "Erica Santos - Portrait 8" },
+  { src: gallery1, alt: "Gwyneth - Portrait 1" },
+  { src: gallery2, alt: "Gwyneth - Portrait 2" },
+  { src: gallery3, alt: "Gwyneth - Portrait 3" },
+  { src: gallery4, alt: "Gwyneth - Portrait 4" },
+  { src: gallery5, alt: "Gwyneth - Portrait 5" },
+  { src: gallery6, alt: "Gwyneth - Portrait 6" },
+  { src: gallery7, alt: "Gwyneth - Portrait 7" },
+  { src: gallery8, alt: "Gwyneth - Portrait 8" },
 ];
 
 export default function Gallery() {
@@ -74,7 +74,7 @@ export default function Gallery() {
             transition={{ delay: 0.6 }}
             className="font-lora text-soft-lilac text-lg mt-12 text-center"
           >
-            Erica's artistic journey captured in moments
+            Gwyneth's journey to adulthood captured in beautiful moments
           </motion.p>
         </div>
       </div>

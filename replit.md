@@ -2,9 +2,21 @@
 
 ## Overview
 
-This is a modern full-stack web application built as a wedding invitation and RSVP system for Erica Santos. The application features an elegant, royal-themed design with interactive elements including a countdown timer, photo gallery, RSVP management, and guestbook functionality. It's built with React on the frontend, Express.js on the backend, and uses PostgreSQL with Drizzle ORM for data persistence.
+This is a modern full-stack web application built as a debutante celebration and RSVP system for Gwyneth. The application features an elegant, royal-themed design with interactive elements including a countdown timer, photo gallery, RSVP management, and guestbook functionality. It's built with React on the frontend, Express.js on the backend, and uses PostgreSQL with Drizzle ORM for data persistence.
 
 ## Recent Changes
+
+**January 12, 2025**: Complete transformation from wedding to debutante celebration
+- Changed celebrant from Erica Santos to Gwyneth (Lea Gwyneth)
+- Updated event details: August 30, 2025 at 5:30 PM
+- Changed venue to THE BARN: Rustic Corner Bar & Grill
+- Updated theme from garden/art to music and personal journey
+- Replaced all photos with new debutante photoshoot images
+- Updated dress code with formal attire requirements (no jeans policy)
+- Changed background music to "Golden Hour" string orchestra cover
+- Updated about section with Gwyneth's story and love for music
+- Updated gift section with new QR code for digital payments
+- Revised parents' message to reflect debutante milestone
 
 **January 12, 2025**: Database isolation completed
 - Created dedicated PostgreSQL database for this remixed project

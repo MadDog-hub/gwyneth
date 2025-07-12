@@ -10,11 +10,11 @@ import RSVPForm from "@/components/RSVPForm";
 import GuestbookForm from "@/components/GuestbookForm";
 import Navigation from "@/components/Navigation";
 
-import gcash from "@assets/gcash.jpg";
-
-import aboutme from "@assets/aboutme.jpg";
-
-import dresscode from "@assets/dresscode.jpg";
+import qrGift from "@assets/qr-gift_1752306166980.jpg";
+import aboutDebutant from "@assets/about-debudant_1752306166981.jpg";
+import dresscodeWomen from "@assets/dresscode-woman_1752306166979.png";
+import dresscodeMen from "@assets/dresscode-men_1752306166979.jpg";
+import locationImage from "@assets/location_1752306166980.webp";
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
@@ -127,22 +127,22 @@ export default function Home() {
                 <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
 
                 <h2 className="font-cinzel text-xl md:text-2xl font-semibold text-royal-blue mb-6">
-                  Erica Santos' Grand Celebration
+                  Gwyneth's Debutante Ball
                 </h2>
 
                 <div className="space-y-3 mb-8 text-slate-gray">
                   <p className="font-opensans">
                     <Calendar className="inline w-4 h-4 mr-2" />
-                    July 20, 2025 • 6:00 PM
+                    August 30, 2025 • 5:30 PM
                   </p>
                   <p className="font-opensans">
                     <MapPin className="inline w-4 h-4 mr-2" />
-                    Royal Gardens Estate
+                    THE BARN: Rustic Corner Bar & Grill
                   </p>
                 </div>
 
                 <p className="font-lora text-sm text-slate-gray mb-8 italic">
-                  "Where art meets elegance in perfect harmony"
+                  "Where music meets the heart in perfect harmony"
                 </p>
 
                 <Button
@@ -172,7 +172,7 @@ export default function Home() {
         onPlay={() => console.log("Audio started playing")}
         style={{ display: 'none' }}
       >
-        <source src="/attached_assets/background-music_1749277320612.mp3" type="audio/mpeg" />
+        <source src="/attached_assets/ytmp3free.cc_golden-hour-jvke-string-orchestra-cover-by-vivid-strings-youtubemp3free.org_1752306166980.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
       <Navigation scrollToSection={scrollToSection} />
@@ -195,7 +195,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-royal-blue mb-4 text-shadow"
           >
-            Erica Santos' Grand Celebration
+            Gwyneth's Debutante Ball
           </motion.h1>
 
           <motion.p
@@ -204,7 +204,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.4 }}
             className="font-lora text-xl md:text-2xl text-soft-lilac mb-8"
           >
-            A Royal Garden Celebration
+            A Musical Journey Celebration
           </motion.p>
 
           <motion.div
@@ -215,11 +215,11 @@ export default function Home() {
           >
             <p className="font-opensans text-lg text-slate-gray">
               <Calendar className="inline w-6 h-6 mr-2 text-gold" />
-              July 20, 2025 at 6:00 PM
+              August 30, 2025 at 5:30 PM
             </p>
             <p className="font-opensans text-lg text-slate-gray">
               <MapPin className="inline w-6 h-6 mr-2 text-gold" />
-              Royal Gardens Estate
+              THE BARN: Rustic Corner Bar & Grill
             </p>
           </motion.div>
 
@@ -228,7 +228,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <CountdownTimer targetDate="2025-07-20T18:00:00" />
+            <CountdownTimer targetDate="2025-08-30T17:30:00" />
           </motion.div>
         </div>
       </section>
@@ -241,7 +241,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12"
             >
-              About Erica
+              About Gwyneth
             </motion.h2>
 
             <motion.div
@@ -253,27 +253,27 @@ export default function Home() {
             >
               <div className="mb-8">
                 <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
-                  <Crown className="w-16 h-16 text-white" />
+                  <Music className="w-16 h-16 text-white" />
                 </div>
               </div>
 
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2">
                   <img 
-                    src={aboutme} 
-                    alt="Erica Santos"
-                    className="w-full h-96 object-contain rounded-2xl shadow-lg border-4 border-gold"
+                    src={aboutDebutant} 
+                    alt="Lea Gwyneth"
+                    className="w-full h-96 object-cover rounded-2xl shadow-lg border-4 border-gold"
                   />
                 </div>
                 <div className="md:w-1/2">
                   <p className="font-opensans text-lg text-white leading-relaxed mb-6">
-                    Erica Santos, a passionate 25-year-old artist from Manila, has always found inspiration in the natural world around her. Her love for painting landscapes, flowers, and garden scenes reflects her deep connection with nature's beauty.
+                    Lea Gwyneth, a thoughtful and passionate 18-year-old, has long held a deep appreciation for music and its ability to inspire, heal, and connect. Though not a musician herself, she finds meaning and emotion in melodies, lyrics, and rhythms that speak to the heart.
                   </p>
                   <p className="font-opensans text-lg text-white leading-relaxed mb-6">
-                    Born into a family that appreciates art and creativity, Erica developed her artistic talents from a young age. She specializes in watercolor paintings that capture the delicate essence of gardens, blooming flowers, and serene natural settings.
+                    Her love for music is reflected in the way she curates soundtracks to match moments in life, drawing strength, comfort, and joy from each note. To her, music is more than entertainment—it's a powerful expression of human experience, and a constant companion on her personal journey.
                   </p>
                   <p className="font-opensans text-lg text-white leading-relaxed">
-                    Her dream of a garden-themed celebration stems from her belief that life, like a garden, blooms most beautifully when nurtured with love, care, and the right conditions. This magnificent royal garden celebration represents the culmination of her artistic vision, where art meets elegance in perfect harmony.
+                    At the heart of her story are her parents, whose unwavering support and love have shaped the person she is today. Their guidance, encouragement, and belief in her dreams have given her the confidence to grow, explore her passions, and face life with grace and purpose.
                   </p>
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-12"
             >
-              Reception Location
+              Celebration Venue
             </motion.h2>
 
             <motion.div
@@ -306,40 +306,34 @@ export default function Home() {
                 </div>
               </div>
 
-              <h3 className="font-lora text-2xl text-white mb-4">Royal Gardens Ballroom</h3>
-              <p className="font-opensans text-lg text-white mb-2">123 Garden Vista Boulevard</p>
-              <p className="font-opensans text-lg text-white mb-8">Makati City, Metro Manila 1200</p>
+              <h3 className="font-lora text-2xl text-white mb-4">THE BARN: Rustic Corner Bar & Grill</h3>
+              <p className="font-opensans text-lg text-white mb-8">A charming rustic venue perfect for memorable celebrations</p>
 
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold mb-6">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5547!2d121.0244!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMzJzE3LjAiTiAxMjHCsDAxJzI4LjAiRQ!5e0!3m2!1sen!2sph!4v1234567890"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  aria-hidden="false"
-                  tabIndex={0}
-                  title="Royal Gardens Ballroom Location"
+                <img 
+                  src={locationImage} 
+                  alt="THE BARN: Rustic Corner Bar & Grill"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div className="bg-white/10 rounded-2xl p-6">
-                  <h4 className="font-lora text-xl text-gold mb-3">Venue Details</h4>
+                  <h4 className="font-lora text-xl text-gold mb-3">Venue Features</h4>
                   <ul className="font-opensans text-white space-y-2">
-                    <li>• Grand ballroom with garden views</li>
-                    <li>• Capacity: 200+ guests</li>
-                    <li>• Climate-controlled environment</li>
-                    <li>• Professional sound system</li>
+                    <li>• Rustic barn-style architecture</li>
+                    <li>• Warm and cozy atmosphere</li>
+                    <li>• Perfect for intimate celebrations</li>
+                    <li>• Great food and service</li>
                   </ul>
                 </div>
                 <div className="bg-white/10 rounded-2xl p-6">
                   <h4 className="font-lora text-xl text-gold mb-3">Amenities</h4>
                   <ul className="font-opensans text-white space-y-2">
-                    <li>• Complimentary valet parking</li>
-                    <li>• Wheelchair accessible</li>
-                    <li>• Bridal suite available</li>
-                    <li>• Professional lighting</li>
+                    <li>• Full bar and grill menu</li>
+                    <li>• Sound system available</li>
+                    <li>• Comfortable seating areas</li>
+                    <li>• Friendly staff service</li>
                   </ul>
                 </div>
               </div>
@@ -350,7 +344,7 @@ export default function Home() {
                   className="bg-gold text-royal-blue font-semibold btn-3d hover:scale-105 transition-all duration-300"
                 >
                   <a 
-                    href="https://www.google.com/maps/dir//Royal+Gardens+Ballroom,+123+Garden+Vista+Boulevard,+Makati+City,+Metro+Manila" 
+                    href="https://www.google.com/maps/search/THE+BARN+Rustic+Corner+Bar+%26+Grill" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
@@ -381,73 +375,45 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="glass-effect rounded-3xl p-8 md:p-12"
             >
-              <div className="mb-8">
-                <div className="w-64 h-auto mx-auto mb-6">
-                  <img 
-                    src={dresscode} 
-                    alt="Dress Code Illustration"
-                    className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-gold"
-                  />
-                </div>
-              </div>
-
-              <p className="font-opensans text-xl text-slate-gray mb-8 leading-relaxed">
-                <strong>Formal Garden Attire</strong><br />
-                We invite you to dress elegantly in celebration colors that complement our royal garden theme.
+              <p className="font-opensans text-xl text-slate-gray mb-8 leading-relaxed text-center">
+                <strong>Formal Attire</strong><br />
+                We invite you to dress elegantly for this special celebration.
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="text-center">
-                  <h3 className="font-lora text-2xl text-royal-blue mb-4">For Ladies</h3>
+                  <h3 className="font-lora text-2xl text-royal-blue mb-4">For Women</h3>
+                  <div className="mb-6">
+                    <img 
+                      src={dresscodeWomen} 
+                      alt="Women's Dress Code - Formal Dresses"
+                      className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-gold"
+                    />
+                  </div>
                   <p className="font-opensans text-slate-gray">
-                    Elegant cocktail dresses, formal gowns, or sophisticated separates in celebration colors. 
-                    Floral patterns and garden-inspired accessories are welcome.
+                    <strong>Formal dress</strong><br />
+                    Elegant evening gowns, cocktail dresses, or sophisticated formal wear.
                   </p>
                 </div>
                 <div className="text-center">
-                  <h3 className="font-lora text-2xl text-royal-blue mb-4">For Gentlemen</h3>
+                  <h3 className="font-lora text-2xl text-royal-blue mb-4">For Men</h3>
+                  <div className="mb-6">
+                    <img 
+                      src={dresscodeMen} 
+                      alt="Men's Dress Code - Tuxedo, Suit, Slacks"
+                      className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-gold"
+                    />
+                  </div>
                   <p className="font-opensans text-slate-gray">
-                    Business formal or cocktail attire - suits with dress shirts and ties. 
-                    Pocket squares in celebration colors are encouraged.
+                    <strong>Tuxedo, suit, slacks</strong><br />
+                    Formal evening wear with dress shirts and ties or bow ties.
                   </p>
                 </div>
               </div>
 
-              <div className="mb-8">
-                <h3 className="font-lora text-2xl text-royal-blue mb-6">Celebration Color Palette</h3>
-                <div className="flex justify-center flex-wrap gap-6">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-blue-800 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
-                    <p className="font-opensans text-sm font-semibold text-slate-gray">Royal Blue</p>
-                    <p className="font-opensans text-xs text-slate-gray">#1E3A8A</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-sky-300 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
-                    <p className="font-opensans text-sm font-semibold text-slate-gray">Sky Blue</p>
-                    <p className="font-opensans text-xs text-slate-gray">#93C5FD</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-pink-300 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
-                    <p className="font-opensans text-sm font-semibold text-slate-gray">Soft Lilac</p>
-                    <p className="font-opensans text-xs text-slate-gray">#F9A8D4</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-yellow-500 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
-                    <p className="font-opensans text-sm font-semibold text-slate-gray">Gold</p>
-                    <p className="font-opensans text-xs text-slate-gray">#FFD700</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-slate-600 rounded-full border-4 border-white shadow-lg mx-auto mb-3"></div>
-                    <p className="font-opensans text-sm font-semibold text-slate-gray">Slate Gray</p>
-                    <p className="font-opensans text-xs text-slate-gray">#6B7280</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-royal-blue/10 rounded-2xl p-6 border-l-4 border-royal-blue">
-                <p className="font-opensans text-slate-gray italic">
-                  <strong>Note:</strong> Please avoid wearing white, ivory, or cream as these colors are reserved for the celebrant. 
-                  We encourage garden-inspired accessories like floral jewelry or botanical prints.
+              <div className="bg-red-50 rounded-2xl p-6 border-l-4 border-red-500">
+                <p className="font-opensans text-red-800 font-semibold text-center">
+                  <strong>Important:</strong> Strictly no jeans
                 </p>
               </div>
             </motion.div>
@@ -474,12 +440,12 @@ export default function Home() {
               className="glass-effect rounded-3xl p-8 md:p-12"
             >
               <p className="font-opensans text-lg leading-relaxed italic text-[#ffffff]">
-                "We are incredibly proud of our daughter Erica and her artistic achievements. This celebration marks not just another year of her life, but the blossoming of her talents and dreams. We invite you to join us in celebrating the beautiful person she has become and the bright future that lies ahead."
+                "We are incredibly proud of our daughter Gwyneth and the beautiful young woman she has become. This debutante celebration marks a significant milestone in her life as she steps into adulthood with grace, passion, and dreams. Her love for music and the way it touches her heart reminds us daily of the wonderful person she is. We invite you to join us in celebrating this special moment as she begins this new chapter of her journey."
               </p>
 
               <div className="mt-8">
                 <p className="font-lora text-xl text-soft-lilac">
-                  — Mr. & Mrs. Santos
+                  — Gwyneth's Loving Parents
                 </p>
               </div>
             </motion.div>
@@ -609,15 +575,15 @@ export default function Home() {
               </div>
 
               <p className="font-opensans text-lg text-white mb-8">
-                Your presence is the greatest gift, but if you'd like to contribute, we'd appreciate art supplies or cash gifts.
+                Your presence is the greatest gift, but if you'd like to contribute to Gwyneth's future, monetary gifts are appreciated.
               </p>
 
               <div className="bg-white rounded-2xl p-4 md:p-6 w-full max-w-xs md:max-w-md mx-auto border-2 border-soft-lilac">
-                <h3 className="font-lora text-lg md:text-xl text-soft-lilac mb-4 text-center">GCash Payment</h3>
+                <h3 className="font-lora text-lg md:text-xl text-soft-lilac mb-4 text-center">Digital Payment</h3>
                 <div className="w-full max-w-[240px] md:max-w-[280px] mx-auto">
                   <img 
-                    src={gcash} 
-                    alt="GCash QR Code"
+                    src={qrGift} 
+                    alt="Payment QR Code for Lea Gwyneth Basco"
                     className="w-full h-auto object-contain rounded-xl"
                   />
                 </div>
@@ -642,23 +608,23 @@ export default function Home() {
               {[
                 {
                   question: "What time should I arrive?",
-                  answer: "Please arrive by 5:30 PM to ensure you don't miss any part of the ceremony."
+                  answer: "Please arrive by 5:30 PM to ensure you don't miss any part of the celebration."
                 },
                 {
                   question: "Is parking available?",
-                  answer: "Yes, complimentary parking is available at the Royal Gardens Estate."
+                  answer: "Yes, parking is available at THE BARN: Rustic Corner Bar & Grill."
                 },
                 {
                   question: "Can I bring a plus-one?",
                   answer: "Please check your invitation for plus-one details, or contact us directly."
                 },
                 {
-                  question: "Do I need to bring a gift?",
-                  answer: "Your presence is enough, but gifts are welcome if you'd like to contribute."
+                  question: "What should I wear?",
+                  answer: "Formal attire is required. Women should wear formal dresses, men should wear tuxedos, suits, or slacks. Strictly no jeans."
                 },
                 {
                   question: "What time does the event end?",
-                  answer: "The celebration will conclude around 10:00 PM."
+                  answer: "The celebration will conclude around 9:00 PM."
                 }
               ].map((faq, index) => (
                 <motion.div
@@ -693,14 +659,11 @@ export default function Home() {
               <Crown className="w-12 h-12 text-gold mx-auto" />
             </div>
 
-            <h3 className="font-cinzel text-2xl text-white mb-4">Erica Santos' Grand Celebration</h3>
+            <h3 className="font-cinzel text-2xl text-white mb-4">Gwyneth's Debutante Ball</h3>
 
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
               <div className="flex items-center">
-                <span className="font-opensans text-white">ericasantos@gmail.com</span>
-              </div>
-              <div className="flex items-center">
-                <span className="font-opensans text-white">0918-654-3210</span>
+                <span className="font-opensans text-white">Contact for inquiries</span>
               </div>
             </div>
 
