@@ -685,9 +685,7 @@ export default function Home() {
               ))}
             </div>
 
-            <p className="font-opensans text-sm text-white mb-4">
-              Domain: ericasantoscelebration.com
-            </p>
+            
 
             <Button
               asChild
