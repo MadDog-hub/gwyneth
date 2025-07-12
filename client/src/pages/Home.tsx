@@ -310,7 +310,6 @@ export default function Home() {
               </div>
 
               <h3 className="font-lora text-2xl text-[#D9C2EB] mb-4">THE BARN: Rustic Corner Bar & Grill</h3>
-              <p className="font-opensans text-lg text-[#E78BA5] mb-8">A charming rustic venue perfect for memorable celebrations</p>
 
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold mb-6">
                 <img 
@@ -620,7 +619,7 @@ export default function Home() {
               {[
                 {
                   question: "What time should I arrive?",
-                  answer: "Please arrive by 5:30 PM to ensure you don't miss any part of the celebration."
+                  answer: "Please arrive by 10:00 PM to ensure you don't miss any part of the celebration."
                 },
                 {
                   question: "Is parking available?",
@@ -645,15 +644,15 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass-effect rounded-2xl p-6"
+                  className="bg-white rounded-2xl p-6"
                 >
                   <details className="group">
-                    <summary className="font-lora text-lg text-[#E78BA5] cursor-pointer list-none flex justify-between items-center">
+                    <summary className="font-lora text-lg text-royal-blue cursor-pointer list-none flex justify-between items-center">
                       <span>{faq.question}</span>
                       <span className="text-gold group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <div className="mt-4 pt-4 border-t border-white/20">
-                      <p className="font-opensans text-[#E78BA5]">{faq.answer}</p>
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <p className="font-opensans text-slate-gray">{faq.answer}</p>
                     </div>
                   </details>
                 </motion.div>
