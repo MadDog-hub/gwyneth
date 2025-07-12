@@ -680,7 +680,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div classNameflex justify-center space-x-6 mb-8">
+            <div className="flex justify-center space-x-6 mb-8">
               {[
                 { label: "Home", id: "hero" },
                 { label: "About", id: "about" },
