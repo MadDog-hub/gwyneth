@@ -84,9 +84,6 @@ export default function Home() {
     return (
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-amber-50 via-amber-100 to-amber-200 flex items-center justify-center">
         <ThreeBackground scene="invitation" />
-
-
-
         <div className="relative w-full max-w-4xl aspect-[4/3]">
           <div className="absolute inset-0 bg-gradient-to-b from-amber-200 to-amber-300 rounded-lg shadow-2xl border-2 border-amber-400">
             <div className="absolute inset-2 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg"></div>
@@ -128,7 +125,7 @@ export default function Home() {
 
                 <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
 
-                <h2 className="font-script text-3xl md:text-5xl font-bold text-royal-blue mb-4">
+                <h2 className="font-script md:text-5xl font-bold text-royal-blue mb-4 text-[45px]">
                   Gwyneth
                 </h2>
 
