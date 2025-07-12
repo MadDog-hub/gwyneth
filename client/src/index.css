@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%; /* #FFFFFF */
+  --background: 35 25% 90%; /* #F5F1E8 - Beige */
   --foreground: 222 84% 5%; /* #020617 */
   --muted: 210 40% 98%; /* #F8FAFC */
   --muted-foreground: 215 16% 47%; /* #64748B */
-  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover: 35 25% 90%; /* #F5F1E8 - Beige */
   --popover-foreground: 222 84% 5%; /* #020617 */
-  --card: 0 0% 100%; /* #FFFFFF */
+  --card: 35 25% 90%; /* #F5F1E8 - Beige */
   --card-foreground: 222 84% 5%; /* #020617 */
   --border: 214 32% 91%; /* #E2E8F0 */
   --input: 214 32% 91%; /* #E2E8F0 */

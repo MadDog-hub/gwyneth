@@ -105,7 +105,7 @@ export default function Home() {
             initial={{ y: 50, opacity: 0, scale: 0.8 }}
             animate={{ y: -20, opacity: 1, scale: 1 }}
             transition={{ delay: 2.5, duration: 1.2, ease: "easeOut" }}
-            className="absolute inset-4 bg-white/95 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-xl border border-gold/30"
+            className="absolute inset-4 bg-[#F5F1E8]/95 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-xl border border-gold/30"
           >
             <div className="text-center h-full flex flex-col justify-center">
               <motion.div
@@ -125,9 +125,13 @@ export default function Home() {
 
                 <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
 
-                <h2 className="md:text-5xl font-bold text-royal-blue mb-4 text-[45px]" style={{ fontFamily: 'Allison' }}>
-                  Gwyneth
-                </h2>
+                <div className="mb-4">
+                  <img 
+                    src="/attached_assets/Screenshot_2025-07-12_231826-removebg-preview_1752333538284.png" 
+                    alt="Gwyneth"
+                    className="h-16 md:h-20 mx-auto"
+                  />
+                </div>
 
                 <h3 className="font-cinzel text-xl md:text-2xl font-semibold text-royal-blue mb-6">
                   A Decade and Eight
@@ -244,7 +248,11 @@ export default function Home() {
               viewport={{ once: true }}
               className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-[#3c83f6e6]"
             >
-              About <span className="font-script">Gwyneth</span>
+              About <img 
+                src="/attached_assets/Screenshot_2025-07-12_231826-removebg-preview_1752333538284.png" 
+                alt="Gwyneth"
+                className="h-12 md:h-16 inline-block"
+              />
             </motion.h2>
 
             <motion.div
@@ -252,7 +260,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-white rounded-3xl p-8 md:p-12"
+              className="bg-[#F5F1E8] rounded-3xl p-8 md:p-12"
             >
               <div className="mb-8">
                 <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
@@ -302,7 +310,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-white rounded-3xl p-8 md:p-12"
+              className="bg-[#F5F1E8] rounded-3xl p-8 md:p-12"
             >
               <div className="mb-8">
                 <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
@@ -355,7 +363,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#ffffff]"
+              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#F5F1E8]"
             >
               <p className="font-opensans text-xl text-slate-gray mb-8 leading-relaxed text-center">
                 <strong>Formal Attire</strong><br />
@@ -446,7 +454,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#ffffff]"
+              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#F5F1E8]"
             >
               <p className="font-opensans text-lg leading-relaxed italic text-[#E78BA5]">
                 "We are incredibly proud of our daughter <span className="font-script text-xl">Gwyneth</span> and the beautiful young woman she has become. This debutante celebration marks a significant milestone in her life as she steps into adulthood with grace, passion, and dreams. Her love for music and the way it touches her heart reminds us daily of the wonderful person she is. We invite you to join us in celebrating this special moment as she begins this new chapter of her journey."
@@ -486,7 +494,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 flex items-center justify-start space-x-4 shadow-lg border border-gold/20"
+                  className="bg-[#F5F1E8]/90 backdrop-blur-sm rounded-2xl p-6 flex items-center justify-start space-x-4 shadow-lg border border-gold/20"
                 >
                   <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
                     <item.icon className="w-6 h-6 text-royal-blue" />
@@ -577,7 +585,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#ffffff]"
+              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#F5F1E8]"
             >
               <div className="mb-8">
                 <Crown className="w-16 h-16 text-gold mx-auto" />
@@ -590,7 +598,7 @@ export default function Home() {
                 a monetary gift is one we suggest.
               </p>
 
-              <div className="bg-white rounded-2xl p-4 md:p-6 w-full max-w-xs md:max-w-md mx-auto border-2 border-soft-lilac">
+              <div className="bg-[#F5F1E8] rounded-2xl p-4 md:p-6 w-full max-w-xs md:max-w-md mx-auto border-2 border-soft-lilac">
                 <div className="w-full max-w-[240px] md:max-w-[280px] mx-auto">
                   <img 
                     src={qrGift} 
@@ -644,7 +652,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-6"
+                  className="bg-[#F5F1E8] rounded-2xl p-6"
                 >
                   <details className="group">
                     <summary className="font-lora text-lg text-royal-blue cursor-pointer list-none flex justify-between items-center">
