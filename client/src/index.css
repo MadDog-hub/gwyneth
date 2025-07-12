@@ -25,7 +25,7 @@
   --destructive-foreground: 210 40% 98%; /* #F8FAFC */
   --ring: 217 91% 60%; /* #3B82F6 */
   --radius: 0.5rem;
-  
+
   /* Custom colors for "A Decade and Eight" theme */
   --peach-cream: 30 100% 81%; /* #FDCFA0 */
   --light-yellow: 57 96% 78%; /* #FAF096 */
@@ -161,23 +161,47 @@
 
 
   .border-royal-blue {
-    border-color: hsl(var(--royal-blue));
+    border-color: hsl(var(--light-yellow));
   }
 
   .border-sky-blue {
-    border-color: hsl(var(--sky-blue));
+    border-color: hsl(var(--light-yellow));
   }
 
   .border-soft-lilac {
-    border-color: hsl(var(--soft-lilac));
+    border-color: hsl(var(--light-yellow));
   }
 
   .border-gold {
-    border-color: hsl(var(--gold));
+    border-color: hsl(var(--light-yellow));
   }
 
   .border-forest-green {
-    border-color: hsl(var(--forest-green));
+    border-color: hsl(var(--light-yellow));
+  }
+
+  .border-peach-cream {
+    border-color: hsl(var(--light-yellow));
+  }
+
+  .border-light-yellow {
+    border-color: hsl(var(--light-yellow));
+  }
+
+  .border-dusty-blue {
+    border-color: hsl(var(--light-yellow));
+  }
+
+  .border-blush-pink {
+    border-color: hsl(var(--light-yellow));
+  }
+
+  .border-mauve-pink {
+    border-color: hsl(var(--light-yellow));
+  }
+
+  .border-lavender {
+    border-color: hsl(var(--light-yellow));
   }
 
   .gradient-royal {
@@ -318,15 +342,15 @@
   .card-3d {
     transform: none;
   }
-  
+
   .card-3d:hover {
     transform: none;
   }
-  
+
   .btn-3d {
     transform: none;
   }
-  
+
   .btn-3d:hover {
     transform: none;
   }
