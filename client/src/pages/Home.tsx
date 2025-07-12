@@ -251,7 +251,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12"
+              className="bg-white rounded-3xl p-8 md:p-12"
             >
               <div className="mb-8">
                 <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
@@ -268,13 +268,13 @@ export default function Home() {
                   />
                 </div>
                 <div className="md:w-1/2">
-                  <p className="font-opensans text-lg leading-relaxed mb-6 text-[#3c83f6e6]">
+                  <p className="font-opensans text-lg leading-relaxed mb-6 text-[#E78BA5]">
                     Lea Gwyneth, a thoughtful and passionate 18-year-old, has long held a deep appreciation for music and its ability to inspire, heal, and connect. Though not a musician herself, she finds meaning and emotion in melodies, lyrics, and rhythms that speak to the heart.
                   </p>
-                  <p className="font-opensans text-lg leading-relaxed mb-6 text-[#3c83f6e6]">
+                  <p className="font-opensans text-lg leading-relaxed mb-6 text-[#E78BA5]">
                     Her love for music is reflected in the way she curates soundtracks to match moments in life, drawing strength, comfort, and joy from each note. To her, music is more than entertainment—it's a powerful expression of human experience, and a constant companion on her personal journey.
                   </p>
-                  <p className="font-opensans text-lg leading-relaxed text-[#3c83f6e6]">
+                  <p className="font-opensans text-lg leading-relaxed text-[#E78BA5]">
                     At the heart of her story are her parents, whose unwavering support and love have shaped the person she is today. Their guidance, encouragement, and belief in her dreams have given her the confidence to grow, explore her passions, and face life with grace and purpose.
                   </p>
                 </div>
@@ -301,7 +301,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12"
+              className="bg-white rounded-3xl p-8 md:p-12"
             >
               <div className="mb-8">
                 <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
@@ -310,7 +310,7 @@ export default function Home() {
               </div>
 
               <h3 className="font-lora text-2xl text-[#D9C2EB] mb-4">THE BARN: Rustic Corner Bar & Grill</h3>
-              <p className="font-opensans text-lg text-[#D9C2EB] mb-8">A charming rustic venue perfect for memorable celebrations</p>
+              <p className="font-opensans text-lg text-[#E78BA5] mb-8">A charming rustic venue perfect for memorable celebrations</p>
 
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold mb-6">
                 <img 
@@ -701,7 +701,7 @@ export default function Home() {
             <Button
               asChild
               variant="ghost"
-              className="text-blue-600 bg-yellow-100 text-xs opacity-50 hover:opacity-100 transition-opacity"
+              className="text-[#3c83f6e6] bg-[#fdf791] text-xs opacity-50 hover:opacity-100 transition-opacity"
             >
               <a href="/admin">Admin</a>
             </Button>
