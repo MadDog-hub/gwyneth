@@ -34,7 +34,7 @@ export default function Gallery() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-12 text-center"
+            className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-center text-[#3c83f6e6]"
           >
             Gallery
           </motion.h2>

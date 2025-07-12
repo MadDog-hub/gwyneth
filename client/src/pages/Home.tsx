@@ -204,7 +204,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-lora text-xl md:text-2xl text-soft-lilac mb-8"
+            className="font-lora text-xl md:text-2xl mb-8 text-[#3c83f6e6]"
           >
             A Musical Journey Celebration
           </motion.p>
@@ -268,13 +268,13 @@ export default function Home() {
                   />
                 </div>
                 <div className="md:w-1/2">
-                  <p className="font-opensans text-lg text-[#D9C2EB] leading-relaxed mb-6">
+                  <p className="font-opensans text-lg leading-relaxed mb-6 text-[#3c83f6e6]">
                     Lea Gwyneth, a thoughtful and passionate 18-year-old, has long held a deep appreciation for music and its ability to inspire, heal, and connect. Though not a musician herself, she finds meaning and emotion in melodies, lyrics, and rhythms that speak to the heart.
                   </p>
-                  <p className="font-opensans text-lg text-[#D9C2EB] leading-relaxed mb-6">
+                  <p className="font-opensans text-lg leading-relaxed mb-6 text-[#3c83f6e6]">
                     Her love for music is reflected in the way she curates soundtracks to match moments in life, drawing strength, comfort, and joy from each note. To her, music is more than entertainment—it's a powerful expression of human experience, and a constant companion on her personal journey.
                   </p>
-                  <p className="font-opensans text-lg text-[#D9C2EB] leading-relaxed">
+                  <p className="font-opensans text-lg leading-relaxed text-[#3c83f6e6]">
                     At the heart of her story are her parents, whose unwavering support and love have shaped the person she is today. Their guidance, encouragement, and belief in her dreams have given her the confidence to grow, explore her passions, and face life with grace and purpose.
                   </p>
                 </div>
@@ -291,7 +291,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-12"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-[#3c83f6e6]"
             >
               Celebration Venue
             </motion.h2>
@@ -345,7 +345,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-12"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-[#3c83f6e6]"
             >
               Dress Code
             </motion.h2>
@@ -436,7 +436,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-12"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-[#3c83f6e6]"
             >
               Message from Parents
             </motion.h2>
@@ -468,7 +468,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-12"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-[#3c83f6e6]"
             >
               Event Timeline
             </motion.h2>
@@ -509,7 +509,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-8 text-[#3c83f6e6]"
             >
               Debut Prenup Video
             </motion.h2>
@@ -567,7 +567,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-8"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-8 text-[#3c83f6e6]"
             >
               Gift Registry
             </motion.h2>
@@ -583,7 +583,7 @@ export default function Home() {
                 <Crown className="w-16 h-16 text-gold mx-auto" />
               </div>
 
-              <p className="font-opensans text-lg text-[#D9C2EB] mb-8">
+              <p className="font-opensans text-lg mb-8 text-[#E78BA5]">
                 With all that we have, we've been truly blessed.<br/>
                 Your presence and prayers are all that we request.<br/>
                 But if you desire to give nonetheless,<br/>
@@ -611,7 +611,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-center text-[#E78BA5]"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-center text-[#3c83f6e6]"
             >
               Frequently Asked Questions
             </motion.h2>
