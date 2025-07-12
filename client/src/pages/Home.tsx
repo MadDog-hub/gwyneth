@@ -670,11 +670,11 @@ export default function Home() {
               <Crown className="w-12 h-12 text-gold mx-auto" />
             </div>
 
-            <h3 className="font-cinzel text-2xl text-[#D9C2EB] mb-4">Gwyneth's Debutante Ball</h3>
+            <h3 className="font-cinzel text-2xl text-[#3c83f6e6] mb-4">Gwyneth's Debutante Ball</h3>
 
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
               <div className="flex items-center">
-                <span className="font-opensans text-[#D9C2EB]">For inquiries visit rsvpblisscreations.site</span>
+                <span className="font-opensans text-[#3c83f6e6]">For inquiries visit rsvpblisscreations.site</span>
               </div>
             </div>
 
@@ -689,7 +689,7 @@ export default function Home() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-[#D9C2EB] hover:text-gold transition-colors font-opensans"
+                  className="text-[#3c83f6e6] hover:text-gold transition-colors font-opensans"
                 >
                   {item.label}
                 </button>
