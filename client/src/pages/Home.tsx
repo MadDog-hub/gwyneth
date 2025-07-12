@@ -125,7 +125,7 @@ export default function Home() {
 
                 <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
 
-                <h2 className="font-script md:text-5xl font-bold text-royal-blue mb-4 text-[45px]">
+                <h2 className="md:text-5xl font-bold text-royal-blue mb-4 text-[45px]" style={{ fontFamily: 'Allison' }}>
                   Gwyneth
                 </h2>
 
