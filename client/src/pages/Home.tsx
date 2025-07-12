@@ -129,13 +129,13 @@ export default function Home() {
                 <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
 
                 <h2 className="font-cinzel text-xl md:text-2xl font-semibold text-royal-blue mb-6">
-                  Gwyneth's Debutante Ball
+                  A Decade and Eight
                 </h2>
 
                 <div className="space-y-3 mb-8 text-slate-gray">
                   <p className="font-opensans">
                     <Calendar className="inline w-4 h-4 mr-2" />
-                    August 30, 2025 • 5:30 PM
+                    August 30, 2025 • 10:00 PM
                   </p>
                   <p className="font-opensans">
                     <MapPin className="inline w-4 h-4 mr-2" />
@@ -197,7 +197,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-royal-blue mb-4 text-shadow"
           >
-            Gwyneth's Debutante Ball
+            A Decade and Eight
           </motion.h1>
 
           <motion.p
@@ -217,7 +217,7 @@ export default function Home() {
           >
             <p className="font-opensans text-lg text-slate-gray">
               <Calendar className="inline w-6 h-6 mr-2 text-gold" />
-              August 30, 2025 at 5:30 PM
+              August 30, 2025 at 10:00 PM
             </p>
             <p className="font-opensans text-lg text-slate-gray">
               <MapPin className="inline w-6 h-6 mr-2 text-gold" />
@@ -230,7 +230,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <CountdownTimer targetDate="2025-08-30T17:30:00" />
+            <CountdownTimer targetDate="2025-08-30T22:00:00" />
           </motion.div>
         </div>
       </section>
@@ -283,6 +283,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <RSVPForm />
       <section id="location" className="py-20 relative gradient-green-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -317,27 +318,6 @@ export default function Home() {
                   alt="THE BARN: Rustic Corner Bar & Grill"
                   className="w-full h-full object-cover"
                 />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6 text-left">
-                <div className="bg-white/10 rounded-2xl p-6">
-                  <h4 className="font-lora text-xl text-gold mb-3">Venue Features</h4>
-                  <ul className="font-opensans text-white space-y-2">
-                    <li>• Rustic barn-style architecture</li>
-                    <li>• Warm and cozy atmosphere</li>
-                    <li>• Perfect for intimate celebrations</li>
-                    <li>• Great food and service</li>
-                  </ul>
-                </div>
-                <div className="bg-white/10 rounded-2xl p-6">
-                  <h4 className="font-lora text-xl text-gold mb-3">Amenities</h4>
-                  <ul className="font-opensans text-white space-y-2">
-                    <li>• Full bar and grill menu</li>
-                    <li>• Sound system available</li>
-                    <li>• Comfortable seating areas</li>
-                    <li>• Friendly staff service</li>
-                  </ul>
-                </div>
               </div>
 
               <div className="mt-8">
@@ -413,6 +393,33 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#FDCFA0' }}></div>
+                  <p className="font-opensans text-sm text-slate-gray">Peach Cream</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#FAF096' }}></div>
+                  <p className="font-opensans text-sm text-slate-gray">Light Yellow</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#89A7C2' }}></div>
+                  <p className="font-opensans text-sm text-slate-gray">Dusty Blue</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#F8C6CC' }}></div>
+                  <p className="font-opensans text-sm text-slate-gray">Blush Pink</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#E78BA5' }}></div>
+                  <p className="font-opensans text-sm text-slate-gray">Mauve Pink</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#D9C2EB' }}></div>
+                  <p className="font-opensans text-sm text-slate-gray">Lavender</p>
+                </div>
+              </div>
+
               <div className="bg-red-50 rounded-2xl p-6 border-l-4 border-red-500">
                 <p className="font-opensans text-red-800 font-semibold text-center">
                   <strong>Important:</strong> Strictly no jeans
@@ -468,10 +475,10 @@ export default function Home() {
 
             <div className="space-y-6">
               {[
-                { time: "5:30 PM", event: "Guests Arrive", icon: Calendar },
-                { time: "6:00 PM", event: "Ceremony Begins", icon: Crown },
-                { time: "7:00 PM", event: "Dinner & Speeches", icon: Calendar },
-                { time: "9:00 PM", event: "Dancing & Farewell", icon: Music },
+                { time: "10:00 PM", event: "Guests Arrive", icon: Calendar },
+                { time: "10:30 PM", event: "Ceremony Begins", icon: Crown },
+                { time: "11:30 PM", event: "Dinner & Speeches", icon: Calendar },
+                { time: "1:00 AM", event: "Dancing & Farewell", icon: Music },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -541,7 +548,7 @@ export default function Home() {
                   </div>
                 ) : (
                   <iframe 
-                    src="https://www.youtube.com/embed/Us5WiFfhvIk?controls=1"
+                    src="https://www.youtube.com/embed/X8QRsbMD5C0?controls=1"
                     className="w-full h-full" 
                     frameBorder="0" 
                     allowFullScreen
@@ -577,7 +584,10 @@ export default function Home() {
               </div>
 
               <p className="font-opensans text-lg text-white mb-8">
-                Your presence is the greatest gift, but if you'd like to contribute to Gwyneth's future, monetary gifts are appreciated.
+                With all that we have, we've been truly blessed.<br/>
+                Your presence and prayers are all that we request.<br/>
+                But if you desire to give nonetheless,<br/>
+                a monetary gift is one we suggest.
               </p>
 
               <div className="bg-white rounded-2xl p-4 md:p-6 w-full max-w-xs md:max-w-md mx-auto border-2 border-soft-lilac">
@@ -652,7 +662,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <RSVPForm />
       <GuestbookForm />
       <footer className="py-12 relative gradient-green-blue">
         <div className="container mx-auto px-4">

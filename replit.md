@@ -6,6 +6,21 @@ This is a modern full-stack web application built as a debutante celebration and
 
 ## Recent Changes
 
+**January 12, 2025**: "A Decade and Eight" transformation with new design theme
+- Event renamed from "Debutante Ball" to "A Decade and Eight"
+- Time changed from 5:30 PM to 10:00 PM on August 30, 2025
+- Updated timeline to reflect new evening schedule (10:00 PM start)
+- Replaced gift section text with custom poem about monetary gifts
+- Implemented new soft color palette: #FDCFA0 #FAF096 #89A7C2 #F8C6CC #E78BA5 #D9C2EB
+- Added color palette display to dress code section
+- Moved RSVP section to appear after About Gwyneth section
+- Added child-free ceremony note to RSVP form
+- Updated debut prenup video to new YouTube link
+- Simplified venue section to show only location details
+- Updated CSS color system to use new "A Decade and Eight" theme
+- Fixed guest management system database schema issues
+- Added "18 Blue Bills" role option to admin dashboard
+
 **January 12, 2025**: Complete transformation from wedding to debutante celebration
 - Changed celebrant from Erica Santos to Gwyneth (Lea Gwyneth)
 - Updated event details: August 30, 2025 at 5:30 PM

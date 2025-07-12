@@ -26,15 +26,13 @@
   --ring: 217 91% 60%; /* #3B82F6 */
   --radius: 0.5rem;
   
-  /* Custom colors for royal theme */
-  --royal-blue: 217 91% 32%; /* #1E3A8A */
-  --sky-blue: 214 95% 79%; /* #93C5FD */
-  --slate-gray: 220 14% 46%; /* #6B7280 */
-  --soft-lilac: 327 73% 81%; /* #F9A8D4 */
-  --gold: 51 100% 50%; /* #FFD700 */
-  --forest-green: 122 39% 49%; /* #22C55E */
-  --emerald-green: 142 71% 45%; /* #10B981 */
-  --sage-green: 84 27% 65%; /* #A3A363 */
+  /* Custom colors for "A Decade and Eight" theme */
+  --peach-cream: 30 100% 81%; /* #FDCFA0 */
+  --light-yellow: 57 96% 78%; /* #FAF096 */
+  --dusty-blue: 213 35% 66%; /* #89A7C2 */
+  --blush-pink: 349 71% 87%; /* #F8C6CC */
+  --mauve-pink: 333 51% 74%; /* #E78BA5 */
+  --lavender: 271 51% 81%; /* #D9C2EB */
 }
 
 .dark {
@@ -87,69 +85,80 @@
 }
 
 @layer utilities {
+  .text-peach-cream {
+    color: hsl(var(--peach-cream));
+  }
+
+  .text-light-yellow {
+    color: hsl(var(--light-yellow));
+  }
+
+  .text-dusty-blue {
+    color: hsl(var(--dusty-blue));
+  }
+
+  .text-blush-pink {
+    color: hsl(var(--blush-pink));
+  }
+
+  .text-mauve-pink {
+    color: hsl(var(--mauve-pink));
+  }
+
+  .text-lavender {
+    color: hsl(var(--lavender));
+  }
+
+  .bg-peach-cream {
+    background-color: hsl(var(--peach-cream));
+  }
+
+  .bg-light-yellow {
+    background-color: hsl(var(--light-yellow));
+  }
+
+  .bg-dusty-blue {
+    background-color: hsl(var(--dusty-blue));
+  }
+
+  .bg-blush-pink {
+    background-color: hsl(var(--blush-pink));
+  }
+
+  .bg-mauve-pink {
+    background-color: hsl(var(--mauve-pink));
+  }
+
+  .bg-lavender {
+    background-color: hsl(var(--lavender));
+  }
+
+  /* Legacy color support - mapping old colors to new ones */
   .text-royal-blue {
-    color: hsl(var(--royal-blue));
-  }
-
-  .text-sky-blue {
-    color: hsl(var(--sky-blue));
-  }
-
-  .text-slate-gray {
-    color: hsl(var(--slate-gray));
+    color: hsl(var(--dusty-blue));
   }
 
   .text-soft-lilac {
-    color: hsl(var(--soft-lilac));
+    color: hsl(var(--blush-pink));
   }
 
   .text-gold {
-    color: hsl(var(--gold));
+    color: hsl(var(--light-yellow));
+  }
+
+  .text-slate-gray {
+    color: #6B7280;
   }
 
   .bg-royal-blue {
-    background-color: hsl(var(--royal-blue));
-  }
-
-  .bg-sky-blue {
-    background-color: hsl(var(--sky-blue));
-  }
-
-  .bg-slate-gray {
-    background-color: hsl(var(--slate-gray));
-  }
-
-  .bg-soft-lilac {
-    background-color: hsl(var(--soft-lilac));
+    background-color: hsl(var(--dusty-blue));
   }
 
   .bg-gold {
-    background-color: hsl(var(--gold));
+    background-color: hsl(var(--light-yellow));
   }
 
-  .bg-forest-green {
-    background-color: hsl(var(--forest-green));
-  }
 
-  .bg-emerald-green {
-    background-color: hsl(var(--emerald-green));
-  }
-
-  .bg-sage-green {
-    background-color: hsl(var(--sage-green));
-  }
-
-  .text-forest-green {
-    color: hsl(var(--forest-green));
-  }
-
-  .text-emerald-green {
-    color: hsl(var(--emerald-green));
-  }
-
-  .text-sage-green {
-    color: hsl(var(--sage-green));
-  }
 
   .border-royal-blue {
     border-color: hsl(var(--royal-blue));
