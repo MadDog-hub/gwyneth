@@ -576,7 +576,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12"
+              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#ffffff]"
             >
               <div className="mb-8">
                 <Crown className="w-16 h-16 text-gold mx-auto" />
