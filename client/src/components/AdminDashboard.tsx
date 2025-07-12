@@ -603,6 +603,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                           <SelectItem value="Relative">Relative</SelectItem>
                           <SelectItem value="18 Roses">18 Roses</SelectItem>
                           <SelectItem value="18 Candles">18 Candles</SelectItem>
+                          <SelectItem value="18 Blue Bills">18 Blue Bills</SelectItem>
                           <SelectItem value="18 Male Guests/Friends">18 Male Guests/Friends</SelectItem>
                           <SelectItem value="18 Treasures">18 Treasures</SelectItem>
                           <SelectItem value="18 Shots/Toasts">18 Shots/Toasts</SelectItem>
