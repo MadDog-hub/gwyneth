@@ -128,13 +128,9 @@ export default function Home() {
 
                 <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
 
-                <h2 className="text-2xl md:text-4xl font-bold text-royal-blue mb-4" style={{ fontFamily: 'cursive' }}>
-                  GWYNETH
-                </h2>
-
-                <h3 className="font-cinzel text-xl md:text-2xl font-semibold text-royal-blue mb-6">
+                <h2 className="font-cinzel text-xl md:text-2xl font-semibold text-royal-blue mb-6">
                   A Decade and Eight
-                </h3>
+                </h2>
 
                 <div className="space-y-3 mb-8 text-slate-gray">
                   <p className="font-opensans">
@@ -680,7 +676,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div classNameflex justify-center space-x-6 mb-8">
+            <div className="flex justify-center space-x-6 mb-8">
               {[
                 { label: "Home", id: "hero" },
                 { label: "About", id: "about" },
@@ -698,7 +694,7 @@ export default function Home() {
               ))}
             </div>
 
-
+            
 
             <Button
               asChild
