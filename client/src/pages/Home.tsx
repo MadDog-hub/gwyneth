@@ -590,7 +590,6 @@ export default function Home() {
               </p>
 
               <div className="bg-white rounded-2xl p-4 md:p-6 w-full max-w-xs md:max-w-md mx-auto border-2 border-soft-lilac">
-                <h3 className="font-lora text-lg md:text-xl text-soft-lilac mb-4 text-center">Digital Payment</h3>
                 <div className="w-full max-w-[240px] md:max-w-[280px] mx-auto">
                   <img 
                     src={qrGift} 
