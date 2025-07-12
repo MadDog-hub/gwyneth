@@ -10,7 +10,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   return (
     <div className="flex justify-center space-x-4 md:space-x-8">
       <div className="text-center">
-        <div className="font-cinzel text-4xl md:text-6xl font-bold text-gold pulse-gold">
+        <div className="font-cinzel text-4xl md:text-6xl font-bold pulse-gold text-[#fbda2d]">
           {days.toString().padStart(3, '0')}
         </div>
         <div className="font-opensans text-slate-gray uppercase tracking-wider text-sm">
