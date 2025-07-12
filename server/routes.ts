@@ -94,9 +94,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { username, password } = adminLoginSchema.parse(req.body);
       
-      // For demo purposes, use hardcoded credentials
-      // In production, use proper password hashing
-      if (username === "sample123" && password === "sample123") {
+      // Use database authentication
+      const admin = await storage.getAdminByUsername(username);
+      
+      if (admin && admin.password === password) {
         res.json({ message: "Login successful", token: "demo-token" });
       } else {
         res.status(401).json({ message: "Invalid credentials" });

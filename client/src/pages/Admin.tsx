@@ -108,7 +108,7 @@ export default function Admin() {
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  placeholder="Enter username (sample123)"
+                  placeholder="Enter username"
                   className="border-2 border-soft-lilac focus:border-gold"
                   disabled={loginMutation.isPending}
                 />
@@ -123,7 +123,7 @@ export default function Admin() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter password (sample123)"
+                  placeholder="Enter password"
                   className="border-2 border-soft-lilac focus:border-gold"
                   disabled={loginMutation.isPending}
                 />
@@ -162,11 +162,7 @@ export default function Admin() {
               </div>
             </form>
             
-            <div className="mt-6 p-4 bg-sky-blue/10 rounded-lg">
-              <p className="text-xs text-slate-gray text-center">
-                Demo credentials: username: sample123, password: sample123
-              </p>
-            </div>
+
           </CardContent>
         </Card>
       </motion.div>
