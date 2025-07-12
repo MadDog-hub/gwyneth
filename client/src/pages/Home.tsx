@@ -16,6 +16,8 @@ import dresscodeWomen from "@assets/dresscode-woman_1752306166979.png";
 import dresscodeMen from "@assets/dresscode-men_1752306166979.jpg";
 import locationImage from "@assets/location_1752306166980.webp";
 
+import Untitled_design from "@assets/Untitled design.png";
+
 export default function Home() {
   const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
   const [musicPlaying, setMusicPlaying] = useState(false);
@@ -385,7 +387,7 @@ export default function Home() {
                   <h3 className="font-lora text-2xl text-royal-blue mb-4">For Women</h3>
                   <div className="mb-6">
                     <img 
-                      src={dresscodeWomen} 
+                      src={Untitled_design} 
                       alt="Women's Dress Code - Formal Dresses"
                       className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-gold"
                     />
