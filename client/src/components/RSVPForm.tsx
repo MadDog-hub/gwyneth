@@ -151,7 +151,7 @@ export default function RSVPForm() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-royal-blue mb-4">
+            <h2 className="font-cinzel text-4xl md:text-5xl font-bold mb-4 text-[#3c83f6e6]">
               RSVP
             </h2>
             <p className="font-lora text-2xl text-soft-lilac">
@@ -174,7 +174,7 @@ export default function RSVPForm() {
               <CardContent className="p-8 md:p-12">
                 {searchMode ? (
                   // Guest Search Form
-                  <form onSubmit={handleSearch} className="space-y-6">
+                  (<form onSubmit={handleSearch} className="space-y-6">
                     <div className="text-center mb-8">
                       <h3 className="font-lora text-2xl font-semibold text-royal-blue mb-2">
                         Find Your Invitation
@@ -183,7 +183,6 @@ export default function RSVPForm() {
                         Enter your name to locate your invitation details
                       </p>
                     </div>
-                    
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="firstName" className="font-opensans text-slate-gray">
@@ -214,7 +213,6 @@ export default function RSVPForm() {
                         />
                       </div>
                     </div>
-                    
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-royal-blue to-soft-lilac text-white font-opensans font-semibold py-4 btn-3d"
@@ -232,10 +230,10 @@ export default function RSVPForm() {
                         </>
                       )}
                     </Button>
-                  </form>
+                  </form>)
                 ) : (
                   // RSVP Details Form
-                  <form onSubmit={handleSubmitRSVP} className="space-y-8">
+                  (<form onSubmit={handleSubmitRSVP} className="space-y-8">
                     {guest && (
                       <div className="p-6 bg-gold/10 rounded-xl border-l-4 border-gold">
                         <p className="font-lora text-lg text-royal-blue">
@@ -246,7 +244,6 @@ export default function RSVPForm() {
                         </p>
                       </div>
                     )}
-                    
                     <div className="space-y-4">
                       <Label className="font-opensans text-slate-gray text-lg">
                         Will you be attending?
@@ -266,7 +263,6 @@ export default function RSVPForm() {
                         </div>
                       </RadioGroup>
                     </div>
-                    
                     {attendance === "attending" && guest && guest.allowedPlusGuests > 0 && (
                       <div className="space-y-6">
                         <div className="flex items-center justify-between">
@@ -328,7 +324,6 @@ export default function RSVPForm() {
                         </div>
                       </div>
                     )}
-                    
                     <div className="space-y-2">
                       <Label htmlFor="personalMessage" className="font-opensans text-slate-gray">
                         Personal Message (Optional)
@@ -343,7 +338,6 @@ export default function RSVPForm() {
                         disabled={rsvpMutation.isPending}
                       />
                     </div>
-                    
                     <div className="flex space-x-4">
                       <Button
                         type="button"
@@ -379,7 +373,7 @@ export default function RSVPForm() {
                         )}
                       </Button>
                     </div>
-                  </form>
+                  </form>)
                 )}
               </CardContent>
             </Card>

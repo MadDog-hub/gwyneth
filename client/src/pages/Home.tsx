@@ -241,7 +241,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-cinzel text-4xl md:text-5xl font-bold text-[#D9C2EB] mb-12"
+              className="font-cinzel text-4xl md:text-5xl font-bold mb-12 text-[#3c83f6e6]"
             >
               About Gwyneth
             </motion.h2>
