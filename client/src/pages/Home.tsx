@@ -129,7 +129,7 @@ export default function Home() {
                   <img 
                     src="/attached_assets/Screenshot_2025-07-12_231826-removebg-preview_1752333538284.png" 
                     alt="Gwyneth"
-                    className="h-16 md:h-20 mx-auto"
+                    className="h-24 md:h-32 mx-auto"
                   />
                 </div>
 
@@ -184,7 +184,7 @@ export default function Home() {
       </audio>
       <Navigation scrollToSection={scrollToSection} />
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
-        <div className="text-center z-10 relative max-w-4xl mx-auto px-4 bg-[#f5f1e8]">
+        <div className="text-center z-10 relative max-w-4xl mx-auto px-4 bg-[#f5f1e8] rounded-lg">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
