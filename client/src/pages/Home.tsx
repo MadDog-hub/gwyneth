@@ -648,12 +648,12 @@ export default function Home() {
                   className="glass-effect rounded-2xl p-6"
                 >
                   <details className="group">
-                    <summary className="font-lora text-lg text-[#D9C2EB] cursor-pointer list-none flex justify-between items-center">
+                    <summary className="font-lora text-lg text-[#E78BA5] cursor-pointer list-none flex justify-between items-center">
                       <span>{faq.question}</span>
                       <span className="text-gold group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <div className="mt-4 pt-4 border-t border-white/20">
-                      <p className="font-opensans text-[#D9C2EB]">{faq.answer}</p>
+                      <p className="font-opensans text-[#E78BA5]">{faq.answer}</p>
                     </div>
                   </details>
                 </motion.div>
