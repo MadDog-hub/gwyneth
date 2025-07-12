@@ -35,7 +35,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
       </div>
       <div className="text-center">
         <div className="font-cinzel text-4xl md:text-6xl font-bold pulse-gold text-[#fadd47]">
-          {seconds.toString().padStart(2, '0')}
+          44
         </div>
         <div className="font-opensans text-slate-gray uppercase tracking-wider text-sm">
           Seconds
