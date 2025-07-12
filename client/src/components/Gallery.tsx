@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import gallery1 from "@assets/gallery1_1752306166982.jpg";
-import gallery2 from "@assets/DSC06930_1752306166981.jpg";
-import gallery3 from "@assets/about-debudant_1752306166981.jpg";
-import gallery4 from "@assets/DSC07066_1752306166982.jpg";
-import gallery5 from "@assets/gallery12_1752306166982.jpg";
-import gallery6 from "@assets/gallery10_1752306166983.jpg";
+import gallery2 from "@assets/gallery2_1752306657653.jpg";
+import gallery3 from "@assets/gallery3_1752306674367.jpg";
+import gallery4 from "@assets/gallery4_1752306684844.jpg";
+import gallery5 from "@assets/gallery5_1752306684845.jpg";
+import gallery6 from "@assets/gallery6_1752306684843.jpg";
 import gallery7 from "@assets/gallery7_1752306166983.jpg";
-import gallery8 from "@assets/gallery11_1752306166983.jpg";
+import gallery8 from "@assets/gallery8_1752306684843.jpg";
+import gallery9 from "@assets/gallery9_1752306684845.jpg";
+import gallery10 from "@assets/gallery2_1752306684844.jpg";
+import gallery11 from "@assets/gallery3_1752306684845.jpg";
 
 const galleryImages = [
   { src: gallery1, alt: "Gwyneth - Portrait 1" },
@@ -17,6 +20,9 @@ const galleryImages = [
   { src: gallery6, alt: "Gwyneth - Portrait 6" },
   { src: gallery7, alt: "Gwyneth - Portrait 7" },
   { src: gallery8, alt: "Gwyneth - Portrait 8" },
+  { src: gallery9, alt: "Gwyneth - Portrait 9" },
+  { src: gallery10, alt: "Gwyneth - Portrait 10" },
+  { src: gallery11, alt: "Gwyneth - Portrait 11" },
 ];
 
 export default function Gallery() {

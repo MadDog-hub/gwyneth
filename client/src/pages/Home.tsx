@@ -663,7 +663,7 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
               <div className="flex items-center">
-                <span className="font-opensans text-white">Contact for inquiries</span>
+                <span className="font-opensans text-white">For inquiries visit rsvpblisscreations.site</span>
               </div>
             </div>
 

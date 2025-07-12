@@ -54,7 +54,7 @@ export default function Navigation({ scrollToSection }: NavigationProps) {
               <div className="flex items-center space-x-2">
                 <Crown className="w-8 h-8 text-royal-blue" />
                 <span className="font-cinzel text-xl font-bold text-royal-blue">
-                  Erica's Celebration
+                  Gwyneth's Celebration
                 </span>
               </div>
 
