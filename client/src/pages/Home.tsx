@@ -309,7 +309,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <h3 className="font-lora text-2xl text-[#D9C2EB] mb-4">THE BARN: Rustic Corner Bar & Grill</h3>
+              <h3 className="font-lora text-2xl mb-4 text-[#e78ba5]">THE BARN: Rustic Corner Bar & Grill</h3>
 
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold mb-6">
                 <img 
