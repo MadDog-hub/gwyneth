@@ -135,7 +135,7 @@ export default function Home() {
                 <div className="space-y-3 mb-8 text-slate-gray">
                   <p className="font-opensans">
                     <Calendar className="inline w-4 h-4 mr-2" />
-                    August 30, 2025 • 10:00 PM
+                    August 30, 2025 • 6:00 PM
                   </p>
                   <p className="font-opensans">
                     <MapPin className="inline w-4 h-4 mr-2" />
@@ -217,7 +217,7 @@ export default function Home() {
           >
             <p className="font-opensans text-lg text-slate-gray">
               <Calendar className="inline w-6 h-6 mr-2 text-gold" />
-              August 30, 2025 at 10:00 PM
+              August 30, 2025 at 6:00 PM
             </p>
             <p className="font-opensans text-lg text-slate-gray">
               <MapPin className="inline w-6 h-6 mr-2 text-gold" />
@@ -230,7 +230,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <CountdownTimer targetDate="2025-08-30T22:00:00" />
+            <CountdownTimer targetDate="2025-08-30T18:00:00" />
           </motion.div>
         </div>
       </section>
@@ -474,10 +474,10 @@ export default function Home() {
 
             <div className="space-y-6">
               {[
-                { time: "10:00 PM", event: "Guests Arrive", icon: Calendar },
-                { time: "10:30 PM", event: "Ceremony Begins", icon: Crown },
-                { time: "11:30 PM", event: "Dinner & Speeches", icon: Calendar },
-                { time: "1:00 AM", event: "Dancing & Farewell", icon: Music },
+                { time: "5:30 PM", event: "Guests Arrive", icon: Calendar },
+                { time: "6:00 PM", event: "Ceremony Begins", icon: Crown },
+                { time: "7:00 PM", event: "Dinner & Speeches", icon: Calendar },
+                { time: "10:00 PM", event: "Dancing & Farewell", icon: Music },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -618,7 +618,7 @@ export default function Home() {
               {[
                 {
                   question: "What time should I arrive?",
-                  answer: "Please arrive by 10:00 PM to ensure you don't miss any part of the celebration."
+                  answer: "Please arrive by 5:30 PM to ensure you don't miss any part of the celebration."
                 },
                 {
                   question: "Is parking available?",
@@ -634,7 +634,7 @@ export default function Home() {
                 },
                 {
                   question: "What time does the event end?",
-                  answer: "The celebration will conclude around 9:00 PM."
+                  answer: "The celebration will conclude around 10:00 PM."
                 }
               ].map((faq, index) => (
                 <motion.div
