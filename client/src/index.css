@@ -161,39 +161,63 @@
 
 
   .border-royal-blue {
-    border-color: hsl(var(--royal-blue));
+    border-color: hsl(var(--dusty-blue));
   }
 
   .border-sky-blue {
-    border-color: hsl(var(--sky-blue));
+    border-color: hsl(var(--dusty-blue));
   }
 
   .border-soft-lilac {
-    border-color: hsl(var(--soft-lilac));
+    border-color: hsl(var(--blush-pink));
   }
 
   .border-gold {
-    border-color: hsl(var(--gold));
+    border-color: hsl(var(--light-yellow));
   }
 
   .border-forest-green {
-    border-color: hsl(var(--forest-green));
+    border-color: hsl(var(--dusty-blue));
+  }
+
+  .border-peach-cream {
+    border-color: hsl(var(--peach-cream));
+  }
+
+  .border-light-yellow {
+    border-color: hsl(var(--light-yellow));
+  }
+
+  .border-dusty-blue {
+    border-color: hsl(var(--dusty-blue));
+  }
+
+  .border-blush-pink {
+    border-color: hsl(var(--blush-pink));
+  }
+
+  .border-mauve-pink {
+    border-color: hsl(var(--mauve-pink));
+  }
+
+  .border-lavender {
+    border-color: hsl(var(--lavender));
   }
 
   .gradient-royal {
-    background: linear-gradient(135deg, hsl(var(--royal-blue)) 0%, hsl(var(--sky-blue)) 100%);
+    background: linear-gradient(135deg, hsl(var(--dusty-blue)) 0%, hsl(var(--dusty-blue)) 100%);
   }
 
   .gradient-lilac {
-    background: linear-gradient(135deg, hsl(var(--soft-lilac)) 0%, hsl(var(--gold)) 100%);
+    background: linear-gradient(135deg, hsl(var(--blush-pink)) 0%, hsl(var(--light-yellow)) 100%);
   }
 
   .gradient-garden {
-    background: linear-gradient(135deg, hsl(var(--forest-green)) 0%, hsl(var(--emerald-green)) 50%, hsl(var(--sage-green)) 100%);
+    background: linear-gradient(135deg, hsl(var(--dusty-blue)) 0%, hsl(var(--peach-cream)) 50%, hsl(var(--light-yellow)) 100%);
   }
 
   .gradient-green-blue {
-    background: linear-gradient(135deg, hsl(var(--emerald-green)) 0%, hsl(var(--royal-blue)) 100%);
+    background: linear-gradient(135deg, hsl(var(--dusty-blue)) 0%, hsl(var(--dusty-blue)) 100%);
   }
 
   .text-shadow {
@@ -267,11 +291,11 @@
 @keyframes pulse-gold {
   0%, 100% {
     opacity: 1;
-    text-shadow: 0 0 20px hsl(var(--gold));
+    text-shadow: 0 0 20px hsl(var(--light-yellow));
   }
   50% {
     opacity: 0.8;
-    text-shadow: 0 0 40px hsl(var(--gold)), 0 0 60px hsl(var(--gold));
+    text-shadow: 0 0 40px hsl(var(--light-yellow)), 0 0 60px hsl(var(--light-yellow));
   }
 }
 
@@ -281,16 +305,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, hsl(var(--royal-blue)), hsl(var(--sky-blue)));
+  background: linear-gradient(180deg, hsl(var(--dusty-blue)), hsl(var(--dusty-blue)));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--gold));
+  background: hsl(var(--light-yellow));
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--soft-lilac));
+  background: hsl(var(--blush-pink));
 }
 
 /* Three.js canvas positioning */
