@@ -1,0 +1,107 @@
+# Replit.md
+
+## Overview
+
+This is a modern full-stack web application built as a wedding invitation and RSVP system for Erica Santos. The application features an elegant, royal-themed design with interactive elements including a countdown timer, photo gallery, RSVP management, and guestbook functionality. It's built with React on the frontend, Express.js on the backend, and uses PostgreSQL with Drizzle ORM for data persistence.
+
+## Recent Changes
+
+**January 12, 2025**: Database isolation completed
+- Created dedicated PostgreSQL database for this remixed project
+- Established separate database tables (guests, plus_guests, guestbook_messages, admins)
+- Ensured complete isolation from other projects on the account
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## System Architecture
+
+The application follows a clean separation between frontend and backend with shared schema definitions:
+
+- **Frontend**: React with TypeScript, styled with Tailwind CSS and Shadcn/ui components
+- **Backend**: Express.js server with RESTful API endpoints
+- **Database**: PostgreSQL with Drizzle ORM for type-safe database operations
+- **Shared Types**: Common schema definitions used by both frontend and backend
+- **Build System**: Vite for frontend bundling, ESBuild for backend compilation
+
+## Key Components
+
+### Frontend Architecture
+- **Component-based React application** using functional components with hooks
+- **Shadcn/ui component library** for consistent, accessible UI components
+- **Framer Motion** for smooth animations and transitions
+- **TanStack Query** for efficient server state management and caching
+- **Wouter** for lightweight client-side routing
+- **Three.js** for 3D background effects and visual enhancements
+- **Tailwind CSS** with custom royal theme color palette
+
+### Backend Architecture
+- **Express.js REST API** with middleware for logging and error handling
+- **Modular route handling** separated into dedicated route files
+- **Storage abstraction layer** with interface-driven database operations
+- **Drizzle ORM** for type-safe database queries and migrations
+- **Neon serverless PostgreSQL** connection with WebSocket support
+
+### Database Schema
+- **Guests table**: Stores primary guest information, RSVP status, and allowed plus guests
+- **Plus guests table**: Stores additional guests brought by primary invitees
+- **Guestbook messages table**: Stores public messages with moderation capabilities
+- **Admins table**: Stores administrator credentials for backend access
+
+## Data Flow
+
+1. **Guest Search**: Users search by first/last name to find their invitation
+2. **RSVP Submission**: Guests can accept/decline and add plus guests within their limit
+3. **Guestbook**: Public messages submitted for approval before display
+4. **Admin Dashboard**: Comprehensive management interface for all data
+5. **Real-time Updates**: Frontend automatically refreshes data using TanStack Query
+
+## External Dependencies
+
+### Frontend Dependencies
+- **React ecosystem**: React, React DOM for UI framework
+- **Styling**: Tailwind CSS, Radix UI primitives, Class Variance Authority
+- **Animations**: Framer Motion for smooth transitions
+- **3D Graphics**: Three.js for background effects
+- **State Management**: TanStack Query for server state
+- **Forms**: React Hook Form with Zod validation
+- **Routing**: Wouter for lightweight routing
+
+### Backend Dependencies
+- **Core**: Express.js, TypeScript for server framework
+- **Database**: Drizzle ORM, @neondatabase/serverless for PostgreSQL
+- **Session Management**: connect-pg-simple for PostgreSQL session storage
+- **Validation**: Zod for runtime type checking
+- **Development**: tsx for TypeScript execution, nodemon equivalent
+
+### Build Tools
+- **Vite**: Frontend development server and build tool
+- **ESBuild**: Backend compilation and bundling
+- **TypeScript**: Type checking and compilation
+- **PostCSS**: CSS processing with Tailwind
+
+## Deployment Strategy
+
+The application is designed for deployment on platforms like Replit, Vercel, or similar:
+
+1. **Environment Variables**: 
+   - `DATABASE_URL`: PostgreSQL connection string (required)
+   - `NODE_ENV`: Environment setting (development/production)
+
+2. **Build Process**:
+   - Frontend: Vite builds static assets to `dist/public`
+   - Backend: ESBuild compiles server code to `dist/index.js`
+   - Database: Drizzle migrations applied via `db:push` command
+
+3. **Production Setup**:
+   - Static assets served by Express in production
+   - PostgreSQL database (Neon serverless recommended)
+   - Session storage using PostgreSQL
+   - HTTPS recommended for production deployment
+
+4. **Development Workflow**:
+   - Hot module replacement via Vite development server
+   - TypeScript compilation and type checking
+   - Database schema changes via Drizzle Kit
+   - Automatic server restart on file changes
