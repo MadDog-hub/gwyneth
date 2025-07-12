@@ -184,7 +184,7 @@ export default function Home() {
       </audio>
       <Navigation scrollToSection={scrollToSection} />
       <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
-        <div className="text-center z-10 relative max-w-4xl mx-auto px-4 bg-[#f5f1e8] rounded-lg">
+        <div className="text-center z-10 relative max-w-4xl mx-auto px-4 rounded-lg bg-[#ece7df]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
