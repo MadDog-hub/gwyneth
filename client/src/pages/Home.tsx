@@ -354,7 +354,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect rounded-3xl p-8 md:p-12"
+              className="glass-effect rounded-3xl p-8 md:p-12 bg-[#ffffff]"
             >
               <p className="font-opensans text-xl text-slate-gray mb-8 leading-relaxed text-center">
                 <strong>Formal Attire</strong><br />
