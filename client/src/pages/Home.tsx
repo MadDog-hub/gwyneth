@@ -140,7 +140,7 @@ export default function Home() {
                 <div className="space-y-3 mb-8 text-slate-gray">
                   <p className="font-opensans">
                     <Calendar className="inline w-4 h-4 mr-2" />
-                    August 30, 2025 • 6:00 PM
+                    August 30, 2025 • 5:30 PM
                   </p>
                   <p className="font-opensans">
                     <MapPin className="inline w-4 h-4 mr-2" />
