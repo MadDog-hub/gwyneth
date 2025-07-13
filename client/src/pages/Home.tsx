@@ -713,7 +713,7 @@ export default function Home() {
             <Button
               asChild
               variant="ghost"
-              className="text-[#3c83f6e6] bg-[#fdf791] text-xs opacity-50 hover:opacity-100 transition-opacity"
+              className="text-[#3c83f6e6] bg-dark-pink text-xs opacity-50 hover:opacity-100 transition-opacity"
             >
               <a href="/admin">Admin</a>
             </Button>
