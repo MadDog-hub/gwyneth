@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import gallery1 from "@assets/gallery1_1752306166982.jpg";
-import gallery2 from "@assets/gallery2_1752306657653.jpg";
-import gallery3 from "@assets/gallery3_1752306674367.jpg";
-import gallery4 from "@assets/gallery4_1752306684844.jpg";
-import gallery5 from "@assets/gallery5_1752306684845.jpg";
-import gallery6 from "@assets/gallery6_1752306684843.jpg";
-import gallery7 from "@assets/gallery7_1752306684841.jpg";
-import gallery8 from "@assets/gallery8_1752306684843.jpg";
-import gallery9 from "@assets/gallery9_1752306684845.jpg";
-import gallery10 from "@assets/gallery10_1752306684840.jpg";
-import gallery11 from "@assets/gallery11_1752306684842.jpg";
-import gallery12 from "@assets/gallery12_1752306684839.jpg";
+import gallery1 from "@assets/gallery1_1752375575296.jpg";
+import gallery2 from "@assets/gallery2_1752375575298.jpg";
+import gallery3 from "@assets/gallery3_1752375575300.jpg";
+import gallery4 from "@assets/gallery4_1752375575301.jpg";
+import gallery5 from "@assets/gallery5_1752375575302.jpg";
+import gallery6 from "@assets/gallery6_1752375575302.jpg";
+import gallery7 from "@assets/gallery7_1752375575303.jpg";
+import gallery8 from "@assets/gallery8_1752375575304.jpg";
+import gallery9 from "@assets/gallery9_1752375575305.jpg";
+import gallery10 from "@assets/gallery10_1752375575308.jpg";
+import gallery11 from "@assets/gallery11_1752375575309.jpg";
+import gallery12 from "@assets/gallery12_1752375575310.jpg";
 
 const galleryImages = [
   { src: gallery1, alt: "Gwyneth - Portrait 1" },
@@ -56,7 +56,7 @@ export default function Gallery() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="group relative overflow-hidden rounded-3xl shadow-2xl border-4 border-gold cursor-pointer"
+                className="group relative overflow-hidden rounded-3xl shadow-2xl border-4 border-dark-pink cursor-pointer"
               >
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
