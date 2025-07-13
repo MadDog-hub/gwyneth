@@ -153,7 +153,7 @@ export default function GuestbookForm() {
           >
             <Card className="border-2 border-soft-lilac bg-white/95 backdrop-blur-sm shadow-2xl">
               <CardHeader>
-                <CardTitle className="font-lora text-2xl text-soft-lilac text-center">
+                <CardTitle className="font-semibold tracking-tight font-lora text-2xl text-center text-[#c64e84]">
                   Leave a Message
                 </CardTitle>
               </CardHeader>
