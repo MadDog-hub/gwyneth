@@ -226,7 +226,6 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
           </div>
         </div>
       </header>
-
       <div className="container mx-auto px-4 py-8">
         {/* Statistics Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
@@ -302,7 +301,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="font-opensans text-sm text-slate-gray">Plus Guests</p>
-                      <p className="font-cinzel text-2xl font-bold text-soft-lilac">
+                      <p className="font-cinzel text-2xl font-bold text-[#f04164]">
                         {statistics?.totalPlusGuests || 0}
                       </p>
                     </div>
