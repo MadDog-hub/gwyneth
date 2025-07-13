@@ -12,10 +12,9 @@ import Navigation from "@/components/Navigation";
 
 import qrGift from "@assets/qr-gift_1752306166980.jpg";
 import aboutGwyneth from "@assets/DSC06930_1752306166981.jpg";
-import dresscodeWomen from "@assets/dresscode-woman_1752306166979.png";
 import dresscodeMen from "@assets/dresscode-men_1752306166979.jpg";
 import locationImage from "@assets/location_1752306166980.webp";
-import familyPhoto from "@assets/DSC07403_1752383308646.jpg";
+import familyPhoto from "@assets/DSC07403 (1)_1752383308646.jpg";
 
 import Untitled_design from "@assets/Untitled design.png";
 
