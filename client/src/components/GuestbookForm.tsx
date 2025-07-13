@@ -87,7 +87,7 @@ export default function GuestbookForm() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h3 className="font-lora text-2xl text-soft-lilac mb-6 text-center">
+            <h3 className="font-lora text-2xl mb-6 text-center text-[#c64e84]">
               Messages from Friends & Family
             </h3>
             

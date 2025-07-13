@@ -80,7 +80,7 @@ export default function Gallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6 }}
-            className="font-lora text-lg mt-12 text-center text-[#E78BA5]"
+            className="font-lora text-lg mt-12 text-center text-[#c64e84]"
           >
             <span className="font-script">Gwyneth's</span> journey to adulthood captured in beautiful moments
           </motion.p>
