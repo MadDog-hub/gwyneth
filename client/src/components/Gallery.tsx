@@ -5,11 +5,12 @@ import gallery3 from "@assets/gallery3_1752306674367.jpg";
 import gallery4 from "@assets/gallery4_1752306684844.jpg";
 import gallery5 from "@assets/gallery5_1752306684845.jpg";
 import gallery6 from "@assets/gallery6_1752306684843.jpg";
-import gallery7 from "@assets/gallery7_1752306166983.jpg";
+import gallery7 from "@assets/gallery7_1752306684841.jpg";
 import gallery8 from "@assets/gallery8_1752306684843.jpg";
 import gallery9 from "@assets/gallery9_1752306684845.jpg";
-import gallery10 from "@assets/gallery2_1752306684844.jpg";
-import gallery11 from "@assets/gallery3_1752306684845.jpg";
+import gallery10 from "@assets/gallery10_1752306684840.jpg";
+import gallery11 from "@assets/gallery11_1752306684842.jpg";
+import gallery12 from "@assets/gallery12_1752306684839.jpg";
 
 const galleryImages = [
   { src: gallery1, alt: "Gwyneth - Portrait 1" },
@@ -23,6 +24,7 @@ const galleryImages = [
   { src: gallery9, alt: "Gwyneth - Portrait 9" },
   { src: gallery10, alt: "Gwyneth - Portrait 10" },
   { src: gallery11, alt: "Gwyneth - Portrait 11" },
+  { src: gallery12, alt: "Gwyneth - Portrait 12" },
 ];
 
 export default function Gallery() {
