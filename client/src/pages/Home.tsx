@@ -556,7 +556,7 @@ export default function Home() {
                       <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <Play className="w-8 h-8 text-royal-blue ml-1" />
                       </div>
-                      <p className="font-lora text-[#D9C2EB] text-lg">Play Debut Prenup Video</p>
+                      <p className="font-lora text-lg text-[#c64e84]">Play Debut Prenup Video</p>
                     </div>
                   </div>
                 ) : (
