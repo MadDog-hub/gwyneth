@@ -1,6 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Crown, MapPin, Calendar, Music, Play, Pause, Mail, Heart } from "lucide-react";
+import {
+  Crown,
+  MapPin,
+  Calendar,
+  Music,
+  Play,
+  Pause,
+  Mail,
+  Heart,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ThreeBackground from "@/components/ThreeBackground";
@@ -19,7 +28,9 @@ import familyPhoto from "@assets/DSC07403 (1)_1752383308646.jpg";
 import Untitled_design from "@assets/Untitled design.png";
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<"invitation" | "main">("invitation");
+  const [currentPage, setCurrentPage] = useState<"invitation" | "main">(
+    "invitation",
+  );
   const [musicPlaying, setMusicPlaying] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
@@ -31,12 +42,15 @@ export default function Home() {
     setTimeout(() => {
       if (audioRef.current) {
         audioRef.current.volume = 0.3;
-        audioRef.current.play().then(() => {
-          setMusicPlaying(true);
-          console.log("Music started successfully");
-        }).catch(error => {
-          console.log("Audio play failed:", error);
-        });
+        audioRef.current
+          .play()
+          .then(() => {
+            setMusicPlaying(true);
+            console.log("Music started successfully");
+          })
+          .catch((error) => {
+            console.log("Audio play failed:", error);
+          });
       }
     }, 1000);
   };
@@ -60,11 +74,14 @@ export default function Home() {
     setVideoPlaying(false);
     // Resume music when video is stopped
     if (audioRef.current && !musicPlaying) {
-      audioRef.current.play().then(() => {
-        setMusicPlaying(true);
-      }).catch(error => {
-        console.log("Audio play failed:", error);
-      });
+      audioRef.current
+        .play()
+        .then(() => {
+          setMusicPlaying(true);
+        })
+        .catch((error) => {
+          console.log("Audio play failed:", error);
+        });
     }
   };
 
@@ -75,7 +92,7 @@ export default function Home() {
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -126,8 +143,8 @@ export default function Home() {
                 <div className="w-24 h-1 bg-dark-pink mx-auto mb-6"></div>
 
                 <div className="mb-4">
-                  <img 
-                    src="/attached_assets/Screenshot_2025-07-12_231826-removebg-preview_1752333538284.png" 
+                  <img
+                    src="/attached_assets/Screenshot_2025-07-12_231826-removebg-preview_1752333538284.png"
                     alt="Gwyneth"
                     className="h-24 md:h-32 mx-auto"
                   />
@@ -177,13 +194,19 @@ export default function Home() {
         onLoadStart={() => console.log("Audio loading started")}
         onCanPlay={() => console.log("Audio ready to play")}
         onPlay={() => console.log("Audio started playing")}
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
       >
-        <source src="/attached_assets/ytmp3free.cc_golden-hour-jvke-string-orchestra-cover-by-vivid-strings-youtubemp3free.org_1752306166980.mp3" type="audio/mpeg" />
+        <source
+          src="/attached_assets/ytmp3free.cc_golden-hour-jvke-string-orchestra-cover-by-vivid-strings-youtubemp3free.org_1752306166980.mp3"
+          type="audio/mpeg"
+        />
         Your browser does not support the audio element.
       </audio>
       <Navigation scrollToSection={scrollToSection} />
-      <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
+      <section
+        id="hero"
+        className="min-h-screen flex items-center justify-center relative pt-20"
+      >
         <div className="text-center z-10 relative max-w-4xl mx-auto px-4 rounded-lg bg-[#ece7df]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -231,7 +254,7 @@ export default function Home() {
           >
             <p className="font-opensans text-lg text-slate-gray">
               <Calendar className="inline w-6 h-6 mr-2 text-dark-pink" />
-              August 30, 2025 at 6:00 PM
+              August 30, 2025 at 5:30 PM
             </p>
             <p className="font-opensans text-lg text-slate-gray">
               <MapPin className="inline w-6 h-6 mr-2 text-dark-pink" />
@@ -244,7 +267,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <CountdownTimer targetDate="2025-08-30T18:00:00" />
+            <CountdownTimer targetDate="2025-08-30T17:30:00" />
           </motion.div>
         </div>
       </section>
@@ -275,21 +298,35 @@ export default function Home() {
 
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2">
-                  <img 
-                    src={aboutGwyneth} 
+                  <img
+                    src={aboutGwyneth}
                     alt="Lea Gwyneth"
                     className="w-full h-96 object-cover rounded-2xl shadow-lg border-4 border-dark-pink"
                   />
                 </div>
                 <div className="md:w-1/2">
                   <p className="font-opensans text-lg leading-relaxed mb-6 text-[#E78BA5]">
-                    Lea <span className="font-script text-xl">Gwyneth</span>, a thoughtful and passionate 18-year-old, has long held a deep appreciation for music and its ability to inspire, heal, and connect. Though not a musician herself, she finds meaning and emotion in melodies, lyrics, and rhythms that speak to the heart.
+                    Lea <span className="font-script text-xl">Gwyneth</span>, a
+                    thoughtful and passionate 18-year-old, has long held a deep
+                    appreciation for music and its ability to inspire, heal, and
+                    connect. Though not a musician herself, she finds meaning
+                    and emotion in melodies, lyrics, and rhythms that speak to
+                    the heart.
                   </p>
                   <p className="font-opensans text-lg leading-relaxed mb-6 text-[#E78BA5]">
-                    Her love for music is reflected in the way she curates soundtracks to match moments in life, drawing strength, comfort, and joy from each note. To her, music is more than entertainment—it's a powerful expression of human experience, and a constant companion on her personal journey.
+                    Her love for music is reflected in the way she curates
+                    soundtracks to match moments in life, drawing strength,
+                    comfort, and joy from each note. To her, music is more than
+                    entertainment—it's a powerful expression of human
+                    experience, and a constant companion on her personal
+                    journey.
                   </p>
                   <p className="font-opensans text-lg leading-relaxed text-[#E78BA5]">
-                    At the heart of her story are her parents, whose unwavering support and love have shaped the person she is today. Their guidance, encouragement, and belief in her dreams have given her the confidence to grow, explore her passions, and face life with grace and purpose.
+                    At the heart of her story are her parents, whose unwavering
+                    support and love have shaped the person she is today. Their
+                    guidance, encouragement, and belief in her dreams have given
+                    her the confidence to grow, explore her passions, and face
+                    life with grace and purpose.
                   </p>
                 </div>
               </div>
@@ -323,11 +360,13 @@ export default function Home() {
                 </div>
               </div>
 
-              <h3 className="font-lora text-2xl mb-4 text-[#e78ba5]">THE BARN: Rustic Corner Bar & Grill</h3>
+              <h3 className="font-lora text-2xl mb-4 text-[#e78ba5]">
+                THE BARN: Rustic Corner Bar & Grill
+              </h3>
 
               <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-dark-pink mb-6">
-                <img 
-                  src={locationImage} 
+                <img
+                  src={locationImage}
                   alt="THE BARN: Rustic Corner Bar & Grill"
                   className="w-full h-full object-cover"
                 />
@@ -338,9 +377,9 @@ export default function Home() {
                   asChild
                   className="bg-dark-pink text-white font-semibold btn-3d hover:scale-105 transition-all duration-300"
                 >
-                  <a 
-                    href="https://www.google.com/maps/search/THE+BARN+Rustic+Corner+Bar+%26+Grill" 
-                    target="_blank" 
+                  <a
+                    href="https://www.google.com/maps/search/THE+BARN+Rustic+Corner+Bar+%26+Grill"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     Get Directions
@@ -371,36 +410,44 @@ export default function Home() {
               className="glass-effect rounded-3xl p-8 md:p-12 bg-[#F5F1E8]"
             >
               <p className="font-opensans text-xl text-slate-gray mb-8 leading-relaxed text-center">
-                <strong>Formal Attire</strong><br />
+                <strong>Formal Attire</strong>
+                <br />
                 We invite you to dress elegantly for this special celebration.
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="text-center">
-                  <h3 className="font-lora text-2xl text-royal-blue mb-4">For Women</h3>
+                  <h3 className="font-lora text-2xl text-royal-blue mb-4">
+                    For Women
+                  </h3>
                   <div className="mb-6">
-                    <img 
-                      src={Untitled_design} 
+                    <img
+                      src={Untitled_design}
                       alt="Women's Dress Code - Formal Dresses"
                       className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-dark-pink"
                     />
                   </div>
                   <p className="font-opensans text-slate-gray">
-                    <strong>Formal dress</strong><br />
-                    Elegant evening gowns, cocktail dresses, or sophisticated formal wear.
+                    <strong>Formal dress</strong>
+                    <br />
+                    Elegant evening gowns, cocktail dresses, or sophisticated
+                    formal wear.
                   </p>
                 </div>
                 <div className="text-center">
-                  <h3 className="font-lora text-2xl text-royal-blue mb-4">For Men</h3>
+                  <h3 className="font-lora text-2xl text-royal-blue mb-4">
+                    For Men
+                  </h3>
                   <div className="mb-6">
-                    <img 
-                      src={dresscodeMen} 
+                    <img
+                      src={dresscodeMen}
                       alt="Men's Dress Code - Tuxedo, Suit, Slacks"
                       className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-dark-pink"
                     />
                   </div>
                   <p className="font-opensans text-slate-gray">
-                    <strong>Tuxedo, suit, slacks</strong><br />
+                    <strong>Tuxedo, suit, slacks</strong>
+                    <br />
                     Formal evening wear with dress shirts and ties or bow ties.
                   </p>
                 </div>
@@ -408,28 +455,58 @@ export default function Home() {
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#FDCFA0' }}></div>
-                  <p className="font-opensans text-sm text-slate-gray">Peach Cream</p>
+                  <div
+                    className="w-16 h-16 mx-auto mb-2 rounded-full"
+                    style={{ backgroundColor: "#FDCFA0" }}
+                  ></div>
+                  <p className="font-opensans text-sm text-slate-gray">
+                    Peach Cream
+                  </p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#A8B5A0' }}></div>
-                  <p className="font-opensans text-sm text-slate-gray">Nude Green</p>
+                  <div
+                    className="w-16 h-16 mx-auto mb-2 rounded-full"
+                    style={{ backgroundColor: "#A8B5A0" }}
+                  ></div>
+                  <p className="font-opensans text-sm text-slate-gray">
+                    Nude Green
+                  </p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#89A7C2' }}></div>
-                  <p className="font-opensans text-sm text-slate-gray">Dusty Blue</p>
+                  <div
+                    className="w-16 h-16 mx-auto mb-2 rounded-full"
+                    style={{ backgroundColor: "#89A7C2" }}
+                  ></div>
+                  <p className="font-opensans text-sm text-slate-gray">
+                    Dusty Blue
+                  </p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#F8C6CC' }}></div>
-                  <p className="font-opensans text-sm text-slate-gray">Blush Pink</p>
+                  <div
+                    className="w-16 h-16 mx-auto mb-2 rounded-full"
+                    style={{ backgroundColor: "#F8C6CC" }}
+                  ></div>
+                  <p className="font-opensans text-sm text-slate-gray">
+                    Blush Pink
+                  </p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#E78BA5' }}></div>
-                  <p className="font-opensans text-sm text-slate-gray">Mauve Pink</p>
+                  <div
+                    className="w-16 h-16 mx-auto mb-2 rounded-full"
+                    style={{ backgroundColor: "#E78BA5" }}
+                  ></div>
+                  <p className="font-opensans text-sm text-slate-gray">
+                    Mauve Pink
+                  </p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#D9C2EB' }}></div>
-                  <p className="font-opensans text-sm text-slate-gray">Lavender</p>
+                  <div
+                    className="w-16 h-16 mx-auto mb-2 rounded-full"
+                    style={{ backgroundColor: "#D9C2EB" }}
+                  ></div>
+                  <p className="font-opensans text-sm text-slate-gray">
+                    Lavender
+                  </p>
                 </div>
               </div>
 
@@ -462,15 +539,28 @@ export default function Home() {
               className="glass-effect rounded-3xl p-8 md:p-12 bg-[#F5F1E8]"
             >
               <div className="mb-8">
-                <img 
-                  src={familyPhoto} 
+                <img
+                  src={familyPhoto}
                   alt="Gwyneth with her loving parents"
                   className="w-full max-w-md mx-auto h-auto object-cover rounded-2xl shadow-lg border-4 border-dark-pink"
                 />
               </div>
 
               <p className="font-opensans text-lg leading-relaxed italic text-[#E78BA5]">
-                "It has been a joy watching our daughter, <span className="font-script text-xl">Gwyneth</span>, blossom from a bubbly little girl into a beautiful, intelligent, and poised young woman. With grace and determination, she follows her dreams and strives for excellence every day.<br/><br/>As she steps into a new chapter of her life, we are filled with pride and love.<br/><br/>We warmly invite you to join us in celebrating a significant milestone—Gwyneth's 18th birthday debut—as she is formally introduced to society and embraces the journey of womanhood."
+                "It has been a joy watching our daughter,{" "}
+                <span className="font-script text-xl">Gwyneth</span>, blossom
+                from a bubbly little girl into a beautiful, intelligent, and
+                poised young woman. With grace and determination, she follows
+                her dreams and strives for excellence every day.
+                <br />
+                <br />
+                As she steps into a new chapter of her life, we are filled with
+                pride and love.
+                <br />
+                <br />
+                We warmly invite you to join us in celebrating a significant
+                milestone—Gwyneth's 18th birthday debut—as she is formally
+                introduced to society and embraces the journey of womanhood."
               </p>
 
               <div className="mt-8">
@@ -513,8 +603,12 @@ export default function Home() {
                     <item.icon className="w-6 h-6 text-royal-blue" />
                   </div>
                   <div className="text-left">
-                    <h3 className="font-lora text-xl text-soft-lilac">{item.time}</h3>
-                    <p className="font-opensans text-slate-gray">{item.event}</p>
+                    <h3 className="font-lora text-xl text-soft-lilac">
+                      {item.time}
+                    </h3>
+                    <p className="font-opensans text-slate-gray">
+                      {item.event}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -556,7 +650,7 @@ export default function Home() {
 
               <div className="w-full h-[70vh] md:h-[80vh] overflow-hidden shadow-lg border-4 border-dark-pink rounded-2xl">
                 {!showVideo ? (
-                  <div 
+                  <div
                     className="w-full h-full bg-gradient-to-br from-royal-blue/20 to-soft-lilac/20 flex items-center justify-center cursor-pointer group"
                     onClick={handlePlayVideo}
                   >
@@ -564,14 +658,16 @@ export default function Home() {
                       <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <Play className="w-8 h-8 text-royal-blue ml-1" />
                       </div>
-                      <p className="font-lora text-lg text-[#c64e84]">Play Debut Prenup Video</p>
+                      <p className="font-lora text-lg text-[#c64e84]">
+                        Play Debut Prenup Video
+                      </p>
                     </div>
                   </div>
                 ) : (
-                  <iframe 
+                  <iframe
                     src="https://www.youtube.com/embed/X8QRsbMD5C0?controls=1"
-                    className="w-full h-full" 
-                    frameBorder="0" 
+                    className="w-full h-full"
+                    frameBorder="0"
                     allowFullScreen
                     title="Debut Prenup Video"
                   />
@@ -605,16 +701,18 @@ export default function Home() {
               </div>
 
               <p className="font-opensans text-lg mb-8 text-[#E78BA5]">
-                With all that we have, we've been truly blessed.<br/>
-                Your presence and prayers are all that we request.<br/>
-                But if you desire to give nonetheless,<br/>
-                a monetary gift is one we suggest.
+                With all that we have, we've been truly blessed.
+                <br />
+                Your presence and prayers are all that we request.
+                <br />
+                But if you desire to give nonetheless,
+                <br />a monetary gift is one we suggest.
               </p>
 
               <div className="bg-[#F5F1E8] rounded-2xl p-4 md:p-6 w-full max-w-xs md:max-w-md mx-auto border-2 border-soft-lilac">
                 <div className="w-full max-w-[240px] md:max-w-[280px] mx-auto">
-                  <img 
-                    src={qrGift} 
+                  <img
+                    src={qrGift}
                     alt="Payment QR Code for Lea Gwyneth Basco"
                     className="w-full h-auto object-contain rounded-xl"
                   />
@@ -640,24 +738,28 @@ export default function Home() {
               {[
                 {
                   question: "What time should I arrive?",
-                  answer: "Please arrive by 5:30 PM to ensure you don't miss any part of the celebration."
+                  answer:
+                    "Please arrive by 5:30 PM to ensure you don't miss any part of the celebration.",
                 },
                 {
                   question: "Is parking available?",
-                  answer: "Yes, parking is available at THE BARN: Rustic Corner Bar & Grill."
+                  answer:
+                    "Yes, parking is available at THE BARN: Rustic Corner Bar & Grill.",
                 },
                 {
                   question: "Can I bring a plus-one?",
-                  answer: "Please check your invitation for plus-one details, or contact us directly."
+                  answer:
+                    "Please check your invitation for plus-one details, or contact us directly.",
                 },
                 {
                   question: "What should I wear?",
-                  answer: "Formal attire is required. Women should wear formal dresses, men should wear tuxedos, suits, or slacks. Strictly no jeans."
+                  answer:
+                    "Formal attire is required. Women should wear formal dresses, men should wear tuxedos, suits, or slacks. Strictly no jeans.",
                 },
                 {
                   question: "What time does the event end?",
-                  answer: "The celebration will conclude around 10:00 PM."
-                }
+                  answer: "The celebration will conclude around 10:00 PM.",
+                },
               ].map((faq, index) => (
                 <motion.div
                   key={index}
@@ -670,10 +772,14 @@ export default function Home() {
                   <details className="group">
                     <summary className="font-lora text-lg text-royal-blue cursor-pointer list-none flex justify-between items-center">
                       <span>{faq.question}</span>
-                      <span className="text-dark-pink group-open:rotate-180 transition-transform">▼</span>
+                      <span className="text-dark-pink group-open:rotate-180 transition-transform">
+                        ▼
+                      </span>
                     </summary>
                     <div className="mt-4 pt-4 border-t border-gray-200">
-                      <p className="font-opensans text-slate-gray">{faq.answer}</p>
+                      <p className="font-opensans text-slate-gray">
+                        {faq.answer}
+                      </p>
                     </div>
                   </details>
                 </motion.div>
@@ -690,11 +796,15 @@ export default function Home() {
               <Crown className="w-12 h-12 text-dark-pink mx-auto" />
             </div>
 
-            <h3 className="font-cinzel text-2xl text-[#3c83f6e6] mb-4"><span className="font-script">Gwyneth's</span> Debutante Ball</h3>
+            <h3 className="font-cinzel text-2xl text-[#3c83f6e6] mb-4">
+              <span className="font-script">Gwyneth's</span> Debutante Ball
+            </h3>
 
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
               <div className="flex items-center">
-                <span className="font-opensans text-[#3c83f6e6]">For inquiries visit rsvpblisscreations.site</span>
+                <span className="font-opensans text-[#3c83f6e6]">
+                  For inquiries visit rsvpblisscreations.site
+                </span>
               </div>
             </div>
 
@@ -715,8 +825,6 @@ export default function Home() {
                 </button>
               ))}
             </div>
-
-
 
             <Button
               asChild
