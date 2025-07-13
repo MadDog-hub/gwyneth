@@ -412,8 +412,8 @@ export default function Home() {
                   <p className="font-opensans text-sm text-slate-gray">Peach Cream</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#C75A7F' }}></div>
-                  <p className="font-opensans text-sm text-slate-gray">Dark Pink</p>
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#A8B5A0' }}></div>
+                  <p className="font-opensans text-sm text-slate-gray">Nude Green</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#89A7C2' }}></div>
