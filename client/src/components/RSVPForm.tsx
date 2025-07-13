@@ -154,7 +154,7 @@ export default function RSVPForm() {
             <h2 className="font-cinzel text-4xl md:text-5xl font-bold mb-4 text-[#3c83f6e6]">
               RSVP
             </h2>
-            <p className="font-lora text-2xl text-soft-lilac">
+            <p className="font-lora text-2xl text-[#c64e84]">
               Let Me Know You're Coming
             </p>
             <div className="rounded-2xl p-4 border-l-4 border-blue-500 mt-6 bg-[#fef2f2]">

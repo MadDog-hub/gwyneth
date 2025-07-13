@@ -466,7 +466,7 @@ export default function Home() {
               </p>
 
               <div className="mt-8">
-                <p className="font-lora text-xl text-soft-lilac">
+                <p className="font-lora text-xl text-[#c64e84]">
                   — Gwyneth's Loving Parents
                 </p>
               </div>
