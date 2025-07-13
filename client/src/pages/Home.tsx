@@ -11,7 +11,7 @@ import GuestbookForm from "@/components/GuestbookForm";
 import Navigation from "@/components/Navigation";
 
 import qrGift from "@assets/qr-gift_1752306166980.jpg";
-import aboutDebutant from "@assets/about-debudant_1752306166981.jpg";
+import aboutGwyneth from "@assets/DSC06930_1752306166981.jpg";
 import dresscodeWomen from "@assets/dresscode-woman_1752306166979.png";
 import dresscodeMen from "@assets/dresscode-men_1752306166979.jpg";
 import locationImage from "@assets/location_1752306166980.webp";
@@ -82,22 +82,22 @@ export default function Home() {
 
   if (currentPage === "invitation") {
     return (
-      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-amber-50 via-amber-100 to-amber-200 flex items-center justify-center">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-pink-50 via-pink-100 to-pink-200 flex items-center justify-center">
         <ThreeBackground scene="invitation" />
         <div className="relative w-full max-w-4xl aspect-[4/3]">
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-200 to-amber-300 rounded-lg shadow-2xl border-2 border-amber-400">
-            <div className="absolute inset-2 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-pink-200 to-pink-300 rounded-lg shadow-2xl border-2 border-pink-400">
+            <div className="absolute inset-2 bg-gradient-to-br from-pink-100 to-pink-200 rounded-lg"></div>
           </div>
 
           <motion.div
             initial={{ rotateX: 0 }}
             animate={{ rotateX: -45 }}
             transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
-            className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-amber-300 to-amber-400 origin-bottom border-2 border-amber-400 rounded-t-lg"
+            className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-pink-300 to-pink-400 origin-bottom border-2 border-pink-400 rounded-t-lg"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-red-600 rounded-full border-4 border-red-700 flex items-center justify-center">
-              <Crown className="w-8 h-8 text-gold" />
+              <Crown className="w-8 h-8 text-dark-pink" />
             </div>
           </motion.div>
 
@@ -105,7 +105,7 @@ export default function Home() {
             initial={{ y: 50, opacity: 0, scale: 0.8 }}
             animate={{ y: -20, opacity: 1, scale: 1 }}
             transition={{ delay: 2.5, duration: 1.2, ease: "easeOut" }}
-            className="absolute inset-4 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-xl border border-gold/30 bg-[#fff8dd]"
+            className="absolute inset-4 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-xl border border-dark-pink/30 bg-[#fff8dd]"
           >
             <div className="text-center h-full flex flex-col justify-center">
               <motion.div
@@ -115,7 +115,7 @@ export default function Home() {
               >
                 <div className="flex items-center justify-center mb-6">
                   <Heart className="w-8 h-8 text-red-500 mr-2" />
-                  <Mail className="w-12 h-12 text-gold" />
+                  <Mail className="w-12 h-12 text-dark-pink" />
                   <Heart className="w-8 h-8 text-red-500 ml-2" />
                 </div>
 
@@ -123,7 +123,7 @@ export default function Home() {
                   You're Invited
                 </h1>
 
-                <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                <div className="w-24 h-1 bg-dark-pink mx-auto mb-6"></div>
 
                 <div className="mb-4">
                   <img 
@@ -191,10 +191,19 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="mb-8"
           >
-            <div className="w-24 h-24 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6 border-2 border-[#fbda2d] rounded-lg">
-              <Crown className="w-12 h-12 text-[#fbda2d]" />
+            <div className="w-24 h-24 mx-auto bg-dark-pink/20 rounded-full flex items-center justify-center mb-6 border-2 border-dark-pink rounded-lg">
+              <Crown className="w-12 h-12 text-dark-pink" />
             </div>
           </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.1 }}
+            className="font-cinzel text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-dark-pink"
+          >
+            GWYNETH
+          </motion.h2>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -221,11 +230,11 @@ export default function Home() {
             className="space-y-4 mb-12"
           >
             <p className="font-opensans text-lg text-slate-gray">
-              <Calendar className="inline w-6 h-6 mr-2 text-[#fbda2d]" />
+              <Calendar className="inline w-6 h-6 mr-2 text-dark-pink" />
               August 30, 2025 at 6:00 PM
             </p>
             <p className="font-opensans text-lg text-slate-gray">
-              <MapPin className="inline w-6 h-6 mr-2 text-[#fbda2d]" />
+              <MapPin className="inline w-6 h-6 mr-2 text-dark-pink" />
               THE BARN: Rustic Corner Bar & Grill
             </p>
           </motion.div>
@@ -259,7 +268,7 @@ export default function Home() {
               className="bg-[#F5F1E8] rounded-3xl p-8 md:p-12"
             >
               <div className="mb-8">
-                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-dark-pink/20 rounded-full flex items-center justify-center mb-6">
                   <Music className="w-16 h-16 text-[#D9C2EB]" />
                 </div>
               </div>
@@ -267,9 +276,9 @@ export default function Home() {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="md:w-1/2">
                   <img 
-                    src={aboutDebutant} 
+                    src={aboutGwyneth} 
                     alt="Lea Gwyneth"
-                    className="w-full h-96 object-cover rounded-2xl shadow-lg border-4 border-gold"
+                    className="w-full h-96 object-cover rounded-2xl shadow-lg border-4 border-dark-pink"
                   />
                 </div>
                 <div className="md:w-1/2">
@@ -309,14 +318,14 @@ export default function Home() {
               className="bg-[#F5F1E8] rounded-3xl p-8 md:p-12"
             >
               <div className="mb-8">
-                <div className="w-20 h-20 mx-auto bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-dark-pink/20 rounded-full flex items-center justify-center mb-6">
                   <MapPin className="w-12 h-12 text-[#D9C2EB]" />
                 </div>
               </div>
 
               <h3 className="font-lora text-2xl mb-4 text-[#e78ba5]">THE BARN: Rustic Corner Bar & Grill</h3>
 
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-gold mb-6">
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border-4 border-dark-pink mb-6">
                 <img 
                   src={locationImage} 
                   alt="THE BARN: Rustic Corner Bar & Grill"
@@ -327,7 +336,7 @@ export default function Home() {
               <div className="mt-8">
                 <Button
                   asChild
-                  className="bg-gold text-royal-blue font-semibold btn-3d hover:scale-105 transition-all duration-300"
+                  className="bg-dark-pink text-white font-semibold btn-3d hover:scale-105 transition-all duration-300"
                 >
                   <a 
                     href="https://www.google.com/maps/search/THE+BARN+Rustic+Corner+Bar+%26+Grill" 
@@ -373,7 +382,7 @@ export default function Home() {
                     <img 
                       src={Untitled_design} 
                       alt="Women's Dress Code - Formal Dresses"
-                      className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-gold"
+                      className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-dark-pink"
                     />
                   </div>
                   <p className="font-opensans text-slate-gray">
@@ -387,7 +396,7 @@ export default function Home() {
                     <img 
                       src={dresscodeMen} 
                       alt="Men's Dress Code - Tuxedo, Suit, Slacks"
-                      className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-gold"
+                      className="w-full h-auto object-contain rounded-2xl shadow-lg border-4 border-dark-pink"
                     />
                   </div>
                   <p className="font-opensans text-slate-gray">
@@ -403,8 +412,8 @@ export default function Home() {
                   <p className="font-opensans text-sm text-slate-gray">Peach Cream</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#FAF096' }}></div>
-                  <p className="font-opensans text-sm text-slate-gray">Light Yellow</p>
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#C75A7F' }}></div>
+                  <p className="font-opensans text-sm text-slate-gray">Dark Pink</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-2 rounded-full" style={{ backgroundColor: '#89A7C2' }}></div>
@@ -490,9 +499,9 @@ export default function Home() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-[#F5F1E8]/90 backdrop-blur-sm rounded-2xl p-6 flex items-center justify-start space-x-4 shadow-lg border border-gold/20"
+                  className="bg-[#F5F1E8]/90 backdrop-blur-sm rounded-2xl p-6 flex items-center justify-start space-x-4 shadow-lg border border-dark-pink/20"
                 >
-                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-dark-pink rounded-full flex items-center justify-center">
                     <item.icon className="w-6 h-6 text-royal-blue" />
                   </div>
                   <div className="text-left">
@@ -537,7 +546,7 @@ export default function Home() {
                 </div>
               )}
 
-              <div className="w-full h-[70vh] md:h-[80vh] overflow-hidden shadow-lg border-4 border-gold rounded-2xl">
+              <div className="w-full h-[70vh] md:h-[80vh] overflow-hidden shadow-lg border-4 border-dark-pink rounded-2xl">
                 {!showVideo ? (
                   <div 
                     className="w-full h-full bg-gradient-to-br from-royal-blue/20 to-soft-lilac/20 flex items-center justify-center cursor-pointer group"
@@ -584,7 +593,7 @@ export default function Home() {
               className="glass-effect rounded-3xl p-8 md:p-12 bg-[#F5F1E8]"
             >
               <div className="mb-8">
-                <Crown className="w-16 h-16 text-gold mx-auto" />
+                <Crown className="w-16 h-16 text-dark-pink mx-auto" />
               </div>
 
               <p className="font-opensans text-lg mb-8 text-[#E78BA5]">
@@ -653,7 +662,7 @@ export default function Home() {
                   <details className="group">
                     <summary className="font-lora text-lg text-royal-blue cursor-pointer list-none flex justify-between items-center">
                       <span>{faq.question}</span>
-                      <span className="text-gold group-open:rotate-180 transition-transform">▼</span>
+                      <span className="text-dark-pink group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <div className="mt-4 pt-4 border-t border-gray-200">
                       <p className="font-opensans text-slate-gray">{faq.answer}</p>
@@ -670,7 +679,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="mb-8">
-              <Crown className="w-12 h-12 text-gold mx-auto" />
+              <Crown className="w-12 h-12 text-dark-pink mx-auto" />
             </div>
 
             <h3 className="font-cinzel text-2xl text-[#3c83f6e6] mb-4"><span className="font-script">Gwyneth's</span> Debutante Ball</h3>
@@ -692,7 +701,7 @@ export default function Home() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-[#3c83f6e6] hover:text-gold transition-colors font-opensans"
+                  className="text-[#3c83f6e6] hover:text-dark-pink transition-colors font-opensans"
                 >
                   {item.label}
                 </button>

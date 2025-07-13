@@ -28,7 +28,7 @@
 
   /* Custom colors for "A Decade and Eight" theme */
   --peach-cream: 30 100% 81%; /* #FDCFA0 */
-  --light-yellow: 57 96% 78%; /* #FAF096 */
+  --dark-pink: 333 51% 54%; /* #C75A7F - Dark pink replacing yellow */
   --dusty-blue: 213 35% 66%; /* #89A7C2 */
   --blush-pink: 349 71% 87%; /* #F8C6CC */
   --mauve-pink: 333 51% 74%; /* #E78BA5 */
@@ -93,8 +93,8 @@
     color: hsl(var(--peach-cream));
   }
 
-  .text-light-yellow {
-    color: hsl(var(--light-yellow));
+  .text-dark-pink {
+    color: hsl(var(--dark-pink));
   }
 
   .text-dusty-blue {
@@ -117,8 +117,8 @@
     background-color: hsl(var(--peach-cream));
   }
 
-  .bg-light-yellow {
-    background-color: hsl(var(--light-yellow));
+  .bg-dark-pink {
+    background-color: hsl(var(--dark-pink));
   }
 
   .bg-dusty-blue {
