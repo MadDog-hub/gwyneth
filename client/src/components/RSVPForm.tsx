@@ -275,7 +275,7 @@ export default function RSVPForm() {
                             size="sm"
                             onClick={addPlusGuest}
                             disabled={plusGuests.length >= guest.allowedPlusGuests}
-                            className="border-soft-lilac text-soft-lilac hover:bg-soft-lilac hover:text-white"
+                            className="border-dark-pink text-dark-pink hover:bg-dark-pink hover:text-white"
                           >
                             <UserPlus className="w-4 h-4 mr-2" />
                             Add Guest
