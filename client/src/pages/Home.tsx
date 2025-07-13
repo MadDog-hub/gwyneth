@@ -15,6 +15,7 @@ import aboutGwyneth from "@assets/DSC06930_1752306166981.jpg";
 import dresscodeWomen from "@assets/dresscode-woman_1752306166979.png";
 import dresscodeMen from "@assets/dresscode-men_1752306166979.jpg";
 import locationImage from "@assets/location_1752306166980.webp";
+import familyPhoto from "@assets/DSC07403_1752383308646.jpg";
 
 import Untitled_design from "@assets/Untitled design.png";
 
@@ -461,6 +462,14 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="glass-effect rounded-3xl p-8 md:p-12 bg-[#F5F1E8]"
             >
+              <div className="mb-8">
+                <img 
+                  src={familyPhoto} 
+                  alt="Gwyneth with her loving parents"
+                  className="w-full max-w-md mx-auto h-auto object-cover rounded-2xl shadow-lg border-4 border-dark-pink"
+                />
+              </div>
+
               <p className="font-opensans text-lg leading-relaxed italic text-[#E78BA5]">
                 "It has been a joy watching our daughter, <span className="font-script text-xl">Gwyneth</span>, blossom from a bubbly little girl into a beautiful, intelligent, and poised young woman. With grace and determination, she follows her dreams and strives for excellence every day.<br/><br/>As she steps into a new chapter of her life, we are filled with pride and love.<br/><br/>We warmly invite you to join us in celebrating a significant milestone—Gwyneth's 18th birthday debut—as she is formally introduced to society and embraces the journey of womanhood."
               </p>
@@ -713,7 +722,7 @@ export default function Home() {
             <Button
               asChild
               variant="ghost"
-              className="text-white bg-dark-pink text-xs opacity-50 hover:opacity-100 transition-opacity"
+              className="text-[#f1f5f9] bg-dark-pink text-xs opacity-50 hover:opacity-100 transition-opacity"
             >
               <a href="/admin">Admin</a>
             </Button>
