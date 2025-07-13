@@ -453,7 +453,7 @@ export default function Home() {
               className="glass-effect rounded-3xl p-8 md:p-12 bg-[#F5F1E8]"
             >
               <p className="font-opensans text-lg leading-relaxed italic text-[#E78BA5]">
-                "We are incredibly proud of our daughter <span className="font-script text-xl">Gwyneth</span> and the beautiful young woman she has become. This debutante celebration marks a significant milestone in her life as she steps into adulthood with grace, passion, and dreams. Her love for music and the way it touches her heart reminds us daily of the wonderful person she is. We invite you to join us in celebrating this special moment as she begins this new chapter of her journey."
+                "It has been a joy watching our daughter, <span className="font-script text-xl">Gwyneth</span>, blossom from a bubbly little girl into a beautiful, intelligent, and poised young woman. With grace and determination, she follows her dreams and strives for excellence every day.<br/><br/>As she steps into a new chapter of her life, we are filled with pride and love.<br/><br/>We warmly invite you to join us in celebrating a significant milestone—Gwyneth's 18th birthday debut—as she is formally introduced to society and embraces the journey of womanhood."
               </p>
 
               <div className="mt-8">
