@@ -1,8 +1,4 @@
 import {
-  guests,
-  plusGuests,
-  guestbookMessages,
-  admins,
   type Guest,
   type InsertGuest,
   type PlusGuest,
@@ -13,8 +9,6 @@ import {
   type InsertAdmin,
   type GuestWithPlusGuests,
 } from "@shared/schema";
-import { db } from "./db";
-import { eq, and, desc, sql } from "drizzle-orm";
 
 export interface IStorage {
   // Guest operations
@@ -50,30 +44,32 @@ export interface IStorage {
   }>;
 }
 
-export class DatabaseStorage implements IStorage {
+export class MemoryStorage implements IStorage {
+  private guests: Guest[] = [];
+  private plusGuests: PlusGuest[] = [];
+  private guestbookMessages: GuestbookMessage[] = [];
+  private admins: Admin[] = [];
+  private nextGuestId = 1;
+  private nextPlusGuestId = 1;
+  private nextGuestbookMessageId = 1;
+  private nextAdminId = 1;
+
   async getGuest(id: number): Promise<Guest | undefined> {
-    const [guest] = await db.select().from(guests).where(eq(guests.id, id));
-    return guest || undefined;
+    return this.guests.find(g => g.id === id);
   }
 
   async getGuestByName(firstName: string, lastName: string): Promise<GuestWithPlusGuests | undefined> {
-    // Normalize input: trim whitespace and convert to lowercase for case-insensitive search
     const normalizedFirstName = firstName.trim().toLowerCase();
     const normalizedLastName = lastName.trim().toLowerCase();
-    
-    // Get all guests and perform case-insensitive comparison
-    const allGuests = await db.select().from(guests);
-    const guest = allGuests.find(g => 
-      g.firstName.trim().toLowerCase() === normalizedFirstName && 
+
+    const guest = this.guests.find(g =>
+      g.firstName.trim().toLowerCase() === normalizedFirstName &&
       g.lastName.trim().toLowerCase() === normalizedLastName
     );
 
     if (!guest) return undefined;
 
-    const guestPlusGuests = await db
-      .select()
-      .from(plusGuests)
-      .where(eq(plusGuests.guestId, guest.id));
+    const guestPlusGuests = this.plusGuests.filter(pg => pg.guestId === guest.id);
 
     return {
       ...guest,
@@ -82,106 +78,111 @@ export class DatabaseStorage implements IStorage {
   }
 
   async createGuest(guest: InsertGuest): Promise<Guest> {
-    const [newGuest] = await db
-      .insert(guests)
-      .values(guest)
-      .returning();
+    const newGuest: Guest = {
+      ...guest,
+      id: this.nextGuestId++,
+      allowedPlusGuests: guest.allowedPlusGuests ?? 0,
+      rsvpStatus: guest.rsvpStatus ?? null,
+      personalMessage: guest.personalMessage ?? null,
+      submittedAt: guest.submittedAt ?? null,
+      createdAt: new Date(),
+    };
+    this.guests.push(newGuest);
     return newGuest;
   }
 
   async updateGuestRSVP(id: number, rsvpStatus: string, personalMessage?: string, submittedAt?: Date): Promise<Guest | undefined> {
-    const [updatedGuest] = await db
-      .update(guests)
-      .set({
-        rsvpStatus,
-        personalMessage,
-        submittedAt: submittedAt || new Date(),
-      })
-      .where(eq(guests.id, id))
-      .returning();
-    return updatedGuest || undefined;
+    const guest = this.guests.find(g => g.id === id);
+    if (!guest) return undefined;
+
+    guest.rsvpStatus = rsvpStatus;
+    guest.personalMessage = personalMessage ?? null;
+    guest.submittedAt = submittedAt || new Date();
+    return guest;
   }
 
   async getAllGuests(): Promise<GuestWithPlusGuests[]> {
-    const allGuests = await db.select().from(guests);
-    const allPlusGuests = await db.select().from(plusGuests);
-
-    return allGuests.map(guest => ({
+    return this.guests.map(guest => ({
       ...guest,
-      plusGuests: allPlusGuests.filter(pg => pg.guestId === guest.id),
+      plusGuests: this.plusGuests.filter(pg => pg.guestId === guest.id),
     }));
   }
 
   async deleteGuest(id: number): Promise<boolean> {
-    const result = await db.delete(guests).where(eq(guests.id, id));
-    return result.rowCount ? result.rowCount > 0 : false;
+    const index = this.guests.findIndex(g => g.id === id);
+    if (index === -1) return false;
+
+    this.guests.splice(index, 1);
+    this.plusGuests = this.plusGuests.filter(pg => pg.guestId !== id);
+    return true;
   }
 
   async createPlusGuest(plusGuest: InsertPlusGuest): Promise<PlusGuest> {
-    const [newPlusGuest] = await db
-      .insert(plusGuests)
-      .values(plusGuest)
-      .returning();
+    const newPlusGuest: PlusGuest = {
+      ...plusGuest,
+      id: this.nextPlusGuestId++,
+      relationship: plusGuest.relationship ?? null,
+      createdAt: new Date(),
+    };
+    this.plusGuests.push(newPlusGuest);
     return newPlusGuest;
   }
 
   async deletePlusGuestsByGuestId(guestId: number): Promise<void> {
-    await db.delete(plusGuests).where(eq(plusGuests.guestId, guestId));
+    this.plusGuests = this.plusGuests.filter(pg => pg.guestId !== guestId);
   }
 
   async getApprovedGuestbookMessages(): Promise<GuestbookMessage[]> {
-    return await db
-      .select()
-      .from(guestbookMessages)
-      .where(eq(guestbookMessages.isApproved, true))
-      .orderBy(desc(guestbookMessages.submittedAt));
+    return this.guestbookMessages
+      .filter(msg => msg.isApproved)
+      .sort((a, b) => (b.submittedAt?.getTime() ?? 0) - (a.submittedAt?.getTime() ?? 0));
   }
 
   async getAllGuestbookMessages(): Promise<GuestbookMessage[]> {
-    return await db
-      .select()
-      .from(guestbookMessages)
-      .orderBy(desc(guestbookMessages.submittedAt));
+    return this.guestbookMessages
+      .sort((a, b) => (b.submittedAt?.getTime() ?? 0) - (a.submittedAt?.getTime() ?? 0));
   }
 
   async createGuestbookMessage(message: InsertGuestbookMessage): Promise<GuestbookMessage> {
-    const [newMessage] = await db
-      .insert(guestbookMessages)
-      .values(message)
-      .returning();
+    const newMessage: GuestbookMessage = {
+      ...message,
+      id: this.nextGuestbookMessageId++,
+      isApproved: false,
+      submittedAt: new Date(),
+      approvedAt: null,
+    };
+    this.guestbookMessages.push(newMessage);
     return newMessage;
   }
 
   async approveGuestbookMessage(id: number): Promise<GuestbookMessage | undefined> {
-    const [approvedMessage] = await db
-      .update(guestbookMessages)
-      .set({
-        isApproved: true,
-        approvedAt: new Date(),
-      })
-      .where(eq(guestbookMessages.id, id))
-      .returning();
-    return approvedMessage || undefined;
+    const message = this.guestbookMessages.find(msg => msg.id === id);
+    if (!message) return undefined;
+
+    message.isApproved = true;
+    message.approvedAt = new Date();
+    return message;
   }
 
   async deleteGuestbookMessage(id: number): Promise<boolean> {
-    const result = await db.delete(guestbookMessages).where(eq(guestbookMessages.id, id));
-    return result.rowCount ? result.rowCount > 0 : false;
+    const index = this.guestbookMessages.findIndex(msg => msg.id === id);
+    if (index === -1) return false;
+
+    this.guestbookMessages.splice(index, 1);
+    return true;
   }
 
   async getAdminByUsername(username: string): Promise<Admin | undefined> {
-    const [admin] = await db
-      .select()
-      .from(admins)
-      .where(eq(admins.username, username));
-    return admin || undefined;
+    return this.admins.find(a => a.username === username);
   }
 
   async createAdmin(admin: InsertAdmin): Promise<Admin> {
-    const [newAdmin] = await db
-      .insert(admins)
-      .values(admin)
-      .returning();
+    const newAdmin: Admin = {
+      ...admin,
+      id: this.nextAdminId++,
+      createdAt: new Date(),
+    };
+    this.admins.push(newAdmin);
     return newAdmin;
   }
 
@@ -192,14 +193,11 @@ export class DatabaseStorage implements IStorage {
     pendingRSVPs: number;
     totalPlusGuests: number;
   }> {
-    const allGuests = await db.select().from(guests);
-    const allPlusGuests = await db.select().from(plusGuests);
-
-    const totalGuests = allGuests.length;
-    const attendingGuests = allGuests.filter(g => g.rsvpStatus === "attending").length;
-    const notAttendingGuests = allGuests.filter(g => g.rsvpStatus === "not_attending").length;
-    const pendingRSVPs = allGuests.filter(g => !g.rsvpStatus).length;
-    const totalPlusGuests = allPlusGuests.length;
+    const totalGuests = this.guests.length;
+    const attendingGuests = this.guests.filter(g => g.rsvpStatus === "attending").length;
+    const notAttendingGuests = this.guests.filter(g => g.rsvpStatus === "not_attending").length;
+    const pendingRSVPs = this.guests.filter(g => !g.rsvpStatus).length;
+    const totalPlusGuests = this.plusGuests.length;
 
     return {
       totalGuests,
@@ -211,4 +209,4 @@ export class DatabaseStorage implements IStorage {
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new MemoryStorage();
